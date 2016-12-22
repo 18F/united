@@ -1,0 +1,7 @@
+.DS_store
+.*.swp
+
+# Ignore Node specific files and directories
+#
+node_modules/
+npm-debug.log*
