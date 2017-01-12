@@ -130,7 +130,7 @@ output:
 */
 /*
 -----------------------------
-Square
+Opentype
 -----------------------------
 usage:
   TK
@@ -1192,140 +1192,106 @@ output:
   letter-spacing: 0.15em !important; }
 
 .sq10ct {
-  height: 10% !important;
-  width: 10% !important; }
+  : 10% !important; }
 
 .sq20ct {
-  height: 20% !important;
-  width: 20% !important; }
+  : 20% !important; }
 
 .sq25ct {
-  height: 25% !important;
-  width: 25% !important; }
+  : 25% !important; }
 
 .sq30ct {
-  height: 30% !important;
-  width: 30% !important; }
+  : 30% !important; }
 
 .sq33ct {
-  height: 33.33333% !important;
-  width: 33.33333% !important; }
+  : 33.33333% !important; }
 
 .sq40ct {
-  height: 40% !important;
-  width: 40% !important; }
+  : 40% !important; }
 
 .sq50ct {
-  height: 50% !important;
-  width: 50% !important; }
+  : 50% !important; }
 
 .sq60ct {
-  height: 60% !important;
-  width: 60% !important; }
+  : 60% !important; }
 
 .sq66ct {
-  height: 66.66667% !important;
-  width: 66.66667% !important; }
+  : 66.66667% !important; }
 
 .sq70ct {
-  height: 70% !important;
-  width: 70% !important; }
+  : 70% !important; }
 
 .sq75ct {
-  height: 75% !important;
-  width: 75% !important; }
+  : 75% !important; }
 
 .sq80ct {
-  height: 80% !important;
-  width: 80% !important; }
+  : 80% !important; }
 
 .sq90ct {
-  height: 90% !important;
-  width: 90% !important; }
+  : 90% !important; }
 
 .sq100ct {
-  height: 100% !important;
-  width: 100% !important; }
+  : 100% !important; }
 
 .sq05 {
-  height: 0.25rem !important;
-  width: 0.25rem !important; }
+  : 0.25rem !important; }
 
 .sq1 {
-  height: 0.5rem !important;
-  width: 0.5rem !important; }
+  : 0.5rem !important; }
 
 .sq105 {
-  height: 0.75rem !important;
-  width: 0.75rem !important; }
+  : 0.75rem !important; }
 
 .sq2 {
-  height: 1rem !important;
-  width: 1rem !important; }
+  : 1rem !important; }
 
 .sq3 {
-  height: 1.5rem !important;
-  width: 1.5rem !important; }
+  : 1.5rem !important; }
 
 .sq4 {
-  height: 2rem !important;
-  width: 2rem !important; }
+  : 2rem !important; }
 
 .sq5 {
-  height: 2.5rem !important;
-  width: 2.5rem !important; }
+  : 2.5rem !important; }
 
 .sq6 {
-  height: 3rem !important;
-  width: 3rem !important; }
+  : 3rem !important; }
 
 .sq7 {
-  height: 3.5rem !important;
-  width: 3.5rem !important; }
+  : 3.5rem !important; }
 
 .sq8 {
-  height: 4rem !important;
-  width: 4rem !important; }
+  : 4rem !important; }
 
 .sq9 {
-  height: 4.5rem !important;
-  width: 4.5rem !important; }
+  : 4.5rem !important; }
 
 .sq10 {
-  height: 5rem !important;
-  width: 5rem !important; }
+  : 5rem !important; }
 
 .sq15 {
-  height: 7.5rem !important;
-  width: 7.5rem !important; }
+  : 7.5rem !important; }
 
 .sq20 {
-  height: 10rem !important;
-  width: 10rem !important; }
+  : 10rem !important; }
 
 .sq25 {
-  height: 12.5rem !important;
-  width: 12.5rem !important; }
+  : 12.5rem !important; }
 
 .sq30 {
-  height: 15rem !important;
-  width: 15rem !important; }
+  : 15rem !important; }
 
 .sq40 {
-  height: 20rem !important;
-  width: 20rem !important; }
+  : 20rem !important; }
 
 .sq50 {
-  height: 25rem !important;
-  width: 25rem !important; }
+  : 25rem !important; }
 
 .sq1px {
-  height: 1px !important;
-  width: 1px !important; }
+  : 1px !important; }
 
 .sq2px {
-  height: 2px !important;
-  width: 2px !important; }
+  : 2px !important; }
 
 .w10ct {
   width: 10% !important; }

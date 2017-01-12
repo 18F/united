@@ -17,11 +17,9 @@
 @import "utilities/square";
 @import "utilities/width";
 
-// ...then the utility builder
+// ...then the utility packager
 
 @import "utilities";
-
-
 
 // Let's build some utility class rules!
 
@@ -48,7 +46,7 @@
   //      isReadable: BOOL,
   //    )
 
-  @if map-has-key($utility, base) {
+  @if map-get($utility, base) != null {
     $baseProps: baseToMap(map-get($utility, base));
 
     // And set $b (used in the selector constructor, below) to baseProps.slug.
@@ -108,7 +106,7 @@
 
     // So, check for modifiers.
 
-    @if map-has-key($utility, modifiers) {
+    @if map-get($utility, modifiers) != null {
 
       // If there is one, capture it as $ourModifiers.
 

@@ -12,6 +12,8 @@ output:
 
 $font-size: (
   font-size: (
+    base: null,
+    modifiers: null,
     values: map-collect(
       map-get($global_values, typeScale)
     ),

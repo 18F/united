@@ -13,6 +13,7 @@ output:
 $background: (
   background: (
     base: (background, isReadable),
+    modifiers: null,
     values: map-get($global_values, colors),
     property: background-color,
   )

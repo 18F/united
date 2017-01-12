@@ -12,6 +12,8 @@ output:
 
 $color: (
   color: (
+    base: null,
+    modifiers: null,
     values: map-collect(
       map-get($global_values, colors)
     ),

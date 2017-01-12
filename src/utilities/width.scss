@@ -13,6 +13,7 @@ output:
 $width: (
   width: (
     base: w,
+    modifiers: null,
     values: map-collect(
       map-get($global_values, percentage),
       map-get($global_values, grid),

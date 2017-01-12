@@ -13,6 +13,7 @@ output:
 $letter-spacing: (
   letter-spacing: (
     base: ls,
+    modifiers: null,
     values: (
       loose: $ls-loose,
       xloose: $ls-xloose,

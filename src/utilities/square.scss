@@ -12,9 +12,8 @@ output:
 
 $square: (
   square: (
-    modifiers: (
-      sq: (height, width),
-    ),
+    base: sq,
+    modifiers: null,
     values: map-collect(
       map-get($global_values, percentage),
       map-get($global_values, grid),
