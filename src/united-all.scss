@@ -26,7 +26,7 @@
   $v: null;
   $mv: null;
 
-  //    If there's a base, use baseToMap() to convert it into a MAP of form
+  //    If there's a base, use baseToMap() to convert it into a MAP:
   //    $baseProps: (
   //      slug: STRING,
   //      isReadable: BOOL,
@@ -56,7 +56,7 @@
 
   @each $valKey, $valValue in map-get($utility, values) {
 
-    // Use toMap() to convert the value keypair into a MAP of form
+    // Use toMap() to convert the value keypair into a MAP:
     //    $valProps: (
     //      slug: STRING,
     //      [isReadable: BOOL,]*
@@ -108,12 +108,13 @@
     }
 
     // OK! C'mon, let's loop!
+    // https://www.youtube.com/watch?v=X9i2i07wPUw
 
     // -------- For each modifier in $ourModifiers ----------
 
     @each $modKey, $modVal in $ourModifiers {
 
-      // Use toMap() to convert the modifier keypair into a MAP of form
+      // Use toMap() to convert the modifier keypair into a MAP:
       //    $modProps: (
       //      slug: STRING,
       //      isReadable: BOOL,

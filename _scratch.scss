@@ -26,7 +26,7 @@
   $v: null;
   $mv: null;
 
-  //    If there's a base, use baseToMap() to convert it into a MAP of form
+  //    If there's a base, use baseToMap() to convert it into a MAP:
   //    $baseProps: (
   //      slug: STRING,
   //      isReadable: BOOL,
@@ -56,7 +56,7 @@
 
   @each $valKey, $valValue in map-get($utility, values) {
 
-    // Use toMap() to convert the value keypair into a MAP of form
+    // Use toMap() to convert the value keypair into a MAP:
     //    $valProps: (
     //      slug: STRING,
     //      [isReadable: BOOL,]*
@@ -108,12 +108,13 @@
     }
 
     // OK! C'mon, let's loop!
+    // https://www.youtube.com/watch?v=X9i2i07wPUw
 
     // -------- For each modifier in $ourModifiers ----------
 
     @each $modKey, $modVal in $ourModifiers {
 
-      // Use toMap() to convert the modifier keypair into a MAP of form
+      // Use toMap() to convert the modifier keypair into a MAP:
       //    $modProps: (
       //      slug: STRING,
       //      isReadable: BOOL,
@@ -161,6 +162,12 @@
 
         }
 
+      // '-' “oh hey.”
+
+      //                     '-' “hey.”
+
+      // '-' “hey.”
+
       // OK, cool.
       // So what if there _is_ a modifier object?
 
@@ -170,6 +177,7 @@
 
         // If the modProps.slug is `none`
         // This special case should be display _no_ slug, rather than `none`
+
         @if map-get($modProps, slug) == 'none' {
           $modProps: map-merge($modProps, (slug: ''));
         }
@@ -177,11 +185,15 @@
         // If there are modifiers, $property is a concat of $propertyDefault
         // with _each_ of the values in $modProps.content
         // There's a function for this... multiCat()!!
+        // (=^･ｪ･^=))ﾉ彡☆
+        // (^._.^)ﾉ☆( _ _).oO
+        // (=චᆽච=)
 
         $property: multiCat($propertyDefault, map-get($modProps, content));
 
         // Now we go through to finish setting the $selector.
-        // Check to see if either mod.slug or val.slug is readable
+        // Check to see if either mod.isReadable or
+        // val.isReadable
 
         @if map-has-key($modProps, isReadable) or
             map-has-key($valProps, isReadable) {
@@ -196,7 +208,8 @@
           $mv: map-get($modProps, slug) + map-get($valProps, slug);
         }
 
-        // Once we have $mv, test for $b and build the selector as before.
+        // Once we have $mv, test for $b
+        // and build the selector as before.
 
         @if $b == null {
           $selector: $mv;
@@ -213,6 +226,7 @@
       // We do?!?!?! We do!
 
       // FINALLY, "BUILD THE RULE, MAX!"
+      // https://www.youtube.com/watch?v=R3Igz5SfBCE
 
       %#{$selector} {
         @each $thisProperty in $property {
@@ -223,9 +237,8 @@
         @each $thisProperty in $property {
           #{$thisProperty}: $value !important;
         }
-      }
+      } // ･ﾟ✧
     } // end the modifier loop
   } // end the value loop
 } // end the utility loop
-
 // (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
