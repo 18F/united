@@ -1,0 +1,22 @@
+/*
+-----------------------------
+Order
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$order: (
+  order: (
+    base: ('order', isReadable),
+    modifiers: null,
+    values: map-collect(
+      map-get($global_values, flexOrders)
+    ),
+    property: 'order',
+  )
+)

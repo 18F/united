@@ -1,0 +1,22 @@
+/*
+-----------------------------
+Font Style
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$font-style: (
+  font-style: (
+    base: null,
+    modifiers: null,
+    values: (
+      italic: ('italic', isReadable),
+    ),
+    property: 'font-style',
+  )
+)

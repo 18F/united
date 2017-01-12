@@ -1,0 +1,23 @@
+/*
+-----------------------------
+Text Decoration
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$text-decoration: (
+  text-decoration: (
+    base: null,
+    modifiers: null,
+    values: (
+      underline: ('underline', isReadable),
+      strike: ('strike', isReadable),
+    ),
+    property: 'text-decoration',
+  )
+)

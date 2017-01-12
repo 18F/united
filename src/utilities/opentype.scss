@@ -1,0 +1,23 @@
+/*
+-----------------------------
+Opentype
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$opentype: (
+  opentype: (
+    base: 'ot',
+    modifiers: null,
+    values: (
+      alt: ('ss01' 1, 'kern' 1, isReadable),
+      tnum: ('tnum' 1, 'kern' 1, isReadable),
+    ),
+    property: 'font-feature-settings',
+  )
+)

@@ -64,6 +64,17 @@ output:
 */
 /*
 -----------------------------
+Border Radius
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+/*
+-----------------------------
 Border
 -----------------------------
 usage:
@@ -108,6 +119,17 @@ output:
 */
 /*
 -----------------------------
+Font Style
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+/*
+-----------------------------
 Font Weight
 -----------------------------
 usage:
@@ -130,7 +152,73 @@ output:
 */
 /*
 -----------------------------
+Line Height
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+/*
+-----------------------------
+Line Length
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+/*
+-----------------------------
 Opentype
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+/*
+-----------------------------
+Order
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+/*
+-----------------------------
+Square
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+/*
+-----------------------------
+Text Decoration
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+/*
+-----------------------------
+Text Transform
 -----------------------------
 usage:
   TK
@@ -513,6 +601,12 @@ output:
 
 .b-white {
   border-color: #ffffff !important; }
+
+.rd-rounded {
+  border-radius: 2px !important; }
+
+.rd-pill {
+  border-radius: "10em" !important; }
 
 .bt1px {
   border-top: 1px !important; }
@@ -1161,6 +1255,9 @@ output:
 .serif-s10 {
   font-size: 6.75rem !important; }
 
+.italic {
+  font-style: "italic" !important; }
+
 .fw100 {
   font-weight: 100 !important; }
 
@@ -1191,107 +1288,255 @@ output:
 .lsxloose {
   letter-spacing: 0.15em !important; }
 
+.lh-single {
+  line-height: 1 !important; }
+
+.lh-hed {
+  line-height: 1.05 !important; }
+
+.lh-cap {
+  line-height: 1.3 !important; }
+
+.lh-body {
+  line-height: 1.55 !important; }
+
+.lh-display {
+  line-height: 1.65 !important; }
+
+.ll-narrow {
+  max-width: 17em !important; }
+
+.ll-reading {
+  max-width: 36em !important; }
+
+.ot-alt {
+  -webkit-font-feature-settings: "ss01" 1 "kern" 1 !important;
+  font-feature-settings: "ss01" 1 "kern" 1 !important; }
+
+.ot-tnum {
+  -webkit-font-feature-settings: "tnum" 1 "kern" 1 !important;
+  font-feature-settings: "tnum" 1 "kern" 1 !important; }
+
+.order-0 {
+  -webkit-box-ordinal-group: 1 !important;
+  -ms-flex-order: 0 !important;
+  order: 0 !important; }
+
+.order-1 {
+  -webkit-box-ordinal-group: 2 !important;
+  -ms-flex-order: 1 !important;
+  order: 1 !important; }
+
+.order-2 {
+  -webkit-box-ordinal-group: 3 !important;
+  -ms-flex-order: 2 !important;
+  order: 2 !important; }
+
+.order-3 {
+  -webkit-box-ordinal-group: 4 !important;
+  -ms-flex-order: 3 !important;
+  order: 3 !important; }
+
+.order-4 {
+  -webkit-box-ordinal-group: 5 !important;
+  -ms-flex-order: 4 !important;
+  order: 4 !important; }
+
+.order-5 {
+  -webkit-box-ordinal-group: 6 !important;
+  -ms-flex-order: 5 !important;
+  order: 5 !important; }
+
+.order-6 {
+  -webkit-box-ordinal-group: 7 !important;
+  -ms-flex-order: 6 !important;
+  order: 6 !important; }
+
+.order-7 {
+  -webkit-box-ordinal-group: 8 !important;
+  -ms-flex-order: 7 !important;
+  order: 7 !important; }
+
+.order-8 {
+  -webkit-box-ordinal-group: 9 !important;
+  -ms-flex-order: 8 !important;
+  order: 8 !important; }
+
+.order-9 {
+  -webkit-box-ordinal-group: 10 !important;
+  -ms-flex-order: 9 !important;
+  order: 9 !important; }
+
+.order-10 {
+  -webkit-box-ordinal-group: 11 !important;
+  -ms-flex-order: 10 !important;
+  order: 10 !important; }
+
+.order-11 {
+  -webkit-box-ordinal-group: 12 !important;
+  -ms-flex-order: 11 !important;
+  order: 11 !important; }
+
+.order-first {
+  -webkit-box-ordinal-group: 0 !important;
+  -ms-flex-order: -1 !important;
+  order: -1 !important; }
+
+.order-last {
+  -webkit-box-ordinal-group: 100 !important;
+  -ms-flex-order: 99 !important;
+  order: 99 !important; }
+
 .sq10ct {
-  : 10% !important; }
+  height: 10% !important;
+  width: 10% !important; }
 
 .sq20ct {
-  : 20% !important; }
+  height: 20% !important;
+  width: 20% !important; }
 
 .sq25ct {
-  : 25% !important; }
+  height: 25% !important;
+  width: 25% !important; }
 
 .sq30ct {
-  : 30% !important; }
+  height: 30% !important;
+  width: 30% !important; }
 
 .sq33ct {
-  : 33.33333% !important; }
+  height: 33.33333% !important;
+  width: 33.33333% !important; }
 
 .sq40ct {
-  : 40% !important; }
+  height: 40% !important;
+  width: 40% !important; }
 
 .sq50ct {
-  : 50% !important; }
+  height: 50% !important;
+  width: 50% !important; }
 
 .sq60ct {
-  : 60% !important; }
+  height: 60% !important;
+  width: 60% !important; }
 
 .sq66ct {
-  : 66.66667% !important; }
+  height: 66.66667% !important;
+  width: 66.66667% !important; }
 
 .sq70ct {
-  : 70% !important; }
+  height: 70% !important;
+  width: 70% !important; }
 
 .sq75ct {
-  : 75% !important; }
+  height: 75% !important;
+  width: 75% !important; }
 
 .sq80ct {
-  : 80% !important; }
+  height: 80% !important;
+  width: 80% !important; }
 
 .sq90ct {
-  : 90% !important; }
+  height: 90% !important;
+  width: 90% !important; }
 
 .sq100ct {
-  : 100% !important; }
+  height: 100% !important;
+  width: 100% !important; }
 
 .sq05 {
-  : 0.25rem !important; }
+  height: 0.25rem !important;
+  width: 0.25rem !important; }
 
 .sq1 {
-  : 0.5rem !important; }
+  height: 0.5rem !important;
+  width: 0.5rem !important; }
 
 .sq105 {
-  : 0.75rem !important; }
+  height: 0.75rem !important;
+  width: 0.75rem !important; }
 
 .sq2 {
-  : 1rem !important; }
+  height: 1rem !important;
+  width: 1rem !important; }
 
 .sq3 {
-  : 1.5rem !important; }
+  height: 1.5rem !important;
+  width: 1.5rem !important; }
 
 .sq4 {
-  : 2rem !important; }
+  height: 2rem !important;
+  width: 2rem !important; }
 
 .sq5 {
-  : 2.5rem !important; }
+  height: 2.5rem !important;
+  width: 2.5rem !important; }
 
 .sq6 {
-  : 3rem !important; }
+  height: 3rem !important;
+  width: 3rem !important; }
 
 .sq7 {
-  : 3.5rem !important; }
+  height: 3.5rem !important;
+  width: 3.5rem !important; }
 
 .sq8 {
-  : 4rem !important; }
+  height: 4rem !important;
+  width: 4rem !important; }
 
 .sq9 {
-  : 4.5rem !important; }
+  height: 4.5rem !important;
+  width: 4.5rem !important; }
 
 .sq10 {
-  : 5rem !important; }
+  height: 5rem !important;
+  width: 5rem !important; }
 
 .sq15 {
-  : 7.5rem !important; }
+  height: 7.5rem !important;
+  width: 7.5rem !important; }
 
 .sq20 {
-  : 10rem !important; }
+  height: 10rem !important;
+  width: 10rem !important; }
 
 .sq25 {
-  : 12.5rem !important; }
+  height: 12.5rem !important;
+  width: 12.5rem !important; }
 
 .sq30 {
-  : 15rem !important; }
+  height: 15rem !important;
+  width: 15rem !important; }
 
 .sq40 {
-  : 20rem !important; }
+  height: 20rem !important;
+  width: 20rem !important; }
 
 .sq50 {
-  : 25rem !important; }
+  height: 25rem !important;
+  width: 25rem !important; }
 
 .sq1px {
-  : 1px !important; }
+  height: 1px !important;
+  width: 1px !important; }
 
 .sq2px {
-  : 2px !important; }
+  height: 2px !important;
+  width: 2px !important; }
+
+.underline {
+  text-decoration: "underline" !important; }
+
+.strike {
+  text-decoration: "strike" !important; }
+
+.capitalize {
+  text-transform: "capitalize" !important; }
+
+.lowercase {
+  text-transform: "lowercase" !important; }
+
+.uppercase {
+  text-transform: "uppercase" !important; }
 
 .w10ct {
   width: 10% !important; }

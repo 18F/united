@@ -83,8 +83,19 @@
   } @else {
     $values: remove($values, isReadable);
     @return (
-      slug: $values,
+      slug: unquote(nth($values, 1)),
       isReadable: true,
     );
   }
 };
+
+// utilitiesMap
+
+@function utilitiesMap($import){
+  $s: ();
+  @each $utility in $import {
+    $thisUtility: '$' + $utility;
+    $s: join($s, $thisUtility);
+  }
+  @return $s;
+}

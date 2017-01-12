@@ -1,0 +1,22 @@
+/*
+-----------------------------
+Line Height
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$line-height: (
+  line-height: (
+    base: 'lh',
+    modifiers: null,
+    values: map-collect(
+      map-get($global_values, lineHeights)
+    ),
+    property: 'line-height',
+  )
+)

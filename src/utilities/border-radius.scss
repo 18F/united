@@ -1,0 +1,23 @@
+/*
+-----------------------------
+Border Radius
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$border-radius: (
+  border-radius: (
+    base: 'rd',
+    modifiers: null,
+    values: (
+      rounded: ($rounded, isReadable),
+      pill: ('10em', isReadable),
+    ),
+    property: 'border-radius',
+  )
+)

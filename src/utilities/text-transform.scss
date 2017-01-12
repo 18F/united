@@ -1,0 +1,24 @@
+/*
+-----------------------------
+Text Transform
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$text-transform: (
+  text-transform: (
+    base: null,
+    modifiers: null,
+    values: (
+      capitalize: ('capitalize', isReadable),
+      lowercase: ('lowercase', isReadable),
+      uppercase: ('uppercase', isReadable),
+    ),
+    property: 'text-transform',
+  )
+)

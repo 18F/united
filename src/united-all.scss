@@ -4,17 +4,25 @@
 @import "mixins";
 @import "fonts";
 
-// import each utility...
+// add utilities to import to $import...
 
 @import "utilities/background";
 @import "utilities/border-color";
+@import "utilities/border-radius";
 @import "utilities/border";
 @import "utilities/color";
 @import "utilities/font-face";
 @import "utilities/font-size";
+@import "utilities/font-style";
 @import "utilities/font-weight";
 @import "utilities/letter-spacing";
+@import "utilities/line-height";
+@import "utilities/line-length";
+@import "utilities/opentype";
+@import "utilities/order";
 @import "utilities/square";
+@import "utilities/text-decoration";
+@import "utilities/text-transform";
 @import "utilities/width";
 
 // ...then the utility packager

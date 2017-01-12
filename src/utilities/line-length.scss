@@ -1,0 +1,23 @@
+/*
+-----------------------------
+Line Length
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$line-length: (
+  line-length: (
+    base: 'll',
+    modifiers: null,
+    values: (
+      narrow: ($text-narrow-width, isReadable),
+      reading: ($text-max-width, isReadable),
+    ),
+    property: 'max-width',
+  )
+)
