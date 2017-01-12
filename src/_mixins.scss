@@ -1,0 +1,39 @@
+
+
+@mixin u-media-query ($breakpoint) {
+    @if (map-has-key($breakpoints, $breakpoint) != true) {
+      @error "Media query mixin requires a valid breakpoint";
+    }
+    @else if(map-get($breakpoints, $breakpoint)) == null {
+      @content;
+    }
+    @else {
+      @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+        @content;
+      }
+    }
+}
+
+@mixin generate-variants {
+  @each $variant, $variant-prefix, $modifier in $variants {
+    $prefix: "#{$variant-prefix}#{$breakpoint-prefix}-";
+    @if ($breakpoint-prefix == null ) {
+      $prefix: "#{$variant-prefix}";
+    }
+    #{$prefix} {
+      @content;
+    }
+  }
+}
+
+@mixin generate-breakpoint-prefixes {
+  @each $breakpoint-name, $breakpoint-value in $breakpoints {
+    $breakpoint-prefix: "#{$breakpoint-name}-";
+
+    @include u-media-query($breakpoint-name) {
+      .#{$breakpoint-prefix} {
+        @content;
+      }
+    }
+  }
+}
