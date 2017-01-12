@@ -1,2050 +1,230 @@
-/*
+@import "vars";
+@import "values";
+@import "functions";
+@import "mixins";
+@import "utilities";
+//@import "fonts";
 
-  FONTS
 
-*/
 
-$static-font-path: '';
+// Let's build some utility class rules!
 
-// 18Franklin light
-@font-face {
-  font-family: '18Franklin-webfont';
-  font-style: normal;
-  font-weight: 300;
-  src:
-    url('#{$static-font-path}/18Franklin-Light.woff2') format('woff2'),
-    url('#{$static-font-path}/18Franklin-Light.woff') format('woff'),
-    url('#{$static-font-path}/18Franklin-Light.ttf') format('truetype');
-}
+// loop through the $utilities in _utilities.scss
+@each $utilityName, $utility in $utilities {
 
-@font-face {
-  font-family: '18Franklin-webfont';
-  font-style: italic;
-  font-weight: 300;
-  src:
-    url('#{$static-font-path}/18Franklin-LightItalic.woff2') format('woff2'),
-    url('#{$static-font-path}/18Franklin-LightItalic.woff') format('woff'),
-    url('#{$static-font-path}/18Franklin-LightItalic.ttf') format('truetype');
-}
+  // set intital variants
+  // $propertyDefault is a single value for all these utilities
 
-// 18Franklin regular
-@font-face {
-  font-family: '18Franklin-webfont';
-  font-style: normal;
-  font-weight: 400;
-  src:
-    url('#{$static-font-path}/18Franklin-Regular.woff2') format('woff2'),
-    url('#{$static-font-path}/18Franklin-Regular.woff') format('woff'),
-    url('#{$static-font-path}/18Franklin-Regular.ttf') format('truetype');
-}
+  $baseProps: null;
+  $modifier: null;
+  $selector: null;
+  $propertyDefault: map-get($utility, property);
+  $property: null;
+  $value: null;
+  $ourModifiers: ();
+  $b: null;
+  $v: null;
+  $mv: null;
 
-// 18Franklin medium
-@font-face {
-  font-family: '18Franklin-webfont';
-  font-style: normal;
-  font-weight: 500;
-  src:
-    url('#{$static-font-path}/18Franklin-Medium.woff2') format('woff2'),
-    url('#{$static-font-path}/18Franklin-Medium.woff') format('woff'),
-    url('#{$static-font-path}/18Franklin-Medium.ttf') format('truetype');
-}
+  //    If there's a base, use baseToMap() to convert it into a MAP of form
+  //    $baseProps: (
+  //      slug: STRING,
+  //      isReadable: BOOL,
+  //    )
 
-// 18Franklin bold
-@font-face {
-  font-family: '18Franklin-webfont';
-  font-style: normal;
-  font-weight: 700;
-  src:
-    url('#{$static-font-path}/18Franklin-Bold.woff2') format('woff2'),
-    url('#{$static-font-path}/18Franklin-Bold.woff') format('woff'),
-    url('#{$static-font-path}/18Franklin-Bold.ttf') format('truetype');
-}
+  @if map-has-key($utility, base) {
+    $baseProps: baseToMap(map-get($utility, base));
 
-// Roboto mono regular
-@font-face {
-  font-family: 'Roboto Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: url('#{$static-font-path}/RobotoMono-Regular.ttf');
-}
+    // And set $b (used in the selector constructor, below) to baseProps.slug.
 
-// Roboto mono bold
-@font-face {
-  font-family: 'Roboto Mono';
-  font-style: normal;
-  font-weight: 700;
-  src: url('#{$static-font-path}/RobotoMono-Bold.ttf');
-}
+    $b: map-get($baseProps, slug);
 
+    // Otherwise, assign it null props.
 
-/*
-
-  VARIABLES
-
-*/
-
-// color
-
-// named colors
-$color-blue:                    #056dd4;
-$color-brightmint:              #00df99;
-$color-cream:                   #f5f5f3;
-$color-gold:                    #f4b400;
-$color-green:                   #0baf00; // dark option #438500
-$color-red:                     #be4900;
-
-$color-trueblack:               #000000;
-$color-textblack:               #333333;
-$color-darkgray:                #555555;
-$color-mediumgray:              #8e8e8e;
-$color-mediumgray-trans:        rgba(0, 0, 0, .4);
-$color-lightgray:               #d3d3d3;
-$color-lightestgray:            #f5f5f3;
-$color-white:                   #ffffff; // perhaps redundant
-
-// typefaces
-$font-sans:                     '18Franklin-webfont', system, -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-$font-serif:                    'Georgia', 'Cambria', 'Times New Roman', 'Times', serif;
-$font-mono:                     'Roboto Mono', 'Bitstream Vera Sans Mono', 'Consolas', 'Courier', monospace;
-
-// utility class scale suffixes
-
-$u-breakpoints: '-xs', '-s', '-m', '-l', '-xl';
-
-// spacing scale and grid
-// spacing is calculated on multiples of a base grid (here, 8px)
-$grid-base:          8; // unitless for some calculations
-$grid-base-px:       8px; // the same value in px
-$grid-type:          $grid-base * 2; // establishes the base type size (16px) for rem calculations; unitless here
-$grid-type-px:       #{$grid-type}px; // the base type size in px
-
-// calculates multiples of the base grid in units of rem
-$grid-05:            #{($grid-base / 2 / $grid-type)}rem;     // 4px
-$grid-1:             #{($grid-base / $grid-type)}rem;         // 8px
-$grid-105:           #{($grid-base * 1.5 / $grid-type)}rem;   // 12px
-$grid-2:             #{($grid-base * 2 / $grid-type)}rem;     // 16px
-$grid-3:             #{($grid-base * 3 / $grid-type)}rem;     // 24px
-$grid-4:             #{($grid-base * 4 / $grid-type)}rem;     // 32px
-$grid-5:             #{($grid-base * 5 / $grid-type)}rem;     // 40px
-$grid-6:             #{($grid-base * 6 / $grid-type)}rem;     // 48px
-$grid-7:             #{($grid-base * 7 / $grid-type)}rem;     // 56px
-$grid-8:             #{($grid-base * 8 / $grid-type)}rem;     // 64px
-$grid-9:             #{($grid-base * 9 / $grid-type)}rem;     // 72px
-$grid-10:            #{($grid-base * 10 / $grid-type)}rem;    // 80px
-$grid-15:            #{($grid-base * 15 / $grid-type)}rem;    // 80px
-$grid-20:            #{($grid-base * 20 / $grid-type)}rem;    // 160px
-$grid-25:            #{($grid-base * 25 / $grid-type)}rem;    // 160px
-$grid-30:            #{($grid-base * 30 / $grid-type)}rem;    // 240px
-$grid-40:            #{($grid-base * 40 / $grid-type)}rem;    // 320px
-$grid-50:            #{($grid-base * 50 / $grid-type)}rem;    // 400px
-
-$grid-n05:            #{($grid-base / -2 / $grid-type)}rem;     // 4px
-$grid-n1:             #{($grid-base * -1 / $grid-type)}rem;     // 8px
-$grid-n105:           #{($grid-base * -1.5 / $grid-type)}rem;   // 12px
-$grid-n2:             #{($grid-base * -2 / $grid-type)}rem;     // 16px
-$grid-n3:             #{($grid-base * -3 / $grid-type)}rem;     // 24px
-$grid-n4:             #{($grid-base * -4 / $grid-type)}rem;     // 32px
-$grid-n5:             #{($grid-base * -5 / $grid-type)}rem;     // 40px
-
-// widths
-$nav-width:          $grid-base-px * 75;          // 600px;
-$site-max-width:     $grid-base-px * 130;         // 1040px;
-$text-max-width:     36em;
-$text-narrow-width:  17em;
-
-// type scale
-$sans-s1:           (10rem / $grid-type);         // 10px;
-$sans-s2:           (12rem / $grid-type);         // 12px;
-$sans-s3:           (13rem / $grid-type);         // 13px;
-$sans-s4:           (14rem / $grid-type);         // 14px;
-$sans-s5:           (16rem / $grid-type);         // 16px;
-$sans-s6:           (18rem / $grid-type);         // 18px;
-$sans-s7:           (20rem / $grid-type);         // 20px;
-$sans-s8:           (24rem / $grid-type);         // 24px;
-$sans-s9:           (40rem / $grid-type);         // 40px;
-$sans-s10:          (100rem / $grid-type);        // 100px;
-
-$sans-s: $sans-s1, $sans-s2, $sans-s3, $sans-s4, $sans-s5, $sans-s6, $sans-s7, $sans-s8, $sans-s9, $sans-s10;
-
-$serif-s1:          (10rem / $grid-type);         // 10px;
-$serif-s2:          (13rem / $grid-type);         // 13px;
-$serif-s3:          (14rem / $grid-type);         // 14px;
-$serif-s4:          (15rem / $grid-type);         // 15px;
-$serif-s5:          (17rem / $grid-type);         // 17px;
-$serif-s6:          (19rem / $grid-type);         // 19px;
-$serif-s7:          (23rem / $grid-type);         // 23px;
-$serif-s8:          (27rem / $grid-type);         // 27px;
-$serif-s9:          (43rem / $grid-type);         // 43px;
-$serif-s10:         (108rem / $grid-type);        // 108px;
-
-$serif-s: $serif-s1, $serif-s2, $serif-s3, $serif-s4, $serif-s5, $serif-s6, $serif-s7, $serif-s8, $serif-s9, $serif-s10;
-
-$mono-s1:           (10rem / $grid-type);         // 10px;
-$mono-s2:           (12rem / $grid-type);         // 12px;
-$mono-s3:           (13rem / $grid-type);         // 13px;
-$mono-s4:           (15rem / $grid-type);         // 15px;
-$mono-s5:           (16rem / $grid-type);         // 16px;
-$mono-s6:           (18rem / $grid-type);         // 18px;
-$mono-s7:           (23rem / $grid-type);         // 23px;
-$mono-s8:           (25rem / $grid-type);         // 25px;
-$mono-s9:           (44rem / $grid-type);         // 44px;
-$mono-s10:          (104rem / $grid-type);        // 104px;
-
-$mono-s: $mono-s1, $mono-s2, $mono-s3, $mono-s4, $mono-s5, $mono-s6, $mono-s7, $mono-s8, $mono-s9, $mono-s10;
-
-$lh-single:    1;
-$lh-hed:       1.05;
-$lh-cap:       1.3;
-$lh-body:      1.55;
-$lh-display:   1.65;
-
-// border radius
-$rounded:         2px;
-$not-rounded:       0;
-
-// function helpers
-$u-percentages: '5', '10', '20', '25', '30', '33', '40', '50', '60', '66', '70', '75', '80', '90', '100';
-$u-percentage-suffix: 'ct';
-$u-percentages-s: '5%', '10%', '20%', '25%', '30%', '33.3333333333%', '40%', '50%', '60%', '66.6666666666', '70%', '75%', '80%', '90%', '100%';
-$u-pixels: '1px', '2px';
-$u-gridscale: '05', '1', '105', '2', '3', '4', '5', '6', '7', '8', '9', '10', '15', '20', '25', '30', '40', '50';
-$grid-s: $grid-05, $grid-1, $grid-105, $grid-2, $grid-3, $grid-4, $grid-5, $grid-6, $grid-7, $grid-8, $grid-9, $grid-10, $grid-15, $grid-20, $grid-25, $grid-30, $grid-40, $grid-50;
-$grid-n-multipliers: '05', '1', '105', '2', '3', '4', '5';
-$grid-n-s: $grid-n05, $grid-n1, $grid-n105, $grid-n2, $grid-n3, $grid-n4, $grid-n5;
-
-/* stylelint-disable declaration-no-important  */
-
-/*
-
-  COLORS
-
-  Base:
-    ---
-
-  Modifiers:
-    ---
-
-  Values:
-    {$color}
-
-*/
-
-$color-s: 'blue', 'brightmint', 'cream', 'gold', 'green', 'red', 'trueblack', 'textblack', 'darkgray', 'mediumgray', 'mediumgray-trans', 'lightgray', 'lightestgray', 'white';
-$colorvar-s: $color-blue, $color-brightmint, $color-cream, $color-gold, $color-green, $color-red, $color-trueblack, $color-textblack, $color-darkgray, $color-mediumgray, $color-mediumgray-trans, $color-lightgray, $color-lightestgray, $color-white;
-
-@for $i from 1 through length($color-s) {
-  %#{nth($color-s, $i)} { color: nth($colorvar-s, $i); }
-  .#{nth($color-s, $i)} { color: nth($colorvar-s, $i) !important; }
-}
-
-/*
-
-  BACKGROUND
-
-  Base:
-    bg
-
-  Modifiers:
-    ---
-
-  Values:
-    -{$color}
-
-  Reset:
-    transparent
-
-*/
-
-@for $i from 1 through length($color-s) {
-  %bg-#{nth($color-s, $i)} { background-color: nth($colorvar-s, $i); }
-  .bg-#{nth($color-s, $i)} { background-color: nth($colorvar-s, $i) !important; }
-}
-
-%bg0 { background-color: transparent; }
-.bg0 { background-color: transparent !important; }
-
-/*
-
-  FONT SIZE
-
-  Base:
-    ---
-
-  Modifiers:
-    sans
-    serif
-    mono
-
-  Values:
-    -s1
-    -s2
-    -s3
-    -s4
-    -s5
-    -s6
-    -s7
-    -s8
-    -s9
-    -s10
-
-  Reset:
-    -s6
-
-*/
-
-$u-typescale: '-s1', '-s2', '-s3', '-s4', '-s5', '-s6', '-s7', '-s8', '-s9', '-s10';
-
-@for $i from 1 through length($u-typescale) {
-  %sans-s#{$i} {
-    font-family: $font-sans;
-    font-size: nth($sans-s, $i);
-  }
-  .sans-s#{$i} {
-    font-family: $font-sans !important;
-    font-size: nth($sans-s, $i) !important;
-  }
-  %serif-s#{$i} {
-    font-family: $font-serif;
-    font-size: nth($sans-s, $i);
-  }
-  .serif-s#{$i} {
-    font-family: $font-serif !important;
-    font-size: nth($sans-s, $i) !important;
-  }
-  %mono-s#{$i} {
-    font-family: $font-mono;
-    font-size: nth($sans-s, $i);
-  }
-  .mono-s#{$i} {
-    font-family: $font-mono !important;
-    font-size: nth($sans-s, $i) !important;
-  }
-}
-
-%sans0 { font-size: $sans-s6; }
-.sans0 { font-size: $sans-s6 !important; }
-
-%serif0 { font-size: $serif-s6; }
-.serif0 { font-size: $serif-s6 !important; }
-
-%mono0 { font-size: $mono-s6; }
-.mono0 { font-size: $mono-s6 !important; }
-
-/*
-
-  FONT FACE
-
-  Base:
-    font
-
-  Modifiers:
-    ---
-
-  Values:
-    -sans
-    -serif
-    -mono
-
-  Reset:
-    -sans
-
-*/
-
-%font-sans { font-family: $font-sans; }
-.font-sans { font-family: $font-sans !important; }
-
-%font-serif { font-family: $font-serif; }
-.font-serif { font-family: $font-serif !important; }
-
-%font-mono { font-family: $font-mono; }
-.font-mono { font-family: $font-mono !important; }
-
-%font0 { font-family: $font-sans; }
-.font0 { font-family: $font-sans !important; }
-
-/*
-
-  OPENTYPE
-
-  Base:
-    ot
-
-  Modifiers:
-    ---
-
-  Values:
-    -alt
-    -tnum
-
-  Reset:
-    kern
-
-*/
-
-%ot-tnum { font-feature-settings: 'tnum', 'kern'; }
-.ot-tnum { font-feature-settings: 'tnum', 'kern' !important; }
-
-%ot-alt { font-feature-settings: 'ss01', 'kern'; }
-.ot-alt { font-feature-settings: 'ss01', 'kern' !important; }
-
-%ot0 { font-feature-settings: 'kern'; }
-.ot0 { font-feature-settings: 'kern' !important; }
-
-/*
-
-  FONT WEIGHT
-
-  Base:
-    fw
-
-  Modifiers:
-    ---
-
-  Values:
-    100
-    200
-    300
-    400
-    500
-    600
-    700
-    800
-    900
-
-  Reset:
-    500
-
-*/
-
-$fw-s: 100, 200, 300, 400, 500, 600, 700, 800, 900;
-
-@for $i from 1 through length($fw-s) {
-  %fw#{nth($fw-s, $i)} { font-weight: nth($fw-s, $i); }
-  .fw#{nth($fw-s, $i)} { font-weight: nth($fw-s, $i) !important; }
-}
-
-%fw0 { font-weight: 500; }
-.fw0 { font-weight: 500 !important; }
-
-/*
-
-  TYPE STYLE
-
-  Base:
-    ---
-
-  Modifiers:
-    ---
-
-  Values:
-    italic
-    strike
-    underline
-
-  Reset:
-    ---
-
-*/
-
-%italic { font-style: italic; }
-.italic { font-style: italic !important; }
-
-%underline { text-decoration: underline; }
-.underline { text-decoration: underline !important; }
-
-%strike { text-decoration: line-through; }
-.strike { text-decoration: line-through !important; }
-
-%uppercase { text-transform: uppercase; }
-.uppercase { text-transform: uppercase !important; }
-
-%lowercase { text-transform: lowercase; }
-.lowercase { text-transform: lowercase !important; }
-
-%capitalize { text-transform: capitalize; }
-.capitalize { text-transform: capitalize !important; }
-
-/*
-
-  LETTER-SPACING
-
-  Base:
-    ls
-
-  Modifiers:
-    ---
-
-  Values:
-    -loose
-    -vloose
-
-  Reset:
-    ---
-
-*/
-
-%ls-loose { letter-spacing: .1em; }
-.ls-loose { letter-spacing: .1em !important; }
-
-%ls-vloose { letter-spacing: .15em; }
-.ls-vloose { letter-spacing: .15em !important; }
-
-/*
-
-  MEASURE
-
-  Base:
-    measure
-
-  Modifiers:
-    ---
-
-  Values:
-    -reading
-    -narrow
-
-  Reset:
-    none
-
-*/
-
-%measure-reading { max-width: $text-max-width; }
-.measure-reading { max-width: $text-max-width !important; }
-
-%measure-narrow { max-width: $text-narrow-width; }
-.measure-narrow { max-width: $text-narrow-width !important; }
-
-%measure0 { max-width: none; }
-.measure0 { max-width: none !important; }
-
-/*
-
-  LINE HEIGHT
-
-  Base:
-    lh
-
-  Modifiers:
-    ---
-
-  Values:
-    -single
-    -hed
-    -cap
-    -body
-    -display
-
-  Reset:
-    -body
-
-*/
-
-%lh-single { line-height: $lh-single; }
-.lh-single { line-height: $lh-single !important; }
-
-%lh-hed { line-height: $lh-hed; }
-.lh-hed { line-height: $lh-hed !important; }
-
-%lh-cap { line-height: $lh-cap; }
-.lh-cap { line-height: $lh-cap !important; }
-
-%lh-body { line-height: $lh-body; }
-.lh-body { line-height: $lh-body !important; }
-
-%lh-display { line-height: $lh-display; }
-.lh-display { line-height: $lh-display !important; }
-
-%lh0 { line-height: $lh-body; }
-.lh0 { line-height: $lh-body !important; }
-
-/*
-
-  BORDER RADIUS
-
-  Base:
-    rd
-
-  Modifiers:
-    ---
-
-    no modifier applies project $rounded to each corner
-
-  Values:
-    -rounded
-    -pill
-
-  Reset:
-    none
-
-*/
-
-%rd-rounded { border-radius: $rounded; }
-.rd-rounded { border-radius: $rounded !important; }
-
-%rd-pill { border-radius: 10em; }
-.rd-pill { border-radius: 10em !important; }
-
-%rd0 { border-radius: none; }
-.rd0 { border-radius: none !important; }
-
-/*
-
-  FLEX ORDER
-
-  Base:
-    order-
-
-  Modifiers:
-    ---
-
-  Values:
-    0
-    1
-    2
-    3
-    4
-    5
-    6
-    7
-    8
-    9
-    10
-    11
-    first
-    last
-
-  Reset:
-    auto
-
-*/
-
-@for $i from 0 through 11 {
-  %order-#{$i} { order: $i; }
-  .order-#{$i} { order: $i !important; }
-}
-
-%order-first { order: -1; }
-.order-first { order: -1 !important; }
-
-%order-last { order: 99; }
-.order-last { order: 99 !important; }
-
-%order0 { order: auto; }
-.order0 { order: auto !important; }
-
-/*
-
-  WIDTH
-
-  Base:
-    w
-
-  Modifiers:
-    ---
-
-  Values:
-    Percentages:
-      5ct
-      10ct
-      20ct
-      25ct
-      30ct
-      33ct
-      40ct
-      50ct
-      60ct
-      66ct
-      70ct
-      75ct
-      80ct
-      90ct
-      100ct
-    Grid:
-      05
-      1
-      105
-      2
-      3
-      4
-      5
-      6
-      7
-      8
-      9
-      10
-      15
-      20
-      30
-      40
-      50
-    Pixel:
-      1px
-      2px
-
-  Reset:
-    auto
-
-*/
-
-@for $i from 1 through length($u-percentages) {
-  %w#{nth($u-percentages, $i)}#{$u-percentage-suffix} {
-    width: #{nth($u-percentages-s, $i)};
-  }
-  .w#{nth($u-percentages, $i)}#{$u-percentage-suffix} {
-    width: #{nth($u-percentages-s, $i)} !important;
-  }
-}
-
-@for $i from 1 through length($u-gridscale) {
-  %w#{nth($u-gridscale, $i)} {
-    width: nth($grid-s, $i);
-  }
-  .w#{nth($u-gridscale, $i)} {
-    width: nth($grid-s, $i) !important;
-  }
-}
-
-@for $i from 1 through length($u-pixels) {
-  %w#{nth($u-pixels, $i)} {
-    width: #{nth($u-pixels, $i)};
-  }
-  .w#{nth($u-pixels, $i)} {
-    width: #{nth($u-pixels, $i)} !important;
-  }
-}
-
-%w0 { width: auto; }
-.w0 { width: auto !important; }
-
-/*
-
-  HEIGHT
-
-  Base:
-    h
-
-  Modifiers:
-    ---
-
-  Values:
-    Percentages:
-      5ct
-      10ct
-      20ct
-      25ct
-      30ct
-      33ct
-      40ct
-      50ct
-      60ct
-      66ct
-      70ct
-      75ct
-      80ct
-      90ct
-      100ct
-    Grid:
-      05
-      1
-      105
-      2
-      3
-      4
-      5
-      6
-      7
-      8
-      9
-      10
-      15
-      20
-      30
-      40
-      50
-    Pixel:
-      1px
-      2px
-
-  Reset:
-    auto
-
-*/
-
-@for $i from 1 through length($u-percentages) {
-  %h#{nth($u-percentages, $i)}#{$u-percentage-suffix} {
-    height: #{nth($u-percentages-s, $i)};
-  }
-  .h#{nth($u-percentages, $i)}#{$u-percentage-suffix} {
-    height: #{nth($u-percentages-s, $i)} !important;
-  }
-}
-
-@for $i from 1 through length($u-gridscale) {
-  %h#{nth($u-gridscale, $i)} {
-    height: nth($grid-s, $i);
-  }
-  .h#{nth($u-gridscale, $i)} {
-    height: nth($grid-s, $i) !important;
-  }
-}
-
-@for $i from 1 through length($u-pixels) {
-  %h#{nth($u-pixels, $i)} {
-    height: #{nth($u-pixels, $i)};
-  }
-  .h#{nth($u-pixels, $i)} {
-    height: #{nth($u-pixels, $i)} !important;
-  }
-}
-
-%h0 { height: auto; }
-.h0 { height: auto !important; }
-
-/*
-
-  SQUARE
-
-  Base:
-    sq
-
-  Modifiers:
-    v   vertical (top and bottom)
-    h   horizontal (left and right)
-    t   top
-    r   right
-    b   bottom
-    l   left
-
-    if no modifier, value applies to all sides
-
-  Values:
-    Percentages:
-      5ct
-      10ct
-      20ct
-      25ct
-      30ct
-      33ct
-      40ct
-      50ct
-      60ct
-      66ct
-      70ct
-      75ct
-      80ct
-      90ct
-      100ct
-    Grid:
-      05
-      1
-      105
-      2
-      3
-      4
-      5
-      6
-      7
-      8
-      9
-      10
-      15
-      20
-      30
-      40
-      50
-    Pixel:
-      1px
-      2px
-
-  Reset:
-    auto
-
-*/
-
-@for $i from 1 through length($u-percentages) {
-  %sq#{nth($u-percentages, $i)}#{$u-percentage-suffix} {
-    height: #{nth($u-percentages-s, $i)};
-    width: #{nth($u-percentages-s, $i)};
-  }
-  .sq#{nth($u-percentages, $i)}#{$u-percentage-suffix} {
-    height: #{nth($u-percentages-s, $i)} !important;
-    width: #{nth($u-percentages-s, $i)} !important;
-  }
-}
-
-@for $i from 1 through length($u-gridscale) {
-  %sq#{nth($u-gridscale, $i)} {
-    height: nth($grid-s, $i);
-    width: nth($grid-s, $i);
-  }
-  .sq#{nth($u-gridscale, $i)} {
-    height: nth($grid-s, $i) !important;
-    width: nth($grid-s, $i) !important;
-  }
-}
-
-@for $i from 1 through length($u-pixels) {
-  %sq#{nth($u-pixels, $i)} {
-    height: #{nth($u-pixels, $i)};
-    width: #{nth($u-pixels, $i)};
-  }
-  .sq#{nth($u-pixels, $i)} {
-    height: #{nth($u-pixels, $i)} !important;
-    width: #{nth($u-pixels, $i)} !important;
-  }
-}
-
-%sq0 {
-  height: auto;
-  width: auto;
-}
-
-.sq0 {
-  height: auto !important;
-  width: auto !important;
-}
-
-/*
-
-  PADDING
-
-  Base:
-    sq
-
-  Modifiers:
-    x   horizontal (left and right)
-    y   vertical (top and bottom)
-    t   top
-    r   right
-    b   bottom
-    l   left
-
-    if no modifier, value applies to all sides
-
-  Values:
-    Grid:
-      05
-      1
-      105
-      2
-      3
-      4
-      5
-      6
-      7
-      8
-      9
-      10
-      15
-      20
-      30
-      40
-      50
-    Pixel:
-      1px
-      2px
-
-  Reset:
-    0
-
-*/
-
-@for $i from 1 through length($u-gridscale) {
-  %p#{nth($u-gridscale, $i)} { padding: nth($grid-s, $i); }
-  .p#{nth($u-gridscale, $i)} { padding: nth($grid-s, $i) !important; }
-
-  %py#{nth($u-gridscale, $i)} {
-    padding-bottom: nth($grid-s, $i);
-    padding-top: nth($grid-s, $i);
+  } @else {
+    $baseProps: (
+      slug: null,
+    );
   }
 
-  .py#{nth($u-gridscale, $i)} {
-    padding-bottom: nth($grid-s, $i) !important;
-    padding-top: nth($grid-s, $i) !important;
-  }
+  // Each utility rule takes a value, so let's start here and begin building.
+  // Values are held in a MAP, where each individual value has the keypair
+  // KEY   :  VALUE
+  // [slug]:  [value], [isReadable]*
 
-  %px#{nth($u-gridscale, $i)} {
-    padding-left: nth($grid-s, $i);
-    padding-right: nth($grid-s, $i);
-  }
-
-  .px#{nth($u-gridscale, $i)} {
-    padding-left: nth($grid-s, $i) !important;
-    padding-right: nth($grid-s, $i) !important;
-  }
-
-  %pt#{nth($u-gridscale, $i)} { padding-top: nth($grid-s, $i); }
-  .pt#{nth($u-gridscale, $i)} { padding-top: nth($grid-s, $i) !important; }
-
-  %pr#{nth($u-gridscale, $i)} { padding-right: nth($grid-s, $i); }
-  .pr#{nth($u-gridscale, $i)} { padding-right: nth($grid-s, $i) !important; }
-
-  %pb#{nth($u-gridscale, $i)} { padding-bottom: nth($grid-s, $i); }
-  .pb#{nth($u-gridscale, $i)} { padding-bottom: nth($grid-s, $i) !important; }
-
-  %pl#{nth($u-gridscale, $i)} { padding-left: nth($grid-s, $i); }
-  .pl#{nth($u-gridscale, $i)} { padding-left: nth($grid-s, $i) !important; }
-}
-
-@for $i from 1 through length($u-pixels) {
-  %p#{nth($u-pixels, $i)} { padding: #{nth($u-pixels, $i)}; }
-  .p#{nth($u-pixels, $i)} { padding: #{nth($u-pixels, $i)} !important; }
-
-  %py#{nth($u-pixels, $i)} {
-    padding-bottom: #{nth($u-pixels, $i)};
-    padding-top: #{nth($u-pixels, $i)};
-  }
+  // -------- For each value in utility.values ----------
 
-  .py#{nth($u-pixels, $i)} {
-    padding-bottom: #{nth($u-pixels, $i)} !important;
-    padding-top: #{nth($u-pixels, $i)} !important;
-  }
+  @each $valKey, $valValue in map-get($utility, values) {
 
-  %px#{nth($u-pixels, $i)} {
-    padding-left: #{nth($u-pixels, $i)};
-    padding-right: #{nth($u-pixels, $i)};
-  }
+    // Use toMap() to convert the value keypair into a MAP of form
+    //    $valProps: (
+    //      slug: STRING,
+    //      [isReadable: BOOL,]*
+    //      values: LIST,
+    //    )
 
-  .px#{nth($u-pixels, $i)} {
-    padding-left: #{nth($u-pixels, $i)} !important;
-    padding-right: #{nth($u-pixels, $i)} !important;
-  }
+    // This makes the value easier to manipulate.
 
-  %pt#{nth($u-pixels, $i)} { padding-top: #{nth($u-pixels, $i)}; }
-  .pt#{nth($u-pixels, $i)} { padding-top: #{nth($u-pixels, $i)} !important; }
+    // We'll keep the $valProps MAP around,
+    // as we'll need it to build both the rule's value and its selector.
 
-  %pr#{nth($u-pixels, $i)} { padding-right: #{nth($u-pixels, $i)}; }
-  .pr#{nth($u-pixels, $i)} { padding-right: #{nth($u-pixels, $i)} !important; }
-
-  %pb#{nth($u-pixels, $i)} { padding-bottom: #{nth($u-pixels, $i)}; }
-  .pb#{nth($u-pixels, $i)} { padding-bottom: #{nth($u-pixels, $i)} !important; }
-
-  %pl#{nth($u-pixels, $i)} { padding-left: #{nth($u-pixels, $i)}; }
-  .pl#{nth($u-pixels, $i)} { padding-left: #{nth($u-pixels, $i)} !important; }
-}
-
-%p0 { padding: 0; }
-.p0 { padding: 0 !important; }
-
-%px0 {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.px0 {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-%py0 {
-  padding-bottom: 0;
-  padding-top: 0;
-}
-
-.py0 {
-  padding-bottom: 0 !important;
-  padding-top: 0 !important;
-}
-
-%pt0 { padding-top: 0; }
-.pt0 { padding-top: 0 !important; }
-
-%pr0 { padding-right: 0; }
-.pr0 { padding-right: 0 !important; }
-
-%pb0 { padding-bottom: 0; }
-.pb0 { padding-bottom: 0 !important; }
-
-%pl0 { padding-left: 0; }
-.pl0 { padding-left: 0 !important; }
-
-%p0 { padding: 0; }
-.p0 { padding: 0 !important; }
-
-%px0 {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.px0 {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-%py0 {
-  padding-bottom: 0;
-  padding-top: 0;
-}
-
-.py0 {
-  padding-bottom: 0 !important;
-  padding-top: 0 !important;
-}
-
-%pt0 { padding-top: 0; }
-.pt0 { padding-top: 0 !important; }
-
-%pr0 { padding-right: 0; }
-.pr0 { padding-right: 0 !important; }
-
-%pb0 { padding-bottom: 0; }
-.pb0 { padding-bottom: 0 !important; }
-
-%pl0 { padding-left: 0; }
-.pl0 { padding-left: 0 !important; }
-
-/*
-
-  MARGIN
-
-  Base:
-    m
-
-  Modifiers:
-    x   horizontal (left and right)
-    y   vertical (top and bottom)
-    t   top
-    r   right
-    b   bottom
-    l   left
-
-    if no modifier, value applies to all sides
-
-  Values:
-    Grid:
-      05
-      1
-      105
-      2
-      3
-      4
-      5
-      6
-      7
-      8
-      9
-      10
-      15
-      20
-      30
-      40
-      50
-    Pixel:
-      1px
-      2px
-    Negative Grid:
-      n05
-      n1
-      n105
-      n2
-      n3
-      n4
-      n5
-    Negative Pixel:
-      n1px
-      n2px
-
-  Reset:
-    0
-
-*/
-
-@for $i from 1 through length($u-gridscale) {
-  %m#{nth($u-gridscale, $i)} { margin: nth($grid-s, $i); }
-  .m#{nth($u-gridscale, $i)} { margin: nth($grid-s, $i) !important; }
-
-  %my#{nth($u-gridscale, $i)} {
-    margin-bottom: nth($grid-s, $i);
-    margin-top: nth($grid-s, $i);
-  }
-
-  .my#{nth($u-gridscale, $i)} {
-    margin-bottom: nth($grid-s, $i) !important;
-    margin-top: nth($grid-s, $i) !important;
-  }
-
-  %mx#{nth($u-gridscale, $i)} {
-    margin-left: nth($grid-s, $i);
-    margin-right: nth($grid-s, $i);
-  }
-
-  .mx#{nth($u-gridscale, $i)} {
-    margin-left: nth($grid-s, $i) !important;
-    margin-right: nth($grid-s, $i) !important;
-  }
-
-  %mt#{nth($u-gridscale, $i)} { margin-top: nth($grid-s, $i); }
-  .mt#{nth($u-gridscale, $i)} {
-    margin-top: nth($grid-s, $i) !important;
-  }
-  %mr#{nth($u-gridscale, $i)} { margin-right: nth($grid-s, $i); }
-  .mr#{nth($u-gridscale, $i)} { margin-right: nth($grid-s, $i) !important; }
-
-  %mb#{nth($u-gridscale, $i)} { margin-bottom: nth($grid-s, $i); }
-  .mb#{nth($u-gridscale, $i)} { margin-bottom: nth($grid-s, $i) !important; }
-
-  %ml#{nth($u-gridscale, $i)} { margin-left: nth($grid-s, $i); }
-  .ml#{nth($u-gridscale, $i)} { margin-left: nth($grid-s, $i) !important; }
-}
-
-@for $i from 1 through length($u-pixels) {
-  %m#{nth($u-pixels, $i)} { margin: #{nth($u-pixels, $i)}; }
-  .m#{nth($u-pixels, $i)} { margin: #{nth($u-pixels, $i)} !important; }
-
-  %my#{nth($u-pixels, $i)} {
-    margin-bottom: #{nth($u-pixels, $i)};
-    margin-top: #{nth($u-pixels, $i)};
-  }
-
-  .my#{nth($u-pixels, $i)} {
-    margin-bottom: #{nth($u-pixels, $i)} !important;
-    margin-top: #{nth($u-pixels, $i)} !important;
-  }
-
-  %mx#{nth($u-pixels, $i)} {
-    margin-left: #{nth($u-pixels, $i)};
-    margin-right: #{nth($u-pixels, $i)};
-  }
-
-  .mx#{nth($u-pixels, $i)} {
-    margin-left: #{nth($u-pixels, $i)} !important;
-    margin-right: #{nth($u-pixels, $i)} !important;
-  }
-
-  %mt#{nth($u-pixels, $i)} { margin-top: #{nth($u-pixels, $i)}; }
-  .mt#{nth($u-pixels, $i)} { margin-top: #{nth($u-pixels, $i)} !important; }
-
-  %mr#{nth($u-pixels, $i)} { margin-right: #{nth($u-pixels, $i)}; }
-  .mr#{nth($u-pixels, $i)} { margin-right: #{nth($u-pixels, $i)} !important; }
-
-  %mb#{nth($u-pixels, $i)} { margin-bottom: #{nth($u-pixels, $i)}; }
-  .mb#{nth($u-pixels, $i)} { margin-bottom: #{nth($u-pixels, $i)} !important; }
-
-  %ml#{nth($u-pixels, $i)} { margin-left: #{nth($u-pixels, $i)}; }
-  .ml#{nth($u-pixels, $i)} { margin-left: #{nth($u-pixels, $i)} !important; }
-}
-
-@for $i from 1 through 7 {
-  %mn#{nth($u-gridscale, $i)} { margin: nth($grid-n-s, $i); }
-  .mn#{nth($u-gridscale, $i)} { margin: nth($grid-n-s, $i) !important; }
-
-  %myn#{nth($u-gridscale, $i)} {
-    margin-bottom: nth($grid-n-s, $i);
-    margin-top: nth($grid-n-s, $i);
-  }
-
-  .myn#{nth($u-gridscale, $i)} {
-    margin-bottom: nth($grid-n-s, $i) !important;
-    margin-top: nth($grid-n-s, $i) !important;
-  }
-
-  %mxn#{nth($u-gridscale, $i)} {
-    margin-left: nth($grid-n-s, $i);
-    margin-right: nth($grid-n-s, $i);
-  }
-
-  .mxn#{nth($u-gridscale, $i)} {
-    margin-left: nth($grid-n-s, $i) !important;
-    margin-right: nth($grid-n-s, $i) !important;
-  }
-
-  %mtn#{nth($u-gridscale, $i)} { margin-top: nth($grid-n-s, $i); }
-  .mtn#{nth($u-gridscale, $i)} { margin-top: nth($grid-n-s, $i) !important; }
-
-  %mrn#{nth($u-gridscale, $i)} { margin-right: nth($grid-n-s, $i); }
-  .mrn#{nth($u-gridscale, $i)} { margin-right: nth($grid-n-s, $i) !important; }
-
-  %mbn#{nth($u-gridscale, $i)} { margin-bottom: nth($grid-n-s, $i); }
-  .mbn#{nth($u-gridscale, $i)} { margin-bottom: nth($grid-n-s, $i) !important; }
-
-  %mln#{nth($u-gridscale, $i)} { margin-left: nth($grid-n-s, $i); }
-  .mln#{nth($u-gridscale, $i)} { margin-left: nth($grid-n-s, $i) !important; }
-}
-
-@for $i from 1 through length($u-pixels) {
-  %myn#{nth($u-pixels, $i)} {
-    margin-bottom: -#{nth($u-pixels, $i)};
-    margin-top: -#{nth($u-pixels, $i)};
-  }
-
-  .myn#{nth($u-pixels, $i)} {
-    margin-bottom: -#{nth($u-pixels, $i)} !important;
-    margin-top: -#{nth($u-pixels, $i)} !important;
-  }
-
-  %mxn#{nth($u-pixels, $i)} {
-    margin-left: -#{nth($u-pixels, $i)};
-    margin-right: -#{nth($u-pixels, $i)};
-  }
-
-  .mxn#{nth($u-pixels, $i)} {
-    margin-left: -#{nth($u-pixels, $i)} !important;
-    margin-right: -#{nth($u-pixels, $i)} !important;
-  }
-
-  %mtn#{nth($u-pixels, $i)} { margin-top: -#{nth($u-pixels, $i)}; }
-  .mtn#{nth($u-pixels, $i)} { margin-top: -#{nth($u-pixels, $i)} !important; }
-
-  %mrn#{nth($u-pixels, $i)} { margin-right: -#{nth($u-pixels, $i)}; }
-  .mrn#{nth($u-pixels, $i)} { margin-right: -#{nth($u-pixels, $i)} !important; }
-
-  %mbn#{nth($u-pixels, $i)} { margin-bottom: -#{nth($u-pixels, $i)}; }
-  .mbn#{nth($u-pixels, $i)} { margin-bottom: -#{nth($u-pixels, $i)} !important; }
-  %mln#{nth($u-pixels, $i)} { margin-left: -#{nth($u-pixels, $i)}; }
-  .mln#{nth($u-pixels, $i)} { margin-left: -#{nth($u-pixels, $i)} !important; }
-}
-
-%m0 { margin: 0; }
-.m0 { margin: 0 !important; }
-
-%mx0 {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.mx0 {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-%my0 {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.my0 {
-  margin-bottom: 0 !important;
-  margin-top: 0 !important;
-}
-
-%mt0 { margin-top: 0; }
-.mt0 { margin-top: 0 !important; }
-
-%mr0 { margin-right: 0; }
-.mr0 { margin-right: 0 !important; }
-
-%mb0 { margin-bottom: 0; }
-.mb0 { margin-bottom: 0 !important; }
-
-%ml0 { margin-left: 0; }
-.ml0 { margin-left: 0 !important; }
-
-%m0 { margin: 0; }
-.m0 { margin: 0 !important; }
-
-%mx0 {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.mx0 {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-%my0 {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.my0 {
-  margin-bottom: 0 !important;
-  margin-top: 0 !important;
-}
-
-%mt0 { margin-top: 0; }
-.mt0 { margin-top: 0 !important; }
+    $valProps: toMap($valKey, $valValue);
 
-%mr0 { margin-right: 0; }
-.mr0 { margin-right: 0 !important; }
+    // In fact, let's set our rule's value now.
 
-%mb0 { margin-bottom: 0; }
-.mb0 { margin-bottom: 0 !important; }
+    $value: map-get($valProps, content);
 
-%ml0 { margin-left: 0; }
-.ml0 { margin-left: 0 !important; }
+    // And we'll set the $v as valProps.slug for use in
+    // constructing the selector.
 
-/*
+    $v: map-get($valProps, slug);
 
-  FLOAT
 
-  Base:
-    float
+    // -------- Start of Modifiers ----------
 
-  Modifiers:
-    ---
+    // Now we'll check for modifiers and loop through them
+    // to get the props we need to build our rule.
 
-  Values:
-    -left
-    -right
+    // Modifiers are held in a MAP,
+    // where each individual modifer has the keypair
+    // KEY   :  VALUE
+    // [slug]:  [value], [isReadable]*
 
-  Reset:
-    `none`
+    // So, check for modifiers.
 
-*/
+    @if map-has-key($utility, modifiers) {
 
-%float-left { float: left; }
-.float-left { float: left !important; }
-
-%float-right { float: right; }
-.float-right { float: right !important; }
-
-%float0 { float: none; }
-.float0 { float: none !important; }
-
-/*
-
-  CLEARFIX
-
-  Base:
-    clearfix
-
-  Modifiers:
-    ---
-
-  Values:
-    ---
-
-  Reset:
-    ---
-
-*/
-
-%clearfix:after,
-%clearfix:before {
-  content: ' ';
-  display: table;
-}
-
-.clearfix:after,
-.clearfix:before {
-  content: ' ' !important;
-  display: table !important;
-}
-
-%clearfix:after { clear: both; }
-
-.clearfix:after { clear: both !important; }
-
-/*
-
-  CLEAR
-
-  Base:
-    clear
-
-  Modifiers:
-    ---
-
-  Values:
-    -left
-    -right
-
-    no value clears both
-
-  Reset:
-    `none`
-
-*/
-
-%clear { clear: both; }
-.clear { clear: both !important; }
-
-%clear-right { clear: right; }
-.clear-right { clear: right !important; }
-
-%clear-left { clear: left; }
-.clear-left { clear: left !important; }
-
-%clear0 { clear: none; }
-.clear0 { clear: none !important; }
-
-/*
-
-  BORDER WIDTH
-
-  Base:
-    b
-
-  Modifiers:
-    x   horizontal (left and right)
-    y   vertical (top and bottom)
-    t   top
-    r   right
-    b   bottom
-    l   left
-
-    if no modifier, value applies to all sides
-
-  Values:
-    Grid:
-      05
-      1
-      105
-      2
-      3
-      4
-      5
-      6
-      7
-      8
-      9
-      10
-      15
-      20
-      30
-      40
-      50
-    Pixel:
-      1px
-      2px
-
-  Reset:
-    `none`
-
-*/
-
-@for $i from 1 through length($u-pixels) {
-  %b#{nth($u-pixels, $i)} { border: #{nth($u-pixels, $i)} solid; }
-  .b#{nth($u-pixels, $i)} { border: #{nth($u-pixels, $i)} solid !important; }
-
-  %bx#{nth($u-pixels, $i)} {
-    border-left: #{nth($u-pixels, $i)} solid;
-    border-right: #{nth($u-pixels, $i)} solid;
-  }
-
-  .bx#{nth($u-pixels, $i)} {
-    border-left: #{nth($u-pixels, $i)} solid !important;
-    border-right: #{nth($u-pixels, $i)} solid !important;
-  }
-
-  %by#{nth($u-pixels, $i)} {
-    border-bottom: #{nth($u-pixels, $i)} solid;
-    border-top: #{nth($u-pixels, $i)} solid;
-  }
-
-  .by#{nth($u-pixels, $i)} {
-    border-bottom: #{nth($u-pixels, $i)} solid !important;
-    border-top: #{nth($u-pixels, $i)} solid !important;
-  }
-
-  %bt#{nth($u-pixels, $i)} { border-top: #{nth($u-pixels, $i)} solid; }
-  .bt#{nth($u-pixels, $i)} { border-top: #{nth($u-pixels, $i)} solid !important; }
-
-  %br#{nth($u-pixels, $i)} { border-right: #{nth($u-pixels, $i)} solid; }
-  .br#{nth($u-pixels, $i)} { border-right: #{nth($u-pixels, $i)} solid !important; }
-
-  %bb#{nth($u-pixels, $i)} { border-bottom: #{nth($u-pixels, $i)} solid; }
-  .bb#{nth($u-pixels, $i)} { border-bottom: #{nth($u-pixels, $i)} solid !important; }
-
-  %bl#{nth($u-pixels, $i)} { border-left: #{nth($u-pixels, $i)} solid; }
-  .bl#{nth($u-pixels, $i)} { border-left: #{nth($u-pixels, $i)} solid !important; }
-}
-
-@for $i from 1 through 2 {
-  %b#{nth($u-gridscale, $i)} { border: nth($grid-s, $i) solid; }
-  .b#{nth($u-gridscale, $i)} { border: nth($grid-s, $i) solid !important; }
-
-  %bx#{nth($u-gridscale, $i)} {
-    border-left: nth($grid-s, $i) solid;
-    border-right: nth($grid-s, $i) solid;
-  }
-
-  .bx#{nth($u-gridscale, $i)} {
-    border-left: nth($grid-s, $i) solid !important;
-    border-right: nth($grid-s, $i) solid !important;
-  }
+      // If there is one, capture it as $ourModifiers.
 
-  %by#{nth($u-gridscale, $i)} {
-    border-bottom: nth($grid-s, $i) solid;
-    border-top: nth($grid-s, $i) solid;
-  }
+      $ourModifiers: map-get($utility, modifiers);
+    } @else {
 
-  .by#{nth($u-gridscale, $i)} {
-    border-bottom: nth($grid-s, $i) solid !important;
-    border-top: nth($grid-s, $i) solid !important;
-  }
+      // If there isn't one, build a dummy so we can keep
+      // all our build in the same loop.
 
-  %bt#{nth($u-gridscale, $i)} { border-top: nth($grid-s, $i) solid; }
-  .bt#{nth($u-gridscale, $i)} { border-top: nth($grid-s, $i) solid !important; }
+      $ourModifiers: (
+        slug: null,
+      );
+    }
 
-  %br#{nth($u-gridscale, $i)} { border-right: nth($grid-s, $i) solid; }
-  .br#{nth($u-gridscale, $i)} { border-right: nth($grid-s, $i) solid !important; }
+    // OK! C'mon, let's loop!
 
-  %bb#{nth($u-gridscale, $i)} { border-bottom: nth($grid-s, $i) solid; }
-  .bb#{nth($u-gridscale, $i)} { border-bottom: nth($grid-s, $i) solid !important; }
+    // -------- For each modifier in $ourModifiers ----------
 
-  %bl#{nth($u-gridscale, $i)} { border-left: nth($grid-s, $i) solid; }
-  .bl#{nth($u-gridscale, $i)} { border-left: nth($grid-s, $i) solid !important; }
-}
+    @each $modKey, $modVal in $ourModifiers {
 
-%b0 { border: none; }
-.b0 { border: none !important; }
+      // Use toMap() to convert the modifier keypair into a MAP of form
+      //    $modProps: (
+      //      slug: STRING,
+      //      isReadable: BOOL,
+      //      values: LIST,
+      //    )
 
-%bx0 {
-  border-left: none;
-  border-right: none;
-}
+      // Just as we did before with the value keypair.
 
-.bx0 {
-  border-left: none !important;
-  border-right: none !important;
-}
+      $modProps: toMap($modKey, $modVal);
 
-%by0 {
-  border-bottom: none;
-  border-top: none;
-}
+      // -------- if the modifier is null ----------
 
-.by0 {
-  border-bottom: none !important;
-  border-top: none !important;
-}
+      @if map-get($modProps, content) == null {
 
-%bt0 { border-top: none; }
-.bt0 { border-top: none !important; }
+        // If modProps.values is null, there's no modifier property
+        // and we can set our rule's $property now
+        // since $property is simply $propertyDefault.
 
-%br0 { border-right: none; }
-.br0 { border-right: none !important; }
+        $property: $propertyDefault;
 
-%bb0 { border-bottom: none; }
-.bb0 { border-bottom: none !important; }
+        // We can also build the $selector if modProps.slug is null!
+        // First, we can test to see if selector $b is null
 
-%bl0 { border-left: none; }
-.bl0 { border-left: none !important; }
+        @if $b == null {
 
-/*
+          // If it _is_ null, the rule's selector is $v.
 
-  BORDER COLOR
+          $selector: $v;
+        }
 
-  Base:
-    b
+        // Otherwise, if baseProps.isReadable, or valProps.isReadable
 
-  Modifiers:
-    t   top
-    r   right
-    b   bottom
-    l   left
+        @if map-has-key($baseProps, isReadable) or
+            map-has-key($valProps, isReadable) {
 
-    if no modifier, value applies to all sides
+          // selector is joined with a '-'
 
-  Values:
-    -$colors
-    -transparent
+          $selector: $b + '-' + $v;
+        } @else {
 
-  Reset:
-    ---
+          // otherwise, it gets a simple join.
 
-*/
+          $selector: $b + $v;
 
-@for $i from 1 through length($color-s) {
-  %b-#{nth($color-s, $i)} { border-color: nth($colorvar-s, $i); }
-  .b-#{nth($color-s, $i)} { border-color: nth($colorvar-s, $i) !important; }
+          // Nice! We just took care of the non-modifier cases!
 
-  %bt-#{nth($color-s, $i)} { border-top-color: nth($colorvar-s, $i); }
-  .bt-#{nth($color-s, $i)} { border-top-color: nth($colorvar-s, $i) !important; }
+        }
 
-  %br-#{nth($color-s, $i)} { border-right-color: nth($colorvar-s, $i); }
-  .br-#{nth($color-s, $i)} { border-right-color: nth($colorvar-s, $i) !important; }
+      // OK, cool.
+      // So what if there _is_ a modifier object?
 
-  %bb-#{nth($color-s, $i)} { border-bottom-color: nth($colorvar-s, $i); }
-  .bb-#{nth($color-s, $i)} { border-bottom-color: nth($colorvar-s, $i) !important; }
+      // -------- if the modifier is NOT null ----------
 
-  %bl-#{nth($color-s, $i)} { border-left-color: nth($colorvar-s, $i); }
-  .bl-#{nth($color-s, $i)} { border-left-color: nth($colorvar-s, $i) !important; }
-}
+      } @else {
 
-/*
+        // If the modProps.slug is `none`
+        // This special case should be display _no_ slug, rather than `none`
+        @if map-get($modProps, slug) == 'none' {
+          $modProps: map-merge($modProps, (slug: ''));
+        }
 
-  BORDER STYLE
+        // If there are modifiers, $property is a concat of $propertyDefault
+        // with _each_ of the values in $modProps.content
+        // There's a function for this... multiCat()!!
 
-  Base:
-    b
+        $property: multiCat($propertyDefault, map-get($modProps, content));
 
-  Modifiers:
-    t   top
-    r   right
-    b   bottom
-    l   left
+        // Now we go through to finish setting the $selector.
+        // Check to see if either mod.slug or val.slug is readable
 
-    if no modifier, value applies to all sides
+        @if map-has-key($modProps, isReadable) or
+            map-has-key($valProps, isReadable) {
 
-  Values:
-    -solid
-    -dashed
-    -dotted
+          // If so, join with a '-' into selector $mv.
 
-  Reset:
-    ---
+          $mv: map-get($modProps, slug) + '-' + map-get($valProps, slug);
+        } @else {
 
-*/
+          // If not, just join into selector $mv.
 
-$bs-s: 'solid', 'dashed', 'dotted';
+          $mv: map-get($modProps, slug) + map-get($valProps, slug);
+        }
 
-@for $i from 1 through length($bs-s) {
-  %b-#{nth($bs-s, $i)} { border-style: nth($bs-s, $i); }
-  .b-#{nth($bs-s, $i)} { border-color: nth($bs-s, $i) !important; }
+        // Once we have $mv, test for $b and build the selector as before.
 
-  %bt-#{nth($bs-s, $i)} { border-top-color: nth($bs-s, $i); }
-  .bt-#{nth($bs-s, $i)} { border-top-color: nth($bs-s, $i) !important; }
+        @if $b == null {
+          $selector: $mv;
+        } @elseif map-get($baseProps, isReadable) or
+                  map-get($modProps, isReadable) {
+          $selector: $b + '-' + $mv;
+        } @else {
+          $selector: $b + $mv;
+        }
+      } // finished setting modifier vars
 
-  %br-#{nth($bs-s, $i)} { border-right-color: nth($bs-s, $i); }
-  .br-#{nth($bs-s, $i)} { border-right-color: nth($bs-s, $i) !important; }
+      // Hey. Did we just finish $selector?
+      // And do we also have $property and $value?
+      // We do?!?!?! We do!
 
-  %bb-#{nth($bs-s, $i)} { border-bottom-color: nth($bs-s, $i); }
-  .bb-#{nth($bs-s, $i)} { border-bottom-color: nth($bs-s, $i) !important; }
+      // FINALLY, "BUILD THE RULE, MAX!"
 
-  %bl-#{nth($bs-s, $i)} { border-left-color: nth($bs-s, $i); }
-  .bl-#{nth($bs-s, $i)} { border-left-color: nth($bs-s, $i) !important; }
-}
-
-/*
-
-  DISPLAY
-
-  Base:
-    ---
-
-  Modifiers:
-    ---
-
-  Values:
-    block
-    inline
-    inline-block
-    hide
-
-  Reset:
-    ---
-
-*/
-
-%block { display: block; }
-.block { display: block !important; }
-
-%inline { display: inline; }
-.inline { display: inline !important; }
-
-%inline-block { display: inline-block; }
-.inline-block { display: inline-block !important; }
-
-%hide { display: none; }
-.hide { display: none !important; }
-
-/*
-
-  VERTICAL ALIGN
-
-  Base:
-    va
-
-  Modifiers:
-    ---
-
-  Values:
-    -baseline
-    -bottom
-    -middle
-    -sub
-    -super
-    -text-bottom
-    -text-top
-    -top
-
-  Reset:
-    ---
-
-*/
-
-$va-s: baseline, bottom, middle, sub, super, text-bottom, text-top, top;
-
-@for $i from 1 through length($va-s) {
-  %va-#{nth($va-s, $i)} { vertical-align: nth($va-s, $i); }
-  .va-#{nth($va-s, $i)} { vertical-align: nth($va-s, $i) !important; }
-}
-
-/*
-
-  POSITION
-
-  Base:
-    pos
-
-  Modifiers:
-    ---
-
-  Values:
-    -absolute
-    -fixed
-    -relative
-    -static
-    -sticky
-
-  Reset:
-    inherit
-
-*/
-
-$pos-s: absolute, fixed, relative, static, sticky;
-
-@for $i from 1 through length($pos-s) {
-  %pos-#{nth($pos-s, $i)} { position: nth($pos-s, $i); }
-  .pos-#{nth($pos-s, $i)} { position: nth($pos-s, $i) !important; }
-}
-
-/*
-
-  MANUAL POSITION
-
-  Base:
-    ---
-
-  Modifiers:
-    top-
-    right-
-    bottom-
-    left-
-
-  Values:
-    Percentages:
-      5ct
-      10ct
-      20ct
-      25ct
-      30ct
-      33ct
-      40ct
-      50ct
-      60ct
-      66ct
-      70ct
-      75ct
-      80ct
-      90ct
-      100ct
-    Grid:
-      05
-      1
-      105
-      2
-      3
-      4
-      5
-      6
-      7
-      8
-      9
-      10
-      15
-      20
-      30
-      40
-      50
-    Pixel:
-      1px
-      2px
-    Negative Grid:
-      n05
-      n1
-      n105
-      n2
-      n3
-      n4
-      n5
-    Negative Pixel:
-      n1px
-      n2px
-
-  Reset:
-    auto
-
-*/
-
-@for $i from 1 through length($u-gridscale) {
-  %top-#{nth($u-gridscale, $i)} { top: nth($grid-s, $i); }
-  %right-#{nth($u-gridscale, $i)} { right: nth($grid-s, $i); }
-  %bottom-#{nth($u-gridscale, $i)} { bottom: nth($grid-s, $i); }
-  %left-#{nth($u-gridscale, $i)} { left: nth($grid-s, $i); }
-  .top-#{nth($u-gridscale, $i)} { top: nth($grid-s, $i) !important; }
-  .right-#{nth($u-gridscale, $i)} { right: nth($grid-s, $i) !important; }
-  .bottom-#{nth($u-gridscale, $i)} { bottom: nth($grid-s, $i) !important; }
-  .left-#{nth($u-gridscale, $i)} { left: nth($grid-s, $i) !important; }
-}
-
-@for $i from 1 through 7 {
-  %top-n#{nth($u-gridscale, $i)} { top: nth($grid-n-s, $i); }
-  %right-n#{nth($u-gridscale, $i)} { right: nth($grid-n-s, $i); }
-  %bottom-n#{nth($u-gridscale, $i)} { bottom: nth($grid-n-s, $i); }
-  %left-n#{nth($u-gridscale, $i)} { left: nth($grid-n-s, $i); }
-  .top-n#{nth($u-gridscale, $i)} { top: nth($grid-n-s, $i) !important; }
-  .right-n#{nth($u-gridscale, $i)} { right: nth($grid-n-s, $i) !important; }
-  .bottom-n#{nth($u-gridscale, $i)} { bottom: nth($grid-n-s, $i) !important; }
-  .left-n#{nth($u-gridscale, $i)} { left: nth($grid-n-s, $i) !important; }
-}
-
-@for $i from 1 through length($u-pixels) {
-  %top-#{nth($u-pixels, $i)} { top: #{nth($u-pixels, $i)}; }
-  %right-#{nth($u-pixels, $i)} { right: #{nth($u-pixels, $i)}; }
-  %bottom-#{nth($u-pixels, $i)} { bottom: #{nth($u-pixels, $i)}; }
-  %left-#{nth($u-pixels, $i)} { left: #{nth($u-pixels, $i)}; }
-  .top-#{nth($u-pixels, $i)} { top: #{nth($u-pixels, $i)} !important; }
-  .right-#{nth($u-pixels, $i)} { right: #{nth($u-pixels, $i)} !important; }
-  .bottom-#{nth($u-pixels, $i)} { bottom: #{nth($u-pixels, $i)} !important; }
-  .left-#{nth($u-pixels, $i)} { left: #{nth($u-pixels, $i)} !important; }
-}
-
-@for $i from 1 through length($u-pixels) {
-  %top-n#{nth($u-pixels, $i)} { top: -#{nth($u-pixels, $i)}; }
-  %right-n#{nth($u-pixels, $i)} { right: -#{nth($u-pixels, $i)}; }
-  %bottom-n#{nth($u-pixels, $i)} { bottom: -#{nth($u-pixels, $i)}; }
-  %left-n#{nth($u-pixels, $i)} { left: -#{nth($u-pixels, $i)}; }
-  .top-n#{nth($u-pixels, $i)} { top: -#{nth($u-pixels, $i)} !important; }
-  .right-n#{nth($u-pixels, $i)} { right: -#{nth($u-pixels, $i)} !important; }
-  .bottom-n#{nth($u-pixels, $i)} { bottom: -#{nth($u-pixels, $i)} !important; }
-  .left-n#{nth($u-pixels, $i)} { left: -#{nth($u-pixels, $i)} !important; }
-}
-
-@for $i from 1 through length($u-percentages) {
-  %top-#{nth($u-percentages, $i)}#{$u-percentage-suffix} { top: #{nth($u-percentages-s, $i)}; }
-  %right-#{nth($u-percentages, $i)}#{$u-percentage-suffix} { right: #{nth($u-percentages-s, $i)}; }
-  %bottom-#{nth($u-percentages, $i)}#{$u-percentage-suffix} { bottom: #{nth($u-percentages-s, $i)}; }
-  %left-#{nth($u-percentages, $i)}#{$u-percentage-suffix} { left: #{nth($u-percentages-s, $i)}; }
-  .top-#{nth($u-percentages, $i)}#{$u-percentage-suffix} { top: #{nth($u-percentages-s, $i)} !important; }
-  .right-#{nth($u-percentages, $i)}#{$u-percentage-suffix} { right: #{nth($u-percentages-s, $i)} !important; }
-  .bottom-#{nth($u-percentages, $i)}#{$u-percentage-suffix} { bottom: #{nth($u-percentages-s, $i)} !important; }
-  .left-#{nth($u-percentages, $i)}#{$u-percentage-suffix} { left: #{nth($u-percentages-s, $i)} !important; }
-}
-
-%top-0 { top: 0; }
-%right-0 { right: 0; }
-%bottom-0 { bottom: 0; }
-%left-0 { left: 0; }
-.top-0 { top: 0 !important; }
-.right-0 { right: 0 !important; }
-.bottom-0 { bottom: 0 !important; }
-.left-0 { left: 0 !important; }
-
-%top-- { top: auto; }
-%right-- { right: auto; }
-%bottom-- { bottom: auto; }
-%left-- { left: auto; }
-.top-- { top: auto !important; }
-.right-- { right: auto !important; }
-.bottom-- { bottom: auto !important; }
-.left-- { left: auto !important; }
-
-/*
-
-  WHITESPACE
-
-  Base:
-    ws
-
-  Modifiers:
-    ---
-
-  Values:
-    -normal
-    -nowrap
-    -pre
-    -pre-line
-    -pre-wrap
-
-  Reset:
-    normal
-
-*/
-
-$ws-s: normal, nowrap, pre, pre-line, pre-wrap;
-
-@for $i from 1 through length($ws-s) {
-  %ws-#{nth($ws-s, $i)} { white-space: nth($ws-s, $i); }
-  .ws-#{nth($ws-s, $i)} { white-space: nth($ws-s, $i) !important; }
-}
-
-%ws-- { white-space: normal; }
-.ws-- { white-space: normal !important; }
-
-/*
-
-  GRID
-
-*/
-
-%row {
-  display: flex;
-}
-
-.row {
-  display: flex !important;
-}
-
-//align across the x-axis
-%row-center-x {
-  @extend %row;
-  align-items: center;
-}
-
-.row-center-x {
-  @extend .row;
-  align-items: center !important;
-}
-
-//align bottom (end of cross-axis)
-%row-end {
-  @extend %row;
-  align-items: flex-end;
-}
-
-.row-end {
-  @extend .row;
-  align-items: flex-end !important;
-}
-
-//align top (start of cross-axis)
-%row-start {
-  @extend %row;
-  align-items: flex-start !important;
-}
-
-.row-start {
-  @extend .row;
-  align-items: flex-start;
-}
-
-//align centered on the y-axis
-%row-center-y {
-  @extend %row;
-  justify-content: center;
-}
-
-.row-center-y {
-  @extend .row;
-  justify-content: center !important;
-}
-
-@for $i from 1 through 12 {
-  %col-f#{$i} {
-    flex: #{$i} 0 0;
-  }
-  .col-f#{$i} {
-    flex: #{$i} 0 0 !important;
-  }
-}
-
-%col-fill {
-  flex: 1;
-}
-
-.col-fill {
-  flex: 1 !important;
-}
-
-%col-fit {
-  flex: none;
-}
-
-.col-fit {
-  flex: none !important;
-}
-/* stylelint-enable  */
+      %#{$selector} {
+        @each $thisProperty in $property {
+          #{$thisProperty}: $value;
+        }
+      }
+      .#{$selector} {
+        @each $thisProperty in $property {
+          #{$thisProperty}: $value !important;
+        }
+      }
+    } // end the modifier loop
+  } // end the value loop
+} // end the utility loop
