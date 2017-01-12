@@ -1,0 +1,33 @@
+/*
+-----------------------------
+Margin
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$margin: (
+  margin: (
+    base: m,
+    modifiers: (
+      t: -top,
+      r: -left,
+      b: -bottom,
+      l: -left,
+      y: (-top, -bottom),
+      x: (-left, -right),
+      noModifier: '',
+    ),
+    values: map-collect(
+      map-get($global_values, pixels),
+      map-get($global_values, negPixels),
+      map-get($global_values, grid),
+      map-get($global_values, negGrid)
+    ),
+    property: margin,
+  )
+)

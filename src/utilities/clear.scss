@@ -1,0 +1,24 @@
+/*
+-----------------------------
+Clear
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$clear: (
+  clear: (
+    base: ('clear', isReadable),
+    modifiers: null,
+    values: (
+      noValue: both,
+      left: (left, isReadable),
+      right: (right, isReadable),
+    ),
+    property: 'clear',
+  )
+)

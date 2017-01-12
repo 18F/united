@@ -1,0 +1,31 @@
+/*
+-----------------------------
+Padding
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$padding: (
+  padding: (
+    base: b,
+    modifiers: (
+      t: -top,
+      r: -left,
+      b: -bottom,
+      l: -left,
+      y: (-top, -bottom),
+      x: (-left, -right),
+      noModifier: '',
+    ),
+    values: map-collect(
+      map-get($global_values, pixels),
+      map-get($global_values, grid)
+    ),
+    property: padding,
+  )
+)

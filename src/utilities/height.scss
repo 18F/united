@@ -1,0 +1,24 @@
+/*
+-----------------------------
+Height
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$height: (
+  height: (
+    base: h,
+    modifiers: null,
+    values: map-collect(
+      map-get($global_values, percentage),
+      map-get($global_values, grid),
+      map-get($global_values, pixels)
+    ),
+    property: height,
+  )
+)
