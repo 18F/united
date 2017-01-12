@@ -181,7 +181,9 @@
         // If there are modifiers, $property is a concat of $propertyDefault
         // with _each_ of the values in $modProps.content
         // There's a function for this... multiCat()!!
-        // (=^･ｪ･^=))ﾉ彡☆ (^._.^)ﾉ☆( _ _).oO (=චᆽච=)
+        // (=^･ｪ･^=))ﾉ彡☆
+        // (^._.^)ﾉ☆( _ _).oO
+        // (=චᆽච=)
 
         $property: multiCat($propertyDefault, map-get($modProps, content));
 
@@ -202,7 +204,8 @@
           $mv: map-get($modProps, slug) + map-get($valProps, slug);
         }
 
-        // Once we have $mv, test for $b and build the selector as before.
+        // Once we have $mv, test for $b
+        // and build the selector as before.
 
         @if $b == null {
           $selector: $mv;
@@ -234,5 +237,4 @@
     } // end the modifier loop
   } // end the value loop
 } // end the utility loop
-
 // (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
