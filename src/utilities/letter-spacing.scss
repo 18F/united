@@ -1,0 +1,22 @@
+/*
+-----------------------------
+Letterspacing
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$letter-spacing: (
+  letter-spacing: (
+    base: ls,
+    values: (
+      loose: $ls-loose,
+      xloose: $ls-xloose,
+    ),
+    property: letter-spacing,
+  )
+)

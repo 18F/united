@@ -1,0 +1,20 @@
+/*
+-----------------------------
+Font Size
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$font-size: (
+  font-size: (
+    values: map-collect(
+      map-get($global_values, typeScale)
+    ),
+    property: font-size,
+  )
+)

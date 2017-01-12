@@ -1,0 +1,21 @@
+/*
+-----------------------------
+Font Weight
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$font-weight: (
+  font-weight: (
+    base: fw,
+    values: map-collect(
+      map-get($global_values, fontWeights)
+    ),
+    property: font-weight,
+  )
+)

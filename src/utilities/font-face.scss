@@ -1,0 +1,20 @@
+/*
+-----------------------------
+Font Face
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$font-face: (
+  font-face: (
+    values: map-collect(
+      map-get($global_values, typefaces)
+    ),
+    property: font-size,
+  )
+)

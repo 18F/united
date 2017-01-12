@@ -1,0 +1,20 @@
+/*
+-----------------------------
+Color
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$color: (
+  color: (
+    values: map-collect(
+      map-get($global_values, colors)
+    ),
+    property: color,
+  )
+)

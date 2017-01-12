@@ -1,0 +1,32 @@
+/*
+-----------------------------
+Border
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$border: (
+  border: (
+    base: b,
+    modifiers: (
+      t: -top,
+      r: -left,
+      b: -bottom,
+      l: -left,
+      y: (-top, -bottom),
+      x: (-left, -right),
+      none: '',
+    ),
+    values: map-collect(
+      map-get($global_values, pixels),
+      map-get($global_values, negPixels),
+      map-get($global_values, grid)
+    ),
+    property: border,
+  )
+)

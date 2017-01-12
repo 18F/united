@@ -1,0 +1,19 @@
+/*
+-----------------------------
+Background
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$background: (
+  background: (
+    base: (background, isReadable),
+    values: map-get($global_values, colors),
+    property: background-color,
+  )
+)

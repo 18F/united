@@ -1,0 +1,30 @@
+/*
+-----------------------------
+Border Color
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$border-color: (
+  border-color: (
+    base: b,
+    modifiers: (
+      t: -top-color,
+      r: -left-color,
+      b: -bottom-color,
+      l: -left-color,
+      y: (-top-color, -bottom-color),
+      x: (-left-color, -right-color),
+      none: -color,
+    ),
+    values: map-collect(
+      map-get($global_values, colors)
+    ),
+    property: border,
+  )
+)
