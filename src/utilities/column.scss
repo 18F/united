@@ -1,0 +1,22 @@
+/*
+-----------------------------
+Column
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$column: (
+  column: (
+    base: (col, isReadable),
+    modifiers: null,
+    values: map-collect(
+      map-get($global_values, flex)
+    ),
+    property: flex,
+  )
+);

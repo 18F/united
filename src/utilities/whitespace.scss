@@ -1,0 +1,26 @@
+/*
+-----------------------------
+Whitespace
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$whitespace: (
+  whitespace: (
+    base: ws,
+    modifiers: null,
+    values: (
+      normal: (normal, isReadable),
+      nowrap: (nowrap, isReadable),
+      pre: (pre, isReadable),
+      pre-line: (pre-line, isReadable),
+      pre-wrap: (pre-wrap, isReadable),
+    ),
+    property: 'whitespace',
+  )
+)

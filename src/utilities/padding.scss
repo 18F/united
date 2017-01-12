@@ -24,7 +24,8 @@ $padding: (
     ),
     values: map-collect(
       map-get($global_values, pixels),
-      map-get($global_values, grid)
+      map-get($global_values, grid),
+      map-get($global_values, zero-zero)
     ),
     property: padding,
   )

@@ -1,0 +1,26 @@
+/*
+-----------------------------
+Position
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$position: (
+  position: (
+    base: null,
+    modifiers: null,
+    values: (
+      absolute: (absolute, isReadable),
+      fixed: (fixed, isReadable),
+      relative: (relative, isReadable),
+      static: (static, isReadable),
+      sticky: (sticky, isReadable),
+    ),
+    property: 'position',
+  )
+)

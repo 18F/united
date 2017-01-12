@@ -1,0 +1,25 @@
+/*
+-----------------------------
+Display
+-----------------------------
+usage:
+  TK
+-----------------------------
+output:
+  TK
+-----------------------------
+*/
+
+$display: (
+  display: (
+    base: null,
+    modifiers: null,
+    values: (
+      block: (block, isReadable),
+      hide: (none, isReadable),
+      inline: (inline, isReadable),
+      inline-block: (inline-block, isReadable),
+    ),
+    property: 'display',
+  )
+)

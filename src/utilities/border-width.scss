@@ -1,6 +1,6 @@
 /*
 -----------------------------
-Border
+Border Width
 -----------------------------
 usage:
   TK
@@ -10,7 +10,7 @@ output:
 -----------------------------
 */
 
-$border: (
+$border-width: (
   border: (
     base: b,
     modifiers: (
@@ -22,10 +22,12 @@ $border: (
       x: (-left, -right),
       noModifier: '',
     ),
-    values: map-collect(
-      map-get($global_values, pixels),
-      map-get($global_values, negPixels),
-      map-get($global_values, grid)
+    values:
+      map-collect(
+        map-get($global_values, pixels),
+        map-get($global_values, negPixels),
+        map-get($global_values, grid),
+        map-get($global_values, zero-none)
     ),
     property: border,
   )
