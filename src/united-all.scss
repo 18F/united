@@ -10,16 +10,22 @@
 @import "utilities/border-color";
 @import "utilities/border-radius";
 @import "utilities/border";
+@import "utilities/clear";
 @import "utilities/color";
+@import "utilities/float";
 @import "utilities/font-face";
 @import "utilities/font-size";
 @import "utilities/font-style";
 @import "utilities/font-weight";
+@import "utilities/font-weight";
+@import "utilities/height";
 @import "utilities/letter-spacing";
 @import "utilities/line-height";
 @import "utilities/line-length";
+@import "utilities/margin";
 @import "utilities/opentype";
 @import "utilities/order";
+@import "utilities/padding";
 @import "utilities/square";
 @import "utilities/text-decoration";
 @import "utilities/text-transform";
@@ -166,6 +172,14 @@
 
           $selector: $v;
 
+        // if the value is noValue ('')
+
+        } @elseif map-get($valProps, slug) == '' {
+
+          // selector is a simple join
+
+          $selector: $b + $v;
+
         // Otherwise, if baseProps.isReadable, or valProps.isReadable
 
         } @elseif map-has-key($baseProps, isReadable) or
@@ -197,10 +211,11 @@
 
       } @else {
 
-        // If the modProps.slug is `none`
-        // This special case should be display _no_ slug, rather than `none`
+        // If the modProps.slug is `noModifier`
+        // This special case should be display _no_ slug,
+        // rather than `noModifier`
 
-        @if map-get($modProps, slug) == 'none' {
+        @if map-get($modProps, slug) == 'noModifier' {
           $modProps: map-merge($modProps, (slug: ''));
         }
 

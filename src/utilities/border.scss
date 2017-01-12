@@ -20,7 +20,7 @@ $border: (
       l: -left,
       y: (-top, -bottom),
       x: (-left, -right),
-      none: '',
+      noModifier: '',
     ),
     values: map-collect(
       map-get($global_values, pixels),

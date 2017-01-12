@@ -20,7 +20,7 @@ $border-color: (
       l: -left-color,
       y: (-top-color, -bottom-color),
       x: (-left-color, -right-color),
-      none: -color,
+      noModifier: -color,
     ),
     values: map-collect(
       map-get($global_values, colors)

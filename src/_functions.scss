@@ -57,6 +57,9 @@
 
 @function toMap($key, $values){
   $l: length($values);
+  @if $key == 'noModifier' or $key == 'noValue' {
+    $key: '';
+  }
   @if $l == 1 or nth($values, $l) != isReadable {
     @return (
       slug: $key,
