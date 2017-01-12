@@ -219,14 +219,6 @@
 
       } @else {
 
-        // If the modProps.slug is `noModifier`
-        // This special case should be display _no_ slug,
-        // rather than `noModifier`
-
-        @if map-get($modProps, slug) == 'noModifier' {
-          $modProps: map-merge($modProps, (slug: ''));
-        }
-
         // If there are modifiers, $property is a concat of $propertyDefault
         // with _each_ of the values in $modProps.content
         // There's a function for this... multiCat()!!
