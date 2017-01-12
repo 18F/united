@@ -2,8 +2,24 @@
 @import "values";
 @import "functions";
 @import "mixins";
-@import "utilities";
 @import "fonts";
+
+// import each utility...
+
+@import "utilities/background";
+@import "utilities/border-color";
+@import "utilities/border";
+@import "utilities/color";
+@import "utilities/font-face";
+@import "utilities/font-size";
+@import "utilities/font-weight";
+@import "utilities/letter-spacing";
+@import "utilities/square";
+@import "utilities/width";
+
+// ...then the utility builder
+
+@import "utilities";
 
 
 

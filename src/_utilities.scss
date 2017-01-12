@@ -1,47 +1,12 @@
-$utilities: (
-  background: (
-    base: (background, isReadable),
-    values: map-get($global_values, colors),
-    property: background-color,
-  ),
-  border: (
-    base: b,
-    modifiers: (
-      t: -top,
-      r: -left,
-      b: -bottom,
-      l: -left,
-      y: (-top, -bottom),
-      x: (-left, -right),
-      none: '',
-    ),
-    values: map-collect(
-      map-get($global_values, pixels),
-      map-get($global_values, negPixels),
-      map-get($global_values, grid)
-    ),
-    property: border,
-  ),
-  borderColor: (
-    base: b,
-    modifiers: (
-      t: -top-color,
-      r: -left-color,
-      b: -bottom-color,
-      l: -left-color,
-      y: (-top-color, -bottom-color),
-      x: (-left-color, -right-color),
-      none: -color,
-    ),
-    values: map-collect(
-      map-get($global_values, colors)
-    ),
-    property: border,
-  ),
-  color: (
-    values: map-collect(
-      map-get($global_values, colors)
-    ),
-    property: color,
-  ),
+$utilities: map-collect(
+  $background,
+  $border-color,
+  $border,
+  $color,
+  $font-face,
+  $font-size,
+  $font-weight,
+  $letter-spacing,
+  $square,
+  $width
 );
