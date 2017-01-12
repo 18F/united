@@ -3,7 +3,7 @@
 @import "functions";
 @import "mixins";
 @import "utilities";
-//@import "fonts";
+@import "fonts";
 
 
 
@@ -142,12 +142,11 @@
           // If it _is_ null, the rule's selector is $v.
 
           $selector: $v;
-        }
 
         // Otherwise, if baseProps.isReadable, or valProps.isReadable
 
-        @if map-has-key($baseProps, isReadable) or
-            map-has-key($valProps, isReadable) {
+        } @elseif map-has-key($baseProps, isReadable) or
+                  map-has-key($valProps, isReadable) {
 
           // selector is joined with a '-'
 
@@ -168,6 +167,12 @@
       // -------- if the modifier is NOT null ----------
 
       } @else {
+
+        // If the modProps.slug is `none`
+        // This special case should be display _no_ slug, rather than `none`
+        @if map-get($modProps, slug) == 'none' {
+          $modProps: map-merge($modProps, (slug: ''));
+        }
 
         // If there are modifiers, $property is a concat of $propertyDefault
         // with _each_ of the values in $modProps.content
@@ -222,3 +227,5 @@
     } // end the modifier loop
   } // end the value loop
 } // end the utility loop
+
+// (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
