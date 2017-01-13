@@ -29,14 +29,14 @@ gulp.task('sass', function() {
 		    )
         .pipe(cleanCSS({compatibility: 'ie8'}))
 				.pipe(rename('united.css'))
-        .pipe(gulp.dest('./'))
+        .pipe(gulp.dest('./build/'))
 });
 
 
 // Watch for changes
 
 gulp.task('watch', function() {
-    gulp.watch('src/*.scss', ['sass']);
+    gulp.watch('src/**/*.scss', ['sass']);
 });
 
 
