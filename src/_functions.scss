@@ -102,3 +102,17 @@
   }
   @return $s;
 }
+
+// grid()
+
+@function grid($grid){
+  $gridToRem: #{($grid-base * 2 / $grid-type)}rem;
+  @return $gridToRem;
+}
+
+// px()
+
+@function px($pixels){
+  $pxToRem: #{($pixels / $grid-type)}rem;
+  @return $pxToRem;
+}

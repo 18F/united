@@ -15,8 +15,9 @@ $border-radius: (
     base: 'rd',
     modifiers: null,
     values: (
-      rounded: ($rounded, isReadable),
+      0: '0',
       pill: ('10em', isReadable),
+      rounded: ($border-radius, isReadable),
     ),
     property: 'border-radius',
   )

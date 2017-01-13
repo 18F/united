@@ -1,3 +1,6 @@
+// Collect all the individual utility maps
+// into a single map for looping.
+
 $utilities: map-collect(
   $background,
   $border-color,

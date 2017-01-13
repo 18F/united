@@ -170,11 +170,11 @@ $global_values: (
     body: ($lh-body, isReadable),
     display: ($lh-display, isReadable),
   ),
-);
-
-$breakpoints: (
-  xs: null,
-  sm: 40rem,
-  md: 52rem,
-  lg: 64rem,
+  breakpoints: (
+    xs: $breakpoint-xs,
+    sm: $breakpoint-sm,
+    md: $breakpoint-md,
+    lg: $breakpoint-lg,
+    xl: $breakpoint-xl,
+  )
 );
