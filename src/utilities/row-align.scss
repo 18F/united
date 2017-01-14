@@ -1,0 +1,57 @@
+/*
+----------------------------------------
+Row Align
+----------------------------------------
+usage:
+  .row-[value]
+----------------------------------------
+output:
+  align-items: [value];
+----------------------------------------
+example:
+  .row {
+    display: flex;
+    align-items: center; }
+
+  .row-top {
+    align-items: center; }
+----------------------------------------
+*/
+
+$row-align: (
+  row-align: (
+    base: (row, isReadable),
+    modifiers: null,
+    values: (
+      noValue: (
+        slug: '',
+        content: center,
+      ),
+      top: (
+        slug: top,
+        isReadable: true,
+        content: top,
+        extends: row,
+      ),
+      bottom: (
+        slug: bottom,
+        isReadable: true,
+        content: bottom,
+        extends: row,
+      ),
+      center: (
+        slug: center,
+        isReadable: true,
+        content: center,
+        extends: row,
+      ),
+      stretch: (
+        slug: stretch,
+        isReadable: true,
+        content: stretch,
+        extends: row,
+      ),
+    ),
+    property: align-items,
+  )
+);
