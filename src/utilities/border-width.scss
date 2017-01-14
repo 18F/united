@@ -3,14 +3,17 @@
 Border Width
 ----------------------------------------
 usage:
-  TK
+  .b[modifier]*[-value]
 ----------------------------------------
 output:
-  TK
+  border-[modifier]: [value];
 ----------------------------------------
 example:
-  .NNNNN {
-    NNNNN: NNNNN; }
+  .bt1px {
+    border-top: 1px; }
+
+  .b0 {
+    border: none; }
 ----------------------------------------
 */
 
@@ -29,7 +32,6 @@ $border-width: (
     values:
       map-collect(
         map-get($global_values, pixels),
-        map-get($global_values, negPixels),
         map-get($global_values, grid),
         map-get($global_values, zero-none)
     ),

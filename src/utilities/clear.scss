@@ -3,14 +3,17 @@
 Clear
 ----------------------------------------
 usage:
-  TK
+  .clear-[value]
 ----------------------------------------
 output:
-  TK
+  clear: [value]
 ----------------------------------------
 example:
-  .NNNNN {
-    NNNNN: NNNNN; }
+  .clear {
+    clear: both; }
+
+  .clear-none {
+    clear: none; }
 ----------------------------------------
 */
 
@@ -20,7 +23,9 @@ $clear: (
     modifiers: null,
     values: (
       noValue: both,
+      both: (none, isReadable),
       left: (left, isReadable),
+      none: (none, isReadable),
       right: (right, isReadable),
     ),
     property: 'clear',
