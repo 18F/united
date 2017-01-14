@@ -3,20 +3,23 @@
 Padding
 ----------------------------------------
 usage:
-  TK
+  .p[modifier]*[-]*[value]
 ----------------------------------------
 output:
-  TK
+  padding: [value]
 ----------------------------------------
 example:
-  .NNNNN {
-    NNNNN: NNNNN; }
+  .p0 {
+    padding: none; }
+
+  .pb1px {
+    padding-bottom: 1px; }
 ----------------------------------------
 */
 
 $padding: (
   padding: (
-    base: b,
+    base: p,
     modifiers: (
       t: -top,
       r: -left,
@@ -29,7 +32,7 @@ $padding: (
     values: map-collect(
       map-get($global_values, pixels),
       map-get($global_values, grid),
-      map-get($global_values, zero-zero)
+      map-get($global_values, zero-none)
     ),
     property: padding,
   )

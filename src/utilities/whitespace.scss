@@ -3,14 +3,14 @@
 Whitespace
 ----------------------------------------
 usage:
-  TK
+  ws-[value]
 ----------------------------------------
 output:
-  TK
+  whitespace: [value];
 ----------------------------------------
 example:
-  .NNNNN {
-    NNNNN: NNNNN; }
+  .ws-prewrap {
+    whitespace: pre-wrap; }
 ----------------------------------------
 */
 
@@ -22,8 +22,8 @@ $whitespace: (
       normal: (normal, isReadable),
       nowrap: (nowrap, isReadable),
       pre: (pre, isReadable),
-      pre-line: (pre-line, isReadable),
-      pre-wrap: (pre-wrap, isReadable),
+      preline: (pre-line, isReadable),
+      prewrap: (pre-wrap, isReadable),
     ),
     property: 'whitespace',
   )

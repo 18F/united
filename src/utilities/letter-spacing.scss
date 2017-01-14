@@ -3,14 +3,14 @@
 Letterspacing
 ----------------------------------------
 usage:
-  TK
+  .ls-[modifier]
 ----------------------------------------
 output:
-  TK
+  letter-spacing: [value];
 ----------------------------------------
 example:
-  .NNNNN {
-    NNNNN: NNNNN; }
+  .ls-loose {
+    letter-spacing: .1em; }
 ----------------------------------------
 */
 
@@ -19,6 +19,7 @@ $letter-spacing: (
     base: ls,
     modifiers: null,
     values: (
+      auto: (auto, isReadable),
       loose: $ls-loose,
       xloose: $ls-xloose,
     ),

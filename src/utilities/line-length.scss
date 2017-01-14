@@ -3,14 +3,14 @@
 Line Length
 ----------------------------------------
 usage:
-  TK
+  .ll-[value]
 ----------------------------------------
 output:
-  TK
+  line-length: value;
 ----------------------------------------
 example:
-  .NNNNN {
-    NNNNN: NNNNN; }
+  .ll-max {
+    max-width: none; }
 ----------------------------------------
 */
 
@@ -20,6 +20,7 @@ $line-length: (
     modifiers: null,
     values: (
       narrow: ($text-narrow-width, isReadable),
+      max: (none, isReadable),
       reading: ($text-max-width, isReadable),
     ),
     property: 'max-width',

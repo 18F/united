@@ -3,14 +3,14 @@
 Text Transform
 ----------------------------------------
 usage:
-  TK
+  .[value]
 ----------------------------------------
 output:
-  TK
+  text-transform: value;
 ----------------------------------------
 example:
-  .NNNNN {
-    NNNNN: NNNNN; }
+  .allcaps {
+    text-transform: uppercase; }
 ----------------------------------------
 */
 
@@ -20,8 +20,8 @@ $text-transform: (
     modifiers: null,
     values: (
       capitalize: ('capitalize', isReadable),
-      lowercase: ('lowercase', isReadable),
-      uppercase: ('uppercase', isReadable),
+      lower: ('lowercase', isReadable),
+      allcaps: ('uppercase', isReadable),
     ),
     property: 'text-transform',
   )

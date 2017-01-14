@@ -3,14 +3,15 @@
 Opentype
 ----------------------------------------
 usage:
-  TK
+  .ot-[value]
 ----------------------------------------
 output:
-  TK
+  font-feature-settings: [value];
 ----------------------------------------
 example:
-  .NNNNN {
-    NNNNN: NNNNN; }
+  .ot-alt {
+    font-feature-settings:
+      'ss01' 1, 'kern' 1; }
 ----------------------------------------
 */
 

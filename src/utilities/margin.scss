@@ -3,14 +3,18 @@
 Margin
 ----------------------------------------
 usage:
-  TK
+  .m[modifier]*[-]*[value]
 ----------------------------------------
 output:
-  TK
+  margin: [value]
 ----------------------------------------
 example:
-  .NNNNN {
-    NNNNN: NNNNN; }
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto; }
+
+  .m105 {
+    margin: .75rem; }
 ----------------------------------------
 */
 

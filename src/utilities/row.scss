@@ -3,37 +3,24 @@
 Row
 ----------------------------------------
 usage:
-  TK
+  .row
 ----------------------------------------
 output:
-  TK
+  display: flex;
 ----------------------------------------
 example:
-  .NNNNN {
-    NNNNN: NNNNN; }
+  .row {
+    display: flex; }
 ----------------------------------------
 */
 
 $row: (
   row: (
-    base: (row, isReadable),
+    base: null,
     modifiers: null,
     values: (
-      top: (top, isReadable),
-      bottom: (bottom, isReadable),
-      center: (center, isReadable),
-      stretch: (stretch, isReadable),
+      row: (flex, isReadable),
     ),
-    property: align-items,
+    property: display,
   )
 );
-
-// Additional rules
-
-.row {
-  display: flex !important;
-}
-
-%row {
-  display: flex;
-}

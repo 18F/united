@@ -3,20 +3,20 @@
 Vertical Align
 ----------------------------------------
 usage:
-  TK
+  .va-[value]
 ----------------------------------------
 output:
-  TK
+  vertical-align: [value]
 ----------------------------------------
 example:
-  .NNNNN {
-    NNNNN: NNNNN; }
+  .va-top {
+    vertical-align: top; }
 ----------------------------------------
 */
 
 $vertical-align: (
   vertical-align: (
-    base: null,
+    base: va,
     modifiers: null,
     values: (
       baseline: (baseline, isReadable),

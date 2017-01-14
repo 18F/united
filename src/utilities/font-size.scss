@@ -3,14 +3,24 @@
 Font Size
 ----------------------------------------
 usage:
-  TK
+  .[value]
 ----------------------------------------
 output:
-  TK
+  font-family: [value];
+  font-size: [value];
 ----------------------------------------
 example:
-  .NNNNN {
-    NNNNN: NNNNN; }
+  .sans-s5 {
+    font-face: '18Franklin-webfont',
+                system,
+                -apple-system,
+                BlinkMacSystemFont,
+                'Roboto',
+                'Helvetica Neue',
+                'Helvetica',
+                'Arial',
+                sans-serif;
+    font-size: 1rem; }
 ----------------------------------------
 */
 

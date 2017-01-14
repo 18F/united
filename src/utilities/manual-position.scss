@@ -3,14 +3,14 @@
 Manual Positioning
 ----------------------------------------
 usage:
-  TK
+  .[modifier]-[value]
 ----------------------------------------
 output:
-  TK
+  [modifier]: [value];
 ----------------------------------------
 example:
-  .NNNNN {
-    NNNNN: NNNNN; }
+  .bottom-n2px {
+    bottom: -2px; }
 ----------------------------------------
 */
 
