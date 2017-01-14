@@ -57,6 +57,7 @@
     $b: null;
     $v: null;
     $mv: null;
+    $valProps: ();
 
     //    If there's a base, use baseToMap() to convert it into a MAP:
     //    $baseProps: (
@@ -88,19 +89,31 @@
 
     @each $valKey, $valValue in map-get($utility, values) {
 
-      // Use toMap() to convert the value keypair into a MAP:
-      //    $valProps: (
-      //      slug: STRING,
-      //      [isReadable: BOOL,]*
-      //      values: LIST,
-      //    )
+      // If $valValue is already a MAP...
 
-      // This makes the value easier to manipulate.
+      @if type-of($valValue) == 'map' {
 
-      // We'll keep the $valProps MAP around,
-      // as we'll need it to build both the rule's value and its selector.
+        // set $valProps = $valValue
 
-      $valProps: toMap($valKey, $valValue);
+        $valProps: $valValue;
+
+      // If it _isn't_ a MAP...
+
+      } @else {
+
+        // ...use toMap() to convert the value keypair into a MAP:
+        //    $valProps: (
+        //      slug: STRING,
+        //      [isReadable: BOOL,]*
+        //      content: LIST,
+        //      [extends: STRING,]*
+        //    )
+
+        // We'll keep the $valProps MAP around,
+        // as we'll need it to build both the rule's value and its selector.
+
+        $valProps: toMap($valKey, $valValue);
+      }
 
       // In fact, let's set our rule's value now.
 
@@ -150,7 +163,7 @@
         //    $modProps: (
         //      slug: STRING,
         //      isReadable: BOOL,
-        //      values: LIST,
+        //      content: LIST,
         //    )
 
         // Just as we did before with the value keypair.
@@ -262,11 +275,17 @@
         // https://www.youtube.com/watch?v=R3Igz5SfBCE
 
         %#{$selector} {
+          @if map-has-key($valProps, extends) {
+            @extend %#{map-get($valProps, extends)};
+          }
           @each $thisProperty in $property {
             #{$thisProperty}: $value;
           }
         }
         .#{$selector} {
+          @if map-has-key($valProps, extends) {
+            @extend .#{map-get($valProps, extends)};
+          }
           @each $thisProperty in $property {
             #{$thisProperty}: $value !important;
           }

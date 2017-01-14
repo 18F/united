@@ -27,7 +27,7 @@ gulp.task('sass', function() {
 		        cascade: false,
 		      })
 		    )
-        .pipe(cleanCSS({compatibility: 'ie8'}))
+        //.pipe(cleanCSS({compatibility: 'ie8'}))
 				.pipe(rename('united.css'))
         .pipe(gulp.dest('./build/'))
 });

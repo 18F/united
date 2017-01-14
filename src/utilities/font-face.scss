@@ -1,13 +1,25 @@
 /*
------------------------------
+----------------------------------------
 Font Face
------------------------------
+----------------------------------------
 usage:
-  TK
------------------------------
+  .[value]
+----------------------------------------
 output:
-  TK
------------------------------
+  font-face: [value]
+----------------------------------------
+example:
+  .sans {
+    font-face: '18Franklin-webfont',
+                system,
+                -apple-system,
+                BlinkMacSystemFont,
+                'Roboto',
+                'Helvetica Neue',
+                'Helvetica',
+                'Arial',
+                sans-serif; }
+----------------------------------------
 */
 
 $font-face: (
@@ -17,6 +29,6 @@ $font-face: (
     values: map-collect(
       map-get($global_values, typefaces)
     ),
-    property: font-size,
+    property: font-face,
   )
 )
