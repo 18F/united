@@ -244,17 +244,17 @@ example:
 */
 /*
 ----------------------------------------
-Font Face
+Font Family
 ----------------------------------------
 usage:
   .[value]
 ----------------------------------------
 output:
-  font-face: [value]
+  font-family: [value]
 ----------------------------------------
 example:
   .sans {
-    font-face: '18Franklin-webfont',
+    font-family: '18Franklin-webfont',
                 system,
                 -apple-system,
                 BlinkMacSystemFont,
@@ -7280,61 +7280,61 @@ example:
     float: "right" !important; } }
 
 .mono, .mono-s1, .mono-s2, .mono-s3, .mono-s4, .mono-s5, .mono-s6, .mono-s7, .mono-s8, .mono-s9, .mono-s10 {
-  font-face: "Roboto Mono", "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace !important; }
+  font-family: "Roboto Mono", "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace !important; }
 
 @media (min-width: 20rem) {
   .sm-mono {
-    font-face: "Roboto Mono", "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace !important; } }
+    font-family: "Roboto Mono", "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace !important; } }
 
 @media (min-width: 40rem) {
   .md-mono {
-    font-face: "Roboto Mono", "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace !important; } }
+    font-family: "Roboto Mono", "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace !important; } }
 
 @media (min-width: 65rem) {
   .lg-mono {
-    font-face: "Roboto Mono", "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace !important; } }
+    font-family: "Roboto Mono", "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace !important; } }
 
 @media (min-width: 70rem) {
   .xl-mono {
-    font-face: "Roboto Mono", "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace !important; } }
+    font-family: "Roboto Mono", "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace !important; } }
 
 .sans, .sans-s1, .sans-s2, .sans-s3, .sans-s4, .sans-s5, .sans-s6, .sans-s7, .sans-s8, .sans-s9, .sans-s10 {
-  font-face: "18Franklin-webfont", system, -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important; }
+  font-family: "18Franklin-webfont", system, -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important; }
 
 @media (min-width: 20rem) {
   .sm-sans {
-    font-face: "18Franklin-webfont", system, -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important; } }
+    font-family: "18Franklin-webfont", system, -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important; } }
 
 @media (min-width: 40rem) {
   .md-sans {
-    font-face: "18Franklin-webfont", system, -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important; } }
+    font-family: "18Franklin-webfont", system, -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important; } }
 
 @media (min-width: 65rem) {
   .lg-sans {
-    font-face: "18Franklin-webfont", system, -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important; } }
+    font-family: "18Franklin-webfont", system, -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important; } }
 
 @media (min-width: 70rem) {
   .xl-sans {
-    font-face: "18Franklin-webfont", system, -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important; } }
+    font-family: "18Franklin-webfont", system, -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important; } }
 
 .serif, .serif-s1, .serif-s2, .serif-s3, .serif-s4, .serif-s5, .serif-s6, .serif-s7, .serif-s8, .serif-s9, .serif-s10 {
-  font-face: "Georgia", "Cambria", "Times New Roman", "Times", serif !important; }
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif !important; }
 
 @media (min-width: 20rem) {
   .sm-serif {
-    font-face: "Georgia", "Cambria", "Times New Roman", "Times", serif !important; } }
+    font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif !important; } }
 
 @media (min-width: 40rem) {
   .md-serif {
-    font-face: "Georgia", "Cambria", "Times New Roman", "Times", serif !important; } }
+    font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif !important; } }
 
 @media (min-width: 65rem) {
   .lg-serif {
-    font-face: "Georgia", "Cambria", "Times New Roman", "Times", serif !important; } }
+    font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif !important; } }
 
 @media (min-width: 70rem) {
   .xl-serif {
-    font-face: "Georgia", "Cambria", "Times New Roman", "Times", serif !important; } }
+    font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif !important; } }
 
 .mono-s1 {
   font-size: 0.625rem !important; }
