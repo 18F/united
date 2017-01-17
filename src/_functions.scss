@@ -106,7 +106,7 @@
 // grid()
 
 @function grid($grid){
-  $gridToRem: #{($grid-base * 2 / $grid-type)}rem;
+  $gridToRem: #{($grid-base * $grid / $grid-type)}rem;
   @return $gridToRem;
 }
 

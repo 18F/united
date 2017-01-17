@@ -1,41 +1,25 @@
 
-
-@mixin u-media-query ($breakpoint) {
-    @if (map-has-key($breakpoints, $breakpoint) != true) {
-      @error "Media query mixin requires a valid breakpoint";
+@mixin renderRule($selector, $property, $value, $valProps) {
+  .#{$selector} {
+    @if map-has-key($valProps, extends) {
+      @extend .#{map-get($valProps, extends)};
     }
-    @else if(map-get($breakpoints, $breakpoint)) == null {
-      @content;
+    @each $thisProperty in $property {
+      #{$thisProperty}: $value !important;
     }
-    @else {
-      @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
-        @content;
-      }
-    }
+  } // ･ﾟ✧
 }
 
-@mixin generate-variants {
-  @each $variant, $variant-prefix, $modifier in $variants {
-    $prefix: "#{$variant-prefix}#{$breakpoint-prefix}-";
-    @if ($breakpoint-prefix == null ) {
-      $prefix: "#{$variant-prefix}";
-    }
-    #{$prefix} {
-      @content;
-    }
-  }
-}
-
-@mixin generate-breakpoint-prefixes {
-  @each $breakpoint-name, $breakpoint-value in $breakpoints {
-    $breakpoint-prefix: "#{$breakpoint-name}-";
-
-    @include u-media-query($breakpoint-name) {
-      .#{$breakpoint-prefix} {
-        @content;
+@mixin renderMediaQueries($selector, $property, $value, $valProps){
+  @each $mediaKey, $mediaValue in map-get($global_values, breakpoints){
+      @media (min-width: #{$mediaValue}) {
+        .#{$mediaKey}-#{$selector} {
+          @each $thisProperty in $property {
+            #{$thisProperty}: $value !important;
+          }
+        }
       }
     }
-  }
 }
 
 @mixin renderRulesIn($utilities){
@@ -277,21 +261,12 @@
           // FINALLY, "BUILD THE RULE, MAX!"
           // https://www.youtube.com/watch?v=R3Igz5SfBCE
 
-          %#{$selector} {
-            @if map-has-key($valProps, extends) {
-              @extend %#{map-get($valProps, extends)};
-            }
-            @each $thisProperty in $property {
-              #{$thisProperty}: $value;
-            }
-          }
-          .#{$selector} {
-            @if map-has-key($valProps, extends) {
-              @extend .#{map-get($valProps, extends)};
-            }
-            @each $thisProperty in $property {
-              #{$thisProperty}: $value !important;
-            }
+          @include renderRule($selector, $property, $value, $valProps);
+
+          // And add the responsive prefixes, if applicable
+
+          @if map-get($utility, responsive){
+            @include renderMediaQueries($selector, $property, $value, $valProps);
           } // ･ﾟ✧
         } // end the modifier loop
       } // end the value loop
