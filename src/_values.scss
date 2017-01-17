@@ -136,181 +136,271 @@ $global_values: (
       slug: 'mono-s1',
       isReadable: true,
       content: $mono-s1,
-      extends: 'mono',
+      extend: (
+        property: 'font-family',
+        value: $font-mono,
+      ),
     ),
     mono-s2: (
       slug: 'mono-s2',
       isReadable: true,
       content: $mono-s1,
-      extends: 'mono',
+      extend: (
+        property: 'font-family',
+        value: $font-mono,
+      ),
     ),
     mono-s3: (
       slug: 'mono-s3',
       isReadable: true,
       content: $mono-s1,
-      extends: 'mono',
+      extend: (
+        property: 'font-family',
+        value: $font-mono,
+      ),
     ),
     mono-s4: (
       slug: 'mono-s4',
       isReadable: true,
       content: $mono-s1,
-      extends: 'mono',
+      extend: (
+        property: 'font-family',
+        value: $font-mono,
+      ),
     ),
     mono-s5: (
       slug: 'mono-s5',
       isReadable: true,
       content: $mono-s1,
-      extends: 'mono',
+      extend: (
+        property: 'font-family',
+        value: $font-mono,
+      ),
     ),
     mono-s6: (
       slug: 'mono-s6',
       isReadable: true,
       content: $mono-s1,
-      extends: 'mono',
+      extend: (
+        property: 'font-family',
+        value: $font-mono,
+      ),
     ),
     mono-s7: (
       slug: 'mono-s7',
       isReadable: true,
       content: $mono-s1,
-      extends: 'mono',
+      extend: (
+        property: 'font-family',
+        value: $font-mono,
+      ),
     ),
     mono-s8: (
       slug: 'mono-s8',
       isReadable: true,
       content: $mono-s1,
-      extends: 'mono',
+      extend: (
+        property: 'font-family',
+        value: $font-mono,
+      ),
     ),
     mono-s9: (
       slug: 'mono-s9',
       isReadable: true,
       content: $mono-s1,
-      extends: 'mono',
+      extend: (
+        property: 'font-family',
+        value: $font-mono,
+      ),
     ),
     mono-s10: (
       slug: 'mono-s10',
       isReadable: true,
       content: $mono-s1,
-      extends: 'mono',
+      extend: (
+        property: 'font-family',
+        value: $font-mono,
+      ),
     ),
     sans-s1: (
       slug: 'sans-s1',
       isReadable: true,
       content: $sans-s1,
-      extends: 'sans',
+      extend: (
+        property: 'font-family',
+        value: $font-sans,
+      ),
     ),
     sans-s2: (
       slug: 'sans-s2',
       isReadable: true,
       content: $sans-s2,
-      extends: 'sans',
+      extend: (
+        property: 'font-family',
+        value: $font-sans,
+      ),
     ),
     sans-s3: (
       slug: 'sans-s3',
       isReadable: true,
       content: $sans-s3,
-      extends: 'sans',
+      extend: (
+        property: 'font-family',
+        value: $font-sans,
+      ),
     ),
     sans-s4: (
       slug: 'sans-s4',
       isReadable: true,
       content: $sans-s4,
-      extends: 'sans',
+      extend: (
+        property: 'font-family',
+        value: $font-sans,
+      ),
     ),
     sans-s5: (
       slug: 'sans-s5',
       isReadable: true,
       content: $sans-s5,
-      extends: 'sans',
+      extend: (
+        property: 'font-family',
+        value: $font-sans,
+      ),
     ),
     sans-s6: (
       slug: 'sans-s6',
       isReadable: true,
       content: $sans-s6,
-      extends: 'sans',
+      extend: (
+        property: 'font-family',
+        value: $font-sans,
+      ),
     ),
     sans-s7: (
       slug: 'sans-s7',
       isReadable: true,
       content: $sans-s7,
-      extends: 'sans',
+      extend: (
+        property: 'font-family',
+        value: $font-sans,
+      ),
     ),
     sans-s8: (
       slug: 'sans-s8',
       isReadable: true,
       content: $sans-s8,
-      extends: 'sans'
+      extend: (
+        property: 'font-family',
+        value: $font-sans,
+      ),
     ),
     sans-s9: (
       slug: 'sans-s9',
       isReadable: true,
       content: $sans-s9,
-      extends: 'sans',
+      extend: (
+        property: 'font-family',
+        value: $font-sans,
+      ),
     ),
     sans-s10: (
       slug: 'sans-s10',
       isReadable: true,
       content: $sans-s10,
-      extends: 'sans',
+      extend: (
+        property: 'font-family',
+        value: $font-sans,
+      ),
     ),
     serif-s1: (
       slug: 'serif-s1',
       isReadable: true,
       content: $serif-s1,
-      extends: 'serif',
+      extend: (
+        property: 'font-family',
+        value: $font-serif,
+      ),
     ),
     serif-s2: (
       slug: 'serif-s2',
       isReadable: true,
       content: $serif-s2,
-      extends: 'serif',
+      extend: (
+        property: 'font-family',
+        value: $font-serif,
+      ),
     ),
     serif-s3: (
       slug: 'serif-s3',
       isReadable: true,
       content: $serif-s3,
-      extends: 'serif',
+      extend: (
+        property: 'font-family',
+        value: $font-serif,
+      ),
     ),
     serif-s4: (
       slug: 'serif-s4',
       isReadable: true,
       content: $serif-s4,
-      extends: 'serif',
+      extend: (
+        property: 'font-family',
+        value: $font-serif,
+      ),
     ),
     serif-s5: (
       slug: 'serif-s5',
       isReadable: true,
       content: $serif-s5,
-      extends: 'serif',
+      extend: (
+        property: 'font-family',
+        value: $font-serif,
+      ),
     ),
     serif-s6: (
       slug: 'serif-s6',
       isReadable: true,
       content: $serif-s6,
-      extends: 'serif',
+      extend: (
+        property: 'font-family',
+        value: $font-serif,
+      ),
     ),
     serif-s7: (
       slug: 'serif-s7',
       isReadable: true,
       content: $serif-s7,
-      extends: 'serif',
+      extend: (
+        property: 'font-family',
+        value: $font-serif,
+      ),
     ),
     serif-s8: (
       slug: 'serif-s8',
       isReadable: true,
       content: $serif-s8,
-      extends: 'serif',
+      extend: (
+        property: 'font-family',
+        value: $font-serif,
+      ),
     ),
     serif-s9: (
       slug: 'serif-s9',
       isReadable: true,
       content: $serif-s9,
-      extends: 'serif',
+      extend: (
+        property: 'font-family',
+        value: $font-serif,
+      ),
     ),
     serif-s10: (
       slug: 'serif-s10',
       isReadable: true,
       content: $serif-s10,
-      extends: 'serif',
+      extend: (
+        property: 'font-family',
+        value: $font-serif,
+      ),
     ),
   ),
   zero-none: (

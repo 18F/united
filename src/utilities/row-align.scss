@@ -31,25 +31,37 @@ $row-align: (
         slug: 'top',
         isReadable: true,
         content: 'top',
-        extends: 'row',
+        extend: (
+          property: 'display',
+          value: 'flex',
+        ),
       ),
       bottom: (
         slug: 'bottom',
         isReadable: true,
         content: 'bottom',
-        extends: 'row',
+        extend: (
+          property: 'display',
+          value: 'flex',
+        ),
       ),
       center: (
         slug: 'center',
         isReadable: true,
         content: 'center',
-        extends: 'row',
+        extend: (
+          property: 'display',
+          value: 'flex',
+        ),
       ),
       stretch: (
         slug: 'stretch',
         isReadable: true,
         content: 'stretch',
-        extends: 'row',
+        extend: (
+          property: 'display',
+          value: 'flex',
+        ),
       ),
     ),
     property: 'align-items',

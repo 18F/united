@@ -1,28 +1,33 @@
-
-@mixin renderRule($selector, $property, $value, $valProps) {
+@mixin renderUtility($selector, $property, $value, $valProps) {
   .#{$selector} {
-    @if map-has-key($valProps, extends) {
-      @extend .#{map-get($valProps, extends)};
+    @if map-has-key($valProps, extend) {
+      #{map-deep-get($valProps, extend, property)}: map-deep-get($valProps, extend, value);
     }
     @each $thisProperty in $property {
-      #{$thisProperty}: $value !important;
+      #{$thisProperty}: $value;
     }
-  } // ･ﾟ✧
+  }
 }
 
 @mixin renderMediaQueries($selector, $property, $value, $valProps){
   @each $mediaKey, $mediaValue in map-get($global_values, breakpoints){
-      @media (min-width: #{$mediaValue}) {
-        .#{$mediaKey}-#{$selector} {
-          @each $thisProperty in $property {
-            #{$thisProperty}: $value !important;
-          }
+    @media (min-width: #{$mediaValue}) {
+      .#{$mediaKey}-#{$selector} {
+        @if map-has-key($valProps, extend) {
+          #{map-deep-get($valProps, extend, property)}: map-deep-get($valProps, extend, value);
+        }
+        @each $thisProperty in $property {
+          #{$thisProperty}: $value;
+        }
+        @each $thisProperty in $property {
+          #{$thisProperty}: $value;
         }
       }
     }
+  }
 }
 
-@mixin renderRulesIn($utilities){
+@mixin renderUtilitiesIn($utilities){
 
   // loop through the $utilities
 
@@ -261,7 +266,7 @@
           // FINALLY, "BUILD THE RULE, MAX!"
           // https://www.youtube.com/watch?v=R3Igz5SfBCE
 
-          @include renderRule($selector, $property, $value, $valProps);
+          @include renderUtility($selector, $property, $value, $valProps);
 
           // And add the responsive prefixes, if applicable
 
