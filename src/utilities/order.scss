@@ -25,5 +25,7 @@ $order: (
       map-get($global_values, flexOrders)
     ),
     property: 'order',
+    output: true,
+    responsive: true,
   )
 )

@@ -24,5 +24,7 @@ $float: (
       right: ('right', isReadable),
     ),
     property: 'float',
+    output: true,
+    responsive: true,
   )
 )

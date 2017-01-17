@@ -52,6 +52,8 @@ $row-align: (
         extends: row,
       ),
     ),
-    property: align-items,
+    property: 'align-items',
+    output: true,
+    responsive: true,
   )
 );

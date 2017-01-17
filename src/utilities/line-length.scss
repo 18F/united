@@ -24,5 +24,7 @@ $line-length: (
       reading: ($text-max-width, isReadable),
     ),
     property: 'max-width',
+    output: true,
+    responsive: true,
   )
 )

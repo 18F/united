@@ -35,6 +35,8 @@ $border-width: (
         map-get($global_values, grid),
         map-get($global_values, zero-none)
     ),
-    property: border,
+    property: 'border',
+    output: true,
+    responsive: true,
   )
 )

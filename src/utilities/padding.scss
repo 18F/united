@@ -34,6 +34,8 @@ $padding: (
       map-get($global_values, grid),
       map-get($global_values, zero-none)
     ),
-    property: padding,
+    property: 'padding',
+    output: true,
+    responsive: true,
   )
 )

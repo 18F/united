@@ -27,6 +27,8 @@ $border-style: (
       dotted: (dotted, isReadable),
       solid: (solid, isReadable),
     ),
-    property: border,
+    property: 'border',
+    output: true,
+    responsive: true,
   )
 )

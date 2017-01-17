@@ -38,6 +38,8 @@ $margin: (
       map-get($global_values, zero-zero),
       map-get($global_values, auto)
     ),
-    property: margin,
+    property: 'margin',
+    output: true,
+    responsive: true,
   )
 )

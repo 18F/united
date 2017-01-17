@@ -22,5 +22,7 @@ $line-height: (
       map-get($global_values, lineHeights)
     ),
     property: 'line-height',
+    output: true,
+    responsive: true,
   )
 )

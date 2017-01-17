@@ -23,6 +23,8 @@ $width: (
       map-get($global_values, grid),
       map-get($global_values, pixels)
     ),
-    property: width,
+    property: 'width',
+    output: true,
+    responsive: true,
   )
 )

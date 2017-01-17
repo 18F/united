@@ -33,5 +33,7 @@ $manual-position: (
         map-get($global_values, auto)
     ),
     property: '',
+    output: true,
+    responsive: true,
   )
 )

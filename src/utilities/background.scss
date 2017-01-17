@@ -19,6 +19,8 @@ $background: (
     base: (background, isReadable),
     modifiers: null,
     values: map-get($global_values, colors),
-    property: background-color,
+    property: 'background-color',
+    output: true,
+    responsive: true,
   )
 )

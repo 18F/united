@@ -33,6 +33,8 @@ $border-color: (
     values: map-collect(
       map-get($global_values, colors)
     ),
-    property: border,
+    property: 'border',
+    output: true,
+    responsive: true,
   )
 )

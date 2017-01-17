@@ -27,6 +27,8 @@ $column: (
     values: map-collect(
       map-get($global_values, flex)
     ),
-    property: flex,
+    property: 'flex',
+    output: true,
+    responsive: true,
   )
 );

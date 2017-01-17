@@ -21,6 +21,8 @@ $color: (
     values: map-collect(
       map-get($global_values, colors)
     ),
-    property: color,
+    property: 'color',
+    output: true,
+    responsive: true,
   )
 )

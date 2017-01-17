@@ -26,5 +26,7 @@ $whitespace: (
       prewrap: (pre-wrap, isReadable),
     ),
     property: 'whitespace',
+    output: true,
+    responsive: true,
   )
 )

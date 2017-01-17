@@ -23,6 +23,8 @@ $height: (
       map-get($global_values, grid),
       map-get($global_values, pixels)
     ),
-    property: height,
+    property: 'height',
+    output: true,
+    responsive: true,
   )
 )

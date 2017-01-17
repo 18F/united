@@ -27,5 +27,7 @@ $border-radius: (
       rounded: ($border-radius, isReadable),
     ),
     property: 'border-radius',
+    output: true,
+    responsive: true,
   )
 )

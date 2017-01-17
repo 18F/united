@@ -29,5 +29,7 @@ $clear: (
       right: (right, isReadable),
     ),
     property: 'clear',
+    output: true,
+    responsive: true,
   )
 )

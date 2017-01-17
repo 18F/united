@@ -21,6 +21,8 @@ $row: (
     values: (
       row: (flex, isReadable),
     ),
-    property: display,
+    property: 'display',
+    output: true,
+    responsive: true,
   )
 );

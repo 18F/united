@@ -24,5 +24,7 @@ $opentype: (
       tnum: ('tnum' 1, 'kern' 1, isReadable),
     ),
     property: 'font-feature-settings',
+    output: true,
+    responsive: true,
   )
 )

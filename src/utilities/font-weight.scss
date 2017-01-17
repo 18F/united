@@ -21,6 +21,8 @@ $font-weight: (
     values: map-collect(
       map-get($global_values, fontWeights)
     ),
-    property: font-weight,
+    property: 'font-weight',
+    output: true,
+    responsive: true,
   )
 )

@@ -23,5 +23,7 @@ $text-decoration: (
       strike: ('strike', isReadable),
     ),
     property: 'text-decoration',
+    output: true,
+    responsive: true,
   )
 )

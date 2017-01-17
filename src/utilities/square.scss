@@ -28,5 +28,7 @@ $square: (
       map-get($global_values, pixels)
     ),
     property: '',
+    output: true,
+    responsive: true,
   )
 )

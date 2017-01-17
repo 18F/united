@@ -24,5 +24,7 @@ $text-transform: (
       allcaps: ('uppercase', isReadable),
     ),
     property: 'text-transform',
+    output: true,
+    responsive: true,
   )
 )

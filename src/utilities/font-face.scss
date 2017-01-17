@@ -29,6 +29,8 @@ $font-face: (
     values: map-collect(
       map-get($global_values, typefaces)
     ),
-    property: font-face,
+    property: 'font-face',
+    output: true,
+    responsive: true,
   )
 )
