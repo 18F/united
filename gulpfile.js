@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
 		rename = require('gulp-rename'),
-    cleanCSS = require('gulp-clean-css');
+    cleanCSS = require('gulp-clean-css'),
+    combineMq = require('gulp-combine-mq');
 
 var supportedBrowsers = [
   	'> 1%',
@@ -27,6 +28,9 @@ gulp.task('sass', function() {
 		        cascade: false,
 		      })
 		    )
+        .pipe(combineMq({
+            beautify: false
+        }))
         .pipe(cleanCSS({compatibility: 'ie8'}))
 				.pipe(rename('united.css'))
         .pipe(gulp.dest('./build/'))
