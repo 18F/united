@@ -12,15 +12,15 @@ output:
 
 $border-style: (
   border-style: (
-    base: b,
+    base: 'b',
     modifiers: (
-      t: -top-style,
-      r: -left-style,
-      b: -bottom-style,
-      l: -left-style,
-      y: (-top-style, -bottom-style),
-      x: (-left-style, -right-style),
-      noModifier: -style,
+      t: '-top-style',
+      r: '-left-style',
+      b: '-bottom-style',
+      l: '-left-style',
+      y: ('-top-style', '-bottom-style'),
+      x: ('-left-style', '-right-style'),
+      noModifier: '-style',
     ),
     values: (
       dashed: (dashed, isReadable),

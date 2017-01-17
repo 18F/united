@@ -16,10 +16,10 @@ example:
 
 $letter-spacing: (
   letter-spacing: (
-    base: ls,
+    base: 'ls',
     modifiers: null,
     values: (
-      auto: (auto, isReadable),
+      auto: ('auto', isReadable),
       loose: $ls-loose,
       xloose: $ls-xloose,
     ),

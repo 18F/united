@@ -21,12 +21,12 @@ $padding: (
   padding: (
     base: p,
     modifiers: (
-      t: -top,
-      r: -left,
-      b: -bottom,
-      l: -left,
-      y: (-top, -bottom),
-      x: (-left, -right),
+      t: '-top',
+      r: '-left',
+      b: '-bottom',
+      l: '-left',
+      y: ('-top', '-bottom'),
+      x: ('-left', '-right'),
       noModifier: '',
     ),
     values: map-collect(

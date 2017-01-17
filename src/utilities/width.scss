@@ -16,7 +16,7 @@ example:
 
 $width: (
   width: (
-    base: w,
+    base: 'w',
     modifiers: null,
     values: map-collect(
       map-get($global_values, percentage),

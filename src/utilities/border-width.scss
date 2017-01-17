@@ -19,14 +19,14 @@ example:
 
 $border-width: (
   border: (
-    base: b,
+    base: 'b',
     modifiers: (
-      t: -top,
-      r: -left,
-      b: -bottom,
-      l: -left,
-      y: (-top, -bottom),
-      x: (-left, -right),
+      t: '-top',
+      r: '-left',
+      b: '-bottom',
+      l: '-left',
+      y: ('-top', '-bottom'),
+      x: ('-left', '-right'),
       noModifier: '',
     ),
     values:

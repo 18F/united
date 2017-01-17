@@ -16,7 +16,7 @@ example:
 
 $height: (
   height: (
-    base: h,
+    base: 'h',
     modifiers: null,
     values: map-collect(
       map-get($global_values, percentage),

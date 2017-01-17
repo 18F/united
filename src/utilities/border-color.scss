@@ -20,14 +20,14 @@ example:
 
 $border-color: (
   border-color: (
-    base: b,
+    base: 'b',
     modifiers: (
-      t: -top-color,
-      r: -left-color,
-      b: -bottom-color,
-      l: -left-color,
-      y: (-top-color, -bottom-color),
-      x: (-left-color, -right-color),
+      t: '-top-color',
+      r: '-left-color',
+      b: '-bottom-color',
+      l: '-left-color',
+      y: ('-top-color', '-bottom-color'),
+      x: ('-left-color', '-right-color'),
       noModifier: -color,
     ),
     values: map-collect(

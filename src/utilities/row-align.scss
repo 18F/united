@@ -20,7 +20,7 @@ example:
 
 $row-align: (
   row-align: (
-    base: (row, isReadable),
+    base: ('row', isReadable),
     modifiers: null,
     values: (
       noValue: (
@@ -28,28 +28,28 @@ $row-align: (
         content: center,
       ),
       top: (
-        slug: top,
+        slug: 'top',
         isReadable: true,
-        content: top,
-        extends: row,
+        content: 'top',
+        extends: 'row',
       ),
       bottom: (
-        slug: bottom,
+        slug: 'bottom',
         isReadable: true,
-        content: bottom,
-        extends: row,
+        content: 'bottom',
+        extends: 'row',
       ),
       center: (
-        slug: center,
+        slug: 'center',
         isReadable: true,
-        content: center,
-        extends: row,
+        content: 'center',
+        extends: 'row',
       ),
       stretch: (
-        slug: stretch,
+        slug: 'stretch',
         isReadable: true,
-        content: stretch,
-        extends: row,
+        content: 'stretch',
+        extends: 'row',
       ),
     ),
     property: 'align-items',

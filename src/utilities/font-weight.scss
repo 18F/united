@@ -16,7 +16,7 @@ example:
 
 $font-weight: (
   font-weight: (
-    base: fw,
+    base: 'fw',
     modifiers: null,
     values: map-collect(
       map-get($global_values, fontWeights)

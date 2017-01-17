@@ -20,7 +20,7 @@ $line-length: (
     modifiers: null,
     values: (
       narrow: ($text-narrow-width, isReadable),
-      max: (none, isReadable),
+      max: ('none', isReadable),
       reading: ($text-max-width, isReadable),
     ),
     property: 'max-width',
