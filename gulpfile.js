@@ -4,7 +4,9 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
 		rename = require('gulp-rename'),
     cleanCSS = require('gulp-clean-css'),
-    combineMq = require('gulp-combine-mq');
+    combineMq = require('gulp-combine-mq'),
+    strip = require('gulp-strip-css-comments'),
+    gzip = require('gulp-gzip');
 
 var supportedBrowsers = [
   	'> 1%',
@@ -19,9 +21,11 @@ var supportedBrowsers = [
 gulp.task('sass', function() {
     return gulp.src('src/*.scss')
         .pipe(sass({
+            outputStyle: 'compact',
             errLogToConsole: true,
             quiet: true
         }).on('error', sass.logError))
+        .pipe(strip())
 				.pipe(
 		      autoprefixer({
 		        browsers: supportedBrowsers,
@@ -29,10 +33,14 @@ gulp.task('sass', function() {
 		      })
 		    )
         .pipe(combineMq({
-            beautify: false
+            beautify: true
         }))
+        .pipe(rename('united.css'))
+        .pipe(gulp.dest('./build/'))
         .pipe(cleanCSS({compatibility: 'ie8'}))
-				.pipe(rename('united.css'))
+				.pipe(rename('united.min.css'))
+        .pipe(gulp.dest('./build/'))
+        .pipe(gzip({ extension: 'zip' }))
         .pipe(gulp.dest('./build/'))
 });
 
