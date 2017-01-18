@@ -16,11 +16,11 @@ example:
 
 $background: (
   background: (
-    base: ('background', isReadable),
+    base: ('bg', isReadable),
     modifiers: null,
     values: map-get($global_values, colors),
     property: 'background-color',
     output: true,
-    responsive: true,
+    responsive: false,
   )
 )

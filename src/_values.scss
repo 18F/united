@@ -86,6 +86,14 @@ $global_values: (
     '40': $grid-40,
     '50': $grid-50,
   ),
+  gridShort: (
+    '05': $grid-05,
+    '1': $grid-1,
+    '105': $grid-105,
+    '2': $grid-2,
+    '3': $grid-3,
+    '4': $grid-4,
+  ),
   lineHeights: (
     single: ($lh-single, isReadable),
     hed: ($lh-hed, isReadable),
