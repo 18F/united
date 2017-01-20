@@ -11,6 +11,17 @@
     @return $map;
 }
 
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
 // multiCat()
 
 @function multiCat($list1, $list2){
@@ -53,6 +64,15 @@
   @return $result;
 }
 
+// strunquote()
+
+@function strunquote($value){
+  @if type-of($value) == 'string' {
+    $value: unquote($value);
+  }
+  @return $value;
+}
+
 // toMap()
 
 @function toMap($key, $values){
@@ -63,14 +83,14 @@
   @if $l == 1 or nth($values, $l) != isReadable {
     @return (
       slug: $key,
-      content: ($values),
+      content: $values,
     );
   } @else {
     $values: remove($values, isReadable);
     @return (
       slug: $key,
       isReadable: true,
-      content: ($values),
+      content: $values,
     );
   }
 }
@@ -115,4 +135,11 @@
 @function px($pixels){
   $pxToRem: #{($pixels / $grid-type)}rem;
   @return $pxToRem;
+}
+
+// typeScale()
+
+@function typeScale($capHeight, $scale){
+  $thisScale: (500 * strip-unit($scale)) / strip-unit($capHeight);
+  @return px($thisScale);
 }

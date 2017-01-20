@@ -1,7 +1,7 @@
 @mixin renderUtility($selector, $property, $value, $valProps) {
   .#{$selector} {
     @if map-has-key($valProps, extend) {
-      #{map-deep-get($valProps, extend, property)}: map-deep-get($valProps, extend, value);
+      #{map-deep-get($valProps, extend, property)}: strunquote(map-deep-get($valProps, extend, value));
     }
     @each $thisProperty in $property {
       #{$thisProperty}: $value;
@@ -14,10 +14,7 @@
     @media (min-width: #{$mediaValue}) {
       .#{$mediaKey}-#{$selector} {
         @if map-has-key($valProps, extend) {
-          #{map-deep-get($valProps, extend, property)}: map-deep-get($valProps, extend, value);
-        }
-        @each $thisProperty in $property {
-          #{$thisProperty}: $value;
+          #{map-deep-get($valProps, extend, property)}: strunquote(map-deep-get($valProps, extend, value));
         }
         @each $thisProperty in $property {
           #{$thisProperty}: $value;
@@ -109,7 +106,7 @@
 
         // In fact, let's set our rule's value now.
 
-        $value: map-get($valProps, content);
+        $value: strunquote(nth(map-get($valProps, content), 1));
 
         // And we'll set the $v as valProps.slug for use in
         // constructing the selector.

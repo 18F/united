@@ -81,7 +81,7 @@ $color-white:                   #ffffff; // perhaps redundant
 // --------------------------------------------------
 // Font path
 
-$static-font-path: '';
+$static-font-path: '../18Franklin';
 
 // --------------------------------------------------
 // Typefaces
@@ -108,41 +108,58 @@ $font-mono:           'Roboto Mono',
                       'Courier',
                       monospace;
 
+// 500px 'N' height (measured in Sketch)
+
+$sans-capHeight:      371px;  // 18Franklin
+$serif-capHeight:     346px;  // Georgia
+$mono-capHeight:      355px;  // Roboto Mono
+
 // --------------------------------------------------
 // Type scale
 
-$sans-s1:             px(10);         // 10px;
-$sans-s2:             px(12);         // 12px;
-$sans-s3:             px(13);         // 13px;
-$sans-s4:             px(14);         // 14px;
-$sans-s5:             px(16);         // 16px;
-$sans-s6:             px(18);         // 18px;
-$sans-s7:             px(20);         // 20px;
-$sans-s8:             px(24);         // 24px;
-$sans-s9:             px(40);         // 40px;
-$sans-s10:            px(100);        // 100px;
+$s1:                  8px;
+$s2:                  9px;
+$s3:                  10px;
+$s4:                  11px;
+$s5:                  12px;
+$s6:                  14px;
+$s7:                  16px;
+$s8:                  18px;
+$s9:                  30px;
+$s10:                 52px;
 
-$serif-s1:            px(10);         // 10px;
-$serif-s2:            px(13);         // 13px;
-$serif-s3:            px(14);         // 14px;
-$serif-s4:            px(15);         // 15px;
-$serif-s5:            px(17);         // 17px;
-$serif-s6:            px(19);         // 19px;
-$serif-s7:            px(23);         // 23px;
-$serif-s8:            px(27);         // 27px;
-$serif-s9:            px(43);         // 43px;
-$serif-s10:           px(108);        // 108px;
+$mono-s1:   typeScale($mono-capHeight, $s1);
+$mono-s2:   typeScale($mono-capHeight, $s2);
+$mono-s3:   typeScale($mono-capHeight, $s3);
+$mono-s4:   typeScale($mono-capHeight, $s4);
+$mono-s5:   typeScale($mono-capHeight, $s5);
+$mono-s6:   typeScale($mono-capHeight, $s6);
+$mono-s7:   typeScale($mono-capHeight, $s7);
+$mono-s8:   typeScale($mono-capHeight, $s8);
+$mono-s9:   typeScale($mono-capHeight, $s9);
+$mono-s10:  typeScale($mono-capHeight, $s10);
 
-$mono-s1:             px(10);         // 10px;
-$mono-s2:             px(12);         // 12px;
-$mono-s3:             px(13);         // 13px;
-$mono-s4:             px(15);         // 15px;
-$mono-s5:             px(16);         // 16px;
-$mono-s6:             px(18);         // 18px;
-$mono-s7:             px(23);         // 23px;
-$mono-s8:             px(25);         // 25px;
-$mono-s9:             px(44);         // 44px;
-$mono-s10:            px(104);        // 104px;
+$sans-s1:   typeScale($sans-capHeight, $s1);
+$sans-s2:   typeScale($sans-capHeight, $s2);
+$sans-s3:   typeScale($sans-capHeight, $s3);
+$sans-s4:   typeScale($sans-capHeight, $s4);
+$sans-s5:   typeScale($sans-capHeight, $s5);
+$sans-s6:   typeScale($sans-capHeight, $s6);
+$sans-s7:   typeScale($sans-capHeight, $s7);
+$sans-s8:   typeScale($sans-capHeight, $s8);
+$sans-s9:   typeScale($sans-capHeight, $s9);
+$sans-s10:  typeScale($sans-capHeight, $s10);
+
+$serif-s1:   typeScale($serif-capHeight, $s1);
+$serif-s2:   typeScale($serif-capHeight, $s2);
+$serif-s3:   typeScale($serif-capHeight, $s3);
+$serif-s4:   typeScale($serif-capHeight, $s4);
+$serif-s5:   typeScale($serif-capHeight, $s5);
+$serif-s6:   typeScale($serif-capHeight, $s6);
+$serif-s7:   typeScale($serif-capHeight, $s7);
+$serif-s8:   typeScale($serif-capHeight, $s8);
+$serif-s9:   typeScale($serif-capHeight, $s9);
+$serif-s10:  typeScale($serif-capHeight, $s10);
 
 // --------------------------------------------------
 // Line height
