@@ -21,12 +21,12 @@ $border-width: (
   border: (
     base: 'b',
     modifiers: (
-      t: '-top',
-      r: '-left',
-      b: '-bottom',
-      l: '-left',
-      y: ('-top', '-bottom'),
-      x: ('-left', '-right'),
+      t: '-top-width',
+      r: '-left-width',
+      b: '-bottom-width',
+      l: '-left-width',
+      y: ('-top-width', '-bottom-width'),
+      x: ('-left-width', '-right-width'),
       noModifier: '',
     ),
     values:
