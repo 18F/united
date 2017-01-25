@@ -1,5 +1,5 @@
 # united
-An atomic css framework good enough for government work.
+An experimental atomic css prototype framework, developed for prototyping patterns for cloud.gov. (https://github.com/18F/cg-style)
 
 ## What it does
 United is an _experimental_ atomic css utility class framework (similar to [Basscss](http://basscss.com/), [Tachyons](http://tachyons.io/), or [Solid](http://solid.buzzfeed.com/)) that allows designing for a wide expressive gamut without modifying css. Utility classes are single-use immutable classes that can be chained together to create more sophisticated presentational styles.
