@@ -272,6 +272,7 @@ $global_values: (
     600: 600,
     700: 700,
     800: 800,
+    900: 900,
   ),
   grid: (
     '05': $grid-05,
@@ -309,13 +310,13 @@ $global_values: (
     'display': ($lh-display, isReadable),
   ),
   negGrid: (
-    'n05': -(#{$grid-05}, isReadable),
-    'n1': -(#{$grid-1}, isReadable),
-    'n105': -(#{$grid-105}, isReadable),
-    'n2': -(#{$grid-2}, isReadable),
-    'n3': -(#{$grid-3}, isReadable),
-    'n4': -(#{$grid-4}, isReadable),
-    'n5': -(#{$grid-5}, isReadable),
+    'n05': -#{$grid-05},
+    'n1': -#{$grid-1},
+    'n105': -#{$grid-105},
+    'n2': -#{$grid-2},
+    'n3': -#{$grid-3},
+    'n4': -#{$grid-4},
+    'n5': -#{$grid-5},
   ),
   negPixels: (
     'n1px': -1px,

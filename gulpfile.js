@@ -9,7 +9,8 @@ var gulp = require('gulp'),
     strip = require('gulp-strip-css-comments'),
     bless = require('gulp-bless'),
     gzip = require('gulp-gzip'),
-    size = require('gulp-size');
+    size = require('gulp-size'),
+    browserSync = require('browser-sync').create();
 
 var supportedBrowsers = [
   	'> 1%',
@@ -27,6 +28,16 @@ gulp.task('clean', function () {
   ]);
 });
 
+// browserSync
+
+gulp.task('serve', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+    gulp.watch("demo/*.html").on('change', browserSync.reload);
+});
 
 // Compile Our Sass
 
@@ -50,6 +61,7 @@ gulp.task('build', function() {
         .pipe(rename('united.css'))
         .pipe(gulp.dest('./build/'))
         .pipe(size())
+        .pipe(browserSync.stream());
 });
 
 gulp.task('package', function() {
@@ -76,6 +88,7 @@ gulp.task('bless', function() {
         .pipe(size())
 });
 
+
 // Process the files in series
 
 gulp.task('process', gulp.series('clean', 'build', 'package', 'bless'));
@@ -89,4 +102,4 @@ gulp.task('watch', function() {
 
 // Default Task
 
-gulp.task('default', gulp.series('process', 'watch'));
+gulp.task('default', gulp.parallel('serve', gulp.series( 'process', 'watch')));
