@@ -1,12 +1,15 @@
 // Modules
 var gulp = require('gulp'),
+    del = require('del'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
 		rename = require('gulp-rename'),
     cleanCSS = require('gulp-clean-css'),
     combineMq = require('gulp-combine-mq'),
     strip = require('gulp-strip-css-comments'),
-    gzip = require('gulp-gzip');
+    bless = require('gulp-bless'),
+    gzip = require('gulp-gzip'),
+    size = require('gulp-size');
 
 var supportedBrowsers = [
   	'> 1%',
@@ -16,14 +19,23 @@ var supportedBrowsers = [
   	'IE 9',
 ];
 
+// Clean the build directory
+
+gulp.task('clean', function () {
+  return del([
+    './build/**/*'
+  ]);
+});
+
+
 // Compile Our Sass
 
-gulp.task('sass', function() {
+gulp.task('build', function() {
     return gulp.src('src/*.scss')
         .pipe(sass({
             outputStyle: 'compact',
             errLogToConsole: true,
-            quiet: true
+            quiet: true,
         }).on('error', sass.logError))
         .pipe(strip())
 				.pipe(
@@ -37,21 +49,44 @@ gulp.task('sass', function() {
         }))
         .pipe(rename('united.css'))
         .pipe(gulp.dest('./build/'))
-        .pipe(cleanCSS({compatibility: 'ie8'}))
-				.pipe(rename('united.min.css'))
-        .pipe(gulp.dest('./build/'))
-        .pipe(gzip({ extension: 'zip' }))
-        .pipe(gulp.dest('./build/'))
+        .pipe(size())
 });
 
+gulp.task('package', function() {
+    return gulp.src('build/united.css')
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
+				.pipe(rename('united.min.css'))
+        .pipe(gulp.dest('./build/'))
+        .pipe(size())
+        .pipe(gzip({ extension: 'zip' }))
+        .pipe(gulp.dest('./build/'))
+        .pipe(size())
+});
+
+gulp.task('bless', function() {
+    return gulp.src('build/united.css')
+        .pipe(rename('united-bless.css'))
+        .pipe(bless({
+    	 		suffix: '-part-',
+          cacheBuster: false,
+          imports: false,
+  	    }))
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
+        .pipe(gulp.dest('./build/'))
+        .pipe(size())
+});
+
+// Process the files in series
+
+gulp.task('process', gulp.series('clean', 'build', 'package', 'bless'));
 
 // Watch for changes
 
 gulp.task('watch', function() {
-    gulp.watch('src/**/*.scss', ['sass']);
-});
+    gulp.watch('src/**/*.scss', gulp.series('process'));
+ });
 
 
 // Default Task
 
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', gulp.series('process', 'watch'));

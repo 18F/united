@@ -19130,6 +19130,874 @@ template {
     clear: right;
   }
 
+  .sm-blue {
+    color: #056dd4;
+  }
+
+  .sm-brightmint {
+    color: #00df99;
+  }
+
+  .sm-cream {
+    color: #f5f5f3;
+  }
+
+  .sm-gold {
+    color: #f4b400;
+  }
+
+  .sm-green {
+    color: #0baf00;
+  }
+
+  .sm-red {
+    color: #be4900;
+  }
+
+  .sm-trueblack {
+    color: #000000;
+  }
+
+  .sm-textblack {
+    color: #333333;
+  }
+
+  .sm-darkgray {
+    color: #555555;
+  }
+
+  .sm-mediumgray {
+    color: #8e8e8e;
+  }
+
+  .sm-mediumgray-trans {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  .sm-lightgray {
+    color: #d3d3d3;
+  }
+
+  .sm-lightestgray {
+    color: #f5f5f3;
+  }
+
+  .sm-white {
+    color: #ffffff;
+  }
+
+  .sm-ultramarine-1 {
+    color: #e7e9f7;
+  }
+
+  .sm-ultramarine-10 {
+    color: #d1d7f4;
+  }
+
+  .sm-ultramarine-20 {
+    color: #b0bef3;
+  }
+
+  .sm-ultramarine-30 {
+    color: #89a2f6;
+  }
+
+  .sm-ultramarine-40 {
+    color: #648fff;
+  }
+
+  .sm-ultramarine-50 {
+    color: #3c6df0;
+  }
+
+  .sm-ultramarine-60 {
+    color: #3151b7;
+  }
+
+  .sm-ultramarine-70 {
+    color: #2e3f8f;
+  }
+
+  .sm-ultramarine-80 {
+    color: #252e6a;
+  }
+
+  .sm-ultramarine-90 {
+    color: #20214f;
+  }
+
+  .sm-blue-1 {
+    color: #e1ebf7;
+  }
+
+  .sm-blue-10 {
+    color: #c8daf4;
+  }
+
+  .sm-blue-20 {
+    color: #a8c0f3;
+  }
+
+  .sm-blue-30 {
+    color: #79a6f6;
+  }
+
+  .sm-blue-40 {
+    color: #5392ff;
+  }
+
+  .sm-blue-50 {
+    color: #2d74da;
+  }
+
+  .sm-blue-60 {
+    color: #1f57a4;
+  }
+
+  .sm-blue-70 {
+    color: #25467a;
+  }
+
+  .sm-blue-80 {
+    color: #1d3458;
+  }
+
+  .sm-blue-90 {
+    color: #19273c;
+  }
+
+  .sm-cerulean-10 {
+    color: #c2dbf4;
+  }
+
+  .sm-cerulean-20 {
+    color: #95c4f3;
+  }
+
+  .sm-cerulean-30 {
+    color: #56acf2;
+  }
+
+  .sm-cerulean-40 {
+    color: #009bef;
+  }
+
+  .sm-cerulean-50 {
+    color: #047cc0;
+  }
+
+  .sm-cerulean-60 {
+    color: #175d8d;
+  }
+
+  .sm-cerulean-70 {
+    color: #1c496d;
+  }
+
+  .sm-cerulean-80 {
+    color: #1d364d;
+  }
+
+  .sm-cerulean-90 {
+    color: #1b2834;
+  }
+
+  .sm-aqua-1 {
+    color: #d1f0f7;
+  }
+
+  .sm-aqua-10 {
+    color: #a0e3f0;
+  }
+
+  .sm-aqua-20 {
+    color: #71cddd;
+  }
+
+  .sm-aqua-30 {
+    color: #00b6cb;
+  }
+
+  .sm-aqua-40 {
+    color: #12a3b4;
+  }
+
+  .sm-aqua-50 {
+    color: #188291;
+  }
+
+  .sm-aqua-60 {
+    color: #17616b;
+  }
+
+  .sm-aqua-70 {
+    color: #164d56;
+  }
+
+  .sm-aqua-80 {
+    color: #13393e;
+  }
+
+  .sm-aqua-90 {
+    color: #122a2e;
+  }
+
+  .sm-teal-1 {
+    color: #c0f5e8;
+  }
+
+  .sm-teal-10 {
+    color: #8ee9d4;
+  }
+
+  .sm-teal-20 {
+    color: #40d5bb;
+  }
+
+  .sm-teal-30 {
+    color: #00baa1;
+  }
+
+  .sm-teal-40 {
+    color: #00a78f;
+  }
+
+  .sm-teal-50 {
+    color: #008673;
+  }
+
+  .sm-teal-60 {
+    color: #006456;
+  }
+
+  .sm-teal-70 {
+    color: #124f44;
+  }
+
+  .sm-teal-80 {
+    color: #133a32;
+  }
+
+  .sm-teal-90 {
+    color: #122b26;
+  }
+
+  .sm-green-1 {
+    color: #cef3d1;
+  }
+
+  .sm-green-10 {
+    color: #89eda0;
+  }
+
+  .sm-green-20 {
+    color: #57d785;
+  }
+
+  .sm-green-30 {
+    color: #34bc6e;
+  }
+
+  .sm-green-40 {
+    color: #00aa5e;
+  }
+
+  .sm-green-50 {
+    color: #00884b;
+  }
+
+  .sm-green-60 {
+    color: #116639;
+  }
+
+  .sm-green-70 {
+    color: #12512e;
+  }
+
+  .sm-green-80 {
+    color: #123b22;
+  }
+
+  .sm-green-90 {
+    color: #112c1b;
+  }
+
+  .sm-lime-1 {
+    color: #d7f4bd;
+  }
+
+  .sm-lime-10 {
+    color: #b4e876;
+  }
+
+  .sm-lime-20 {
+    color: #95d13c;
+  }
+
+  .sm-lime-30 {
+    color: #81b532;
+  }
+
+  .sm-lime-40 {
+    color: #73a22c;
+  }
+
+  .sm-lime-50 {
+    color: #5b8121;
+  }
+
+  .sm-lime-60 {
+    color: #426200;
+  }
+
+  .sm-lime-70 {
+    color: #374c1a;
+  }
+
+  .sm-lime-80 {
+    color: #283912;
+  }
+
+  .sm-lime-90 {
+    color: #1f2a10;
+  }
+
+  .sm-yellow-1 {
+    color: #fbeaae;
+  }
+
+  .sm-yellow-10 {
+    color: #fed500;
+  }
+
+  .sm-yellow-20 {
+    color: #e3bc13;
+  }
+
+  .sm-yellow-30 {
+    color: #c6a21a;
+  }
+
+  .sm-yellow-40 {
+    color: #b3901f;
+  }
+
+  .sm-yellow-50 {
+    color: #91721f;
+  }
+
+  .sm-yellow-60 {
+    color: #70541b;
+  }
+
+  .sm-yellow-70 {
+    color: #5b421a;
+  }
+
+  .sm-yellow-80 {
+    color: #452f18;
+  }
+
+  .sm-yellow-90 {
+    color: #372118;
+  }
+
+  .sm-gold-1 {
+    color: #f5e8db;
+  }
+
+  .sm-gold-10 {
+    color: #ffd191;
+  }
+
+  .sm-gold-20 {
+    color: #ffb000;
+  }
+
+  .sm-gold-30 {
+    color: #e39d14;
+  }
+
+  .sm-gold-40 {
+    color: #c4881c;
+  }
+
+  .sm-gold-50 {
+    color: #9c6d1e;
+  }
+
+  .sm-gold-60 {
+    color: #74521b;
+  }
+
+  .sm-gold-70 {
+    color: #5b421c;
+  }
+
+  .sm-gold-80 {
+    color: #42301b;
+  }
+
+  .sm-gold-90 {
+    color: #2f261c;
+  }
+
+  .sm-orange-1 {
+    color: #f5e8de;
+  }
+
+  .sm-orange-10 {
+    color: #fdcfad;
+  }
+
+  .sm-orange-20 {
+    color: #fcaf6d;
+  }
+
+  .sm-orange-30 {
+    color: #fe8500;
+  }
+
+  .sm-orange-40 {
+    color: #db7c00;
+  }
+
+  .sm-orange-50 {
+    color: #ad6418;
+  }
+
+  .sm-orange-60 {
+    color: #814b19;
+  }
+
+  .sm-orange-70 {
+    color: #653d1b;
+  }
+
+  .sm-orange-80 {
+    color: #482e1a;
+  }
+
+  .sm-orange-90 {
+    color: #33241c;
+  }
+
+  .sm-peach-1 {
+    color: #f7e7e2;
+  }
+
+  .sm-peach-10 {
+    color: #f8d0c3;
+  }
+
+  .sm-peach-20 {
+    color: #faad96;
+  }
+
+  .sm-peach-30 {
+    color: #fc835c;
+  }
+
+  .sm-peach-40 {
+    color: #fe6100;
+  }
+
+  .sm-peach-50 {
+    color: #c45433;
+  }
+
+  .sm-peach-60 {
+    color: #993a1d;
+  }
+
+  .sm-peach-70 {
+    color: #782f1c;
+  }
+
+  .sm-peach-80 {
+    color: #56251a;
+  }
+
+  .sm-peach-90 {
+    color: #3a201b;
+  }
+
+  .sm-red-1 {
+    color: #f7e6e6;
+  }
+
+  .sm-red-10 {
+    color: #fccec7;
+  }
+
+  .sm-red-20 {
+    color: #ffaa9d;
+  }
+
+  .sm-red-30 {
+    color: #ff806c;
+  }
+
+  .sm-red-40 {
+    color: #ff5c49;
+  }
+
+  .sm-red-50 {
+    color: #e62325;
+  }
+
+  .sm-red-60 {
+    color: #aa231f;
+  }
+
+  .sm-red-70 {
+    color: #83231e;
+  }
+
+  .sm-red-80 {
+    color: #5c1f1b;
+  }
+
+  .sm-red-90 {
+    color: #3e1d1b;
+  }
+
+  .sm-magenta-1 {
+    color: #f5e7eb;
+  }
+
+  .sm-magenta-10 {
+    color: #f5cedb;
+  }
+
+  .sm-magenta-20 {
+    color: #f7aac3;
+  }
+
+  .sm-magenta-30 {
+    color: #f87eac;
+  }
+
+  .sm-magenta-40 {
+    color: #ff509e;
+  }
+
+  .sm-magenta-50 {
+    color: #dc267f;
+  }
+
+  .sm-magenta-60 {
+    color: #a91560;
+  }
+
+  .sm-magenta-70 {
+    color: #831b4c;
+  }
+
+  .sm-magenta-80 {
+    color: #5d1a38;
+  }
+
+  .sm-magenta-90 {
+    color: #401a29;
+  }
+
+  .sm-purple-1 {
+    color: #f7e4fb;
+  }
+
+  .sm-purple-10 {
+    color: #efcef3;
+  }
+
+  .sm-purple-20 {
+    color: #e4adea;
+  }
+
+  .sm-purple-30 {
+    color: #d68adf;
+  }
+
+  .sm-purple-40 {
+    color: #cb71d7;
+  }
+
+  .sm-purple-50 {
+    color: #c22dd5;
+  }
+
+  .sm-purple-60 {
+    color: #9320a2;
+  }
+
+  .sm-purple-70 {
+    color: #71237c;
+  }
+
+  .sm-purple-80 {
+    color: #501e58;
+  }
+
+  .sm-purple-90 {
+    color: #3b1a40;
+  }
+
+  .sm-violet-1 {
+    color: #ece8f5;
+  }
+
+  .sm-violet-10 {
+    color: #e2d2f4;
+  }
+
+  .sm-violet-20 {
+    color: #d2b5f0;
+  }
+
+  .sm-violet-30 {
+    color: #bf93eb;
+  }
+
+  .sm-violet-40 {
+    color: #b07ce8;
+  }
+
+  .sm-violet-50 {
+    color: #9753e1;
+  }
+
+  .sm-violet-60 {
+    color: #7732bb;
+  }
+
+  .sm-violet-70 {
+    color: #602797;
+  }
+
+  .sm-violet-80 {
+    color: #44216a;
+  }
+
+  .sm-violet-90 {
+    color: #321c4c;
+  }
+
+  .sm-indigo-1 {
+    color: #e9e8ff;
+  }
+
+  .sm-indigo-10 {
+    color: #dcd4f7;
+  }
+
+  .sm-indigo-20 {
+    color: #c7b6f7;
+  }
+
+  .sm-indigo-30 {
+    color: #ae97f4;
+  }
+
+  .sm-indigo-40 {
+    color: #9b82f3;
+  }
+
+  .sm-indigo-50 {
+    color: #785ef0;
+  }
+
+  .sm-indigo-60 {
+    color: #5a3ec8;
+  }
+
+  .sm-indigo-70 {
+    color: #473793;
+  }
+
+  .sm-indigo-80 {
+    color: #352969;
+  }
+
+  .sm-indigo-90 {
+    color: #272149;
+  }
+
+  .sm-gray-1 {
+    color: #eaeaea;
+  }
+
+  .sm-gray-10 {
+    color: #d8d8d8;
+  }
+
+  .sm-gray-20 {
+    color: #c0bfc0;
+  }
+
+  .sm-gray-30 {
+    color: #a6a5a6;
+  }
+
+  .sm-gray-40 {
+    color: #949394;
+  }
+
+  .sm-gray-50 {
+    color: #777677;
+  }
+
+  .sm-gray-60 {
+    color: #595859;
+  }
+
+  .sm-gray-70 {
+    color: #464646;
+  }
+
+  .sm-gray-80 {
+    color: #343334;
+  }
+
+  .sm-gray-90 {
+    color: #272727;
+  }
+
+  .sm-cool-gray-1 {
+    color: #e3ecec;
+  }
+
+  .sm-cool-gray-10 {
+    color: #d0dada;
+  }
+
+  .sm-cool-gray-20 {
+    color: #b8c1c1;
+  }
+
+  .sm-cool-gray-30 {
+    color: #9fa7a7;
+  }
+
+  .sm-cool-gray-40 {
+    color: #8c9696;
+  }
+
+  .sm-cool-gray-50 {
+    color: #6f7878;
+  }
+
+  .sm-cool-gray-60 {
+    color: #535a5a;
+  }
+
+  .sm-cool-gray-70 {
+    color: #424747;
+  }
+
+  .sm-cool-gray-80 {
+    color: #343334;
+  }
+
+  .sm-cool-gray-90 {
+    color: #272727;
+  }
+
+  .sm-warm-gray-1 {
+    color: #efe9e9;
+  }
+
+  .sm-warm-gray-10 {
+    color: #e2d5d5;
+  }
+
+  .sm-warm-gray-20 {
+    color: #ccbcbc;
+  }
+
+  .sm-warm-gray-30 {
+    color: #b4a1a1;
+  }
+
+  .sm-warm-gray-40 {
+    color: #9e9191;
+  }
+
+  .sm-warm-gray-50 {
+    color: #7d7373;
+  }
+
+  .sm-warm-gray-60 {
+    color: #5f5757;
+  }
+
+  .sm-warm-gray-70 {
+    color: #4b4545;
+  }
+
+  .sm-warm-gray-80 {
+    color: #373232;
+  }
+
+  .sm-warm-gray-90 {
+    color: #2a2626;
+  }
+
+  .sm-neutral-white-1 {
+    color: #fcfcfc;
+  }
+
+  .sm-neutral-white-2 {
+    color: #f9f9f9;
+  }
+
+  .sm-neutral-white-3 {
+    color: #f6f6f6;
+  }
+
+  .sm-neutral-white-4 {
+    color: #f3f3f3;
+  }
+
+  .sm-cool-white-1 {
+    color: #fbfcfc;
+  }
+
+  .sm-cool-white-2 {
+    color: #f8fafa;
+  }
+
+  .sm-cool-white-3 {
+    color: #f4f7f7;
+  }
+
+  .sm-cool-white-4 {
+    color: #f0f4f4;
+  }
+
+  .sm-warm-white-1 {
+    color: #fdfcfc;
+  }
+
+  .sm-warm-white-2 {
+    color: #fbf8f8;
+  }
+
+  .sm-warm-white-3 {
+    color: #f9f6f6;
+  }
+
+  .sm-warm-white-4 {
+    color: #f6f3f3;
+  }
+
+  .sm-black-100 {
+    color: #000;
+  }
+
+  .sm-white-0 {
+    color: #fff;
+  }
+
   .sm-col {
     -webkit-box-flex: 0;
     -ms-flex: 0;
@@ -29277,6 +30145,874 @@ template {
 
   .md-clear-right {
     clear: right;
+  }
+
+  .md-blue {
+    color: #056dd4;
+  }
+
+  .md-brightmint {
+    color: #00df99;
+  }
+
+  .md-cream {
+    color: #f5f5f3;
+  }
+
+  .md-gold {
+    color: #f4b400;
+  }
+
+  .md-green {
+    color: #0baf00;
+  }
+
+  .md-red {
+    color: #be4900;
+  }
+
+  .md-trueblack {
+    color: #000000;
+  }
+
+  .md-textblack {
+    color: #333333;
+  }
+
+  .md-darkgray {
+    color: #555555;
+  }
+
+  .md-mediumgray {
+    color: #8e8e8e;
+  }
+
+  .md-mediumgray-trans {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  .md-lightgray {
+    color: #d3d3d3;
+  }
+
+  .md-lightestgray {
+    color: #f5f5f3;
+  }
+
+  .md-white {
+    color: #ffffff;
+  }
+
+  .md-ultramarine-1 {
+    color: #e7e9f7;
+  }
+
+  .md-ultramarine-10 {
+    color: #d1d7f4;
+  }
+
+  .md-ultramarine-20 {
+    color: #b0bef3;
+  }
+
+  .md-ultramarine-30 {
+    color: #89a2f6;
+  }
+
+  .md-ultramarine-40 {
+    color: #648fff;
+  }
+
+  .md-ultramarine-50 {
+    color: #3c6df0;
+  }
+
+  .md-ultramarine-60 {
+    color: #3151b7;
+  }
+
+  .md-ultramarine-70 {
+    color: #2e3f8f;
+  }
+
+  .md-ultramarine-80 {
+    color: #252e6a;
+  }
+
+  .md-ultramarine-90 {
+    color: #20214f;
+  }
+
+  .md-blue-1 {
+    color: #e1ebf7;
+  }
+
+  .md-blue-10 {
+    color: #c8daf4;
+  }
+
+  .md-blue-20 {
+    color: #a8c0f3;
+  }
+
+  .md-blue-30 {
+    color: #79a6f6;
+  }
+
+  .md-blue-40 {
+    color: #5392ff;
+  }
+
+  .md-blue-50 {
+    color: #2d74da;
+  }
+
+  .md-blue-60 {
+    color: #1f57a4;
+  }
+
+  .md-blue-70 {
+    color: #25467a;
+  }
+
+  .md-blue-80 {
+    color: #1d3458;
+  }
+
+  .md-blue-90 {
+    color: #19273c;
+  }
+
+  .md-cerulean-10 {
+    color: #c2dbf4;
+  }
+
+  .md-cerulean-20 {
+    color: #95c4f3;
+  }
+
+  .md-cerulean-30 {
+    color: #56acf2;
+  }
+
+  .md-cerulean-40 {
+    color: #009bef;
+  }
+
+  .md-cerulean-50 {
+    color: #047cc0;
+  }
+
+  .md-cerulean-60 {
+    color: #175d8d;
+  }
+
+  .md-cerulean-70 {
+    color: #1c496d;
+  }
+
+  .md-cerulean-80 {
+    color: #1d364d;
+  }
+
+  .md-cerulean-90 {
+    color: #1b2834;
+  }
+
+  .md-aqua-1 {
+    color: #d1f0f7;
+  }
+
+  .md-aqua-10 {
+    color: #a0e3f0;
+  }
+
+  .md-aqua-20 {
+    color: #71cddd;
+  }
+
+  .md-aqua-30 {
+    color: #00b6cb;
+  }
+
+  .md-aqua-40 {
+    color: #12a3b4;
+  }
+
+  .md-aqua-50 {
+    color: #188291;
+  }
+
+  .md-aqua-60 {
+    color: #17616b;
+  }
+
+  .md-aqua-70 {
+    color: #164d56;
+  }
+
+  .md-aqua-80 {
+    color: #13393e;
+  }
+
+  .md-aqua-90 {
+    color: #122a2e;
+  }
+
+  .md-teal-1 {
+    color: #c0f5e8;
+  }
+
+  .md-teal-10 {
+    color: #8ee9d4;
+  }
+
+  .md-teal-20 {
+    color: #40d5bb;
+  }
+
+  .md-teal-30 {
+    color: #00baa1;
+  }
+
+  .md-teal-40 {
+    color: #00a78f;
+  }
+
+  .md-teal-50 {
+    color: #008673;
+  }
+
+  .md-teal-60 {
+    color: #006456;
+  }
+
+  .md-teal-70 {
+    color: #124f44;
+  }
+
+  .md-teal-80 {
+    color: #133a32;
+  }
+
+  .md-teal-90 {
+    color: #122b26;
+  }
+
+  .md-green-1 {
+    color: #cef3d1;
+  }
+
+  .md-green-10 {
+    color: #89eda0;
+  }
+
+  .md-green-20 {
+    color: #57d785;
+  }
+
+  .md-green-30 {
+    color: #34bc6e;
+  }
+
+  .md-green-40 {
+    color: #00aa5e;
+  }
+
+  .md-green-50 {
+    color: #00884b;
+  }
+
+  .md-green-60 {
+    color: #116639;
+  }
+
+  .md-green-70 {
+    color: #12512e;
+  }
+
+  .md-green-80 {
+    color: #123b22;
+  }
+
+  .md-green-90 {
+    color: #112c1b;
+  }
+
+  .md-lime-1 {
+    color: #d7f4bd;
+  }
+
+  .md-lime-10 {
+    color: #b4e876;
+  }
+
+  .md-lime-20 {
+    color: #95d13c;
+  }
+
+  .md-lime-30 {
+    color: #81b532;
+  }
+
+  .md-lime-40 {
+    color: #73a22c;
+  }
+
+  .md-lime-50 {
+    color: #5b8121;
+  }
+
+  .md-lime-60 {
+    color: #426200;
+  }
+
+  .md-lime-70 {
+    color: #374c1a;
+  }
+
+  .md-lime-80 {
+    color: #283912;
+  }
+
+  .md-lime-90 {
+    color: #1f2a10;
+  }
+
+  .md-yellow-1 {
+    color: #fbeaae;
+  }
+
+  .md-yellow-10 {
+    color: #fed500;
+  }
+
+  .md-yellow-20 {
+    color: #e3bc13;
+  }
+
+  .md-yellow-30 {
+    color: #c6a21a;
+  }
+
+  .md-yellow-40 {
+    color: #b3901f;
+  }
+
+  .md-yellow-50 {
+    color: #91721f;
+  }
+
+  .md-yellow-60 {
+    color: #70541b;
+  }
+
+  .md-yellow-70 {
+    color: #5b421a;
+  }
+
+  .md-yellow-80 {
+    color: #452f18;
+  }
+
+  .md-yellow-90 {
+    color: #372118;
+  }
+
+  .md-gold-1 {
+    color: #f5e8db;
+  }
+
+  .md-gold-10 {
+    color: #ffd191;
+  }
+
+  .md-gold-20 {
+    color: #ffb000;
+  }
+
+  .md-gold-30 {
+    color: #e39d14;
+  }
+
+  .md-gold-40 {
+    color: #c4881c;
+  }
+
+  .md-gold-50 {
+    color: #9c6d1e;
+  }
+
+  .md-gold-60 {
+    color: #74521b;
+  }
+
+  .md-gold-70 {
+    color: #5b421c;
+  }
+
+  .md-gold-80 {
+    color: #42301b;
+  }
+
+  .md-gold-90 {
+    color: #2f261c;
+  }
+
+  .md-orange-1 {
+    color: #f5e8de;
+  }
+
+  .md-orange-10 {
+    color: #fdcfad;
+  }
+
+  .md-orange-20 {
+    color: #fcaf6d;
+  }
+
+  .md-orange-30 {
+    color: #fe8500;
+  }
+
+  .md-orange-40 {
+    color: #db7c00;
+  }
+
+  .md-orange-50 {
+    color: #ad6418;
+  }
+
+  .md-orange-60 {
+    color: #814b19;
+  }
+
+  .md-orange-70 {
+    color: #653d1b;
+  }
+
+  .md-orange-80 {
+    color: #482e1a;
+  }
+
+  .md-orange-90 {
+    color: #33241c;
+  }
+
+  .md-peach-1 {
+    color: #f7e7e2;
+  }
+
+  .md-peach-10 {
+    color: #f8d0c3;
+  }
+
+  .md-peach-20 {
+    color: #faad96;
+  }
+
+  .md-peach-30 {
+    color: #fc835c;
+  }
+
+  .md-peach-40 {
+    color: #fe6100;
+  }
+
+  .md-peach-50 {
+    color: #c45433;
+  }
+
+  .md-peach-60 {
+    color: #993a1d;
+  }
+
+  .md-peach-70 {
+    color: #782f1c;
+  }
+
+  .md-peach-80 {
+    color: #56251a;
+  }
+
+  .md-peach-90 {
+    color: #3a201b;
+  }
+
+  .md-red-1 {
+    color: #f7e6e6;
+  }
+
+  .md-red-10 {
+    color: #fccec7;
+  }
+
+  .md-red-20 {
+    color: #ffaa9d;
+  }
+
+  .md-red-30 {
+    color: #ff806c;
+  }
+
+  .md-red-40 {
+    color: #ff5c49;
+  }
+
+  .md-red-50 {
+    color: #e62325;
+  }
+
+  .md-red-60 {
+    color: #aa231f;
+  }
+
+  .md-red-70 {
+    color: #83231e;
+  }
+
+  .md-red-80 {
+    color: #5c1f1b;
+  }
+
+  .md-red-90 {
+    color: #3e1d1b;
+  }
+
+  .md-magenta-1 {
+    color: #f5e7eb;
+  }
+
+  .md-magenta-10 {
+    color: #f5cedb;
+  }
+
+  .md-magenta-20 {
+    color: #f7aac3;
+  }
+
+  .md-magenta-30 {
+    color: #f87eac;
+  }
+
+  .md-magenta-40 {
+    color: #ff509e;
+  }
+
+  .md-magenta-50 {
+    color: #dc267f;
+  }
+
+  .md-magenta-60 {
+    color: #a91560;
+  }
+
+  .md-magenta-70 {
+    color: #831b4c;
+  }
+
+  .md-magenta-80 {
+    color: #5d1a38;
+  }
+
+  .md-magenta-90 {
+    color: #401a29;
+  }
+
+  .md-purple-1 {
+    color: #f7e4fb;
+  }
+
+  .md-purple-10 {
+    color: #efcef3;
+  }
+
+  .md-purple-20 {
+    color: #e4adea;
+  }
+
+  .md-purple-30 {
+    color: #d68adf;
+  }
+
+  .md-purple-40 {
+    color: #cb71d7;
+  }
+
+  .md-purple-50 {
+    color: #c22dd5;
+  }
+
+  .md-purple-60 {
+    color: #9320a2;
+  }
+
+  .md-purple-70 {
+    color: #71237c;
+  }
+
+  .md-purple-80 {
+    color: #501e58;
+  }
+
+  .md-purple-90 {
+    color: #3b1a40;
+  }
+
+  .md-violet-1 {
+    color: #ece8f5;
+  }
+
+  .md-violet-10 {
+    color: #e2d2f4;
+  }
+
+  .md-violet-20 {
+    color: #d2b5f0;
+  }
+
+  .md-violet-30 {
+    color: #bf93eb;
+  }
+
+  .md-violet-40 {
+    color: #b07ce8;
+  }
+
+  .md-violet-50 {
+    color: #9753e1;
+  }
+
+  .md-violet-60 {
+    color: #7732bb;
+  }
+
+  .md-violet-70 {
+    color: #602797;
+  }
+
+  .md-violet-80 {
+    color: #44216a;
+  }
+
+  .md-violet-90 {
+    color: #321c4c;
+  }
+
+  .md-indigo-1 {
+    color: #e9e8ff;
+  }
+
+  .md-indigo-10 {
+    color: #dcd4f7;
+  }
+
+  .md-indigo-20 {
+    color: #c7b6f7;
+  }
+
+  .md-indigo-30 {
+    color: #ae97f4;
+  }
+
+  .md-indigo-40 {
+    color: #9b82f3;
+  }
+
+  .md-indigo-50 {
+    color: #785ef0;
+  }
+
+  .md-indigo-60 {
+    color: #5a3ec8;
+  }
+
+  .md-indigo-70 {
+    color: #473793;
+  }
+
+  .md-indigo-80 {
+    color: #352969;
+  }
+
+  .md-indigo-90 {
+    color: #272149;
+  }
+
+  .md-gray-1 {
+    color: #eaeaea;
+  }
+
+  .md-gray-10 {
+    color: #d8d8d8;
+  }
+
+  .md-gray-20 {
+    color: #c0bfc0;
+  }
+
+  .md-gray-30 {
+    color: #a6a5a6;
+  }
+
+  .md-gray-40 {
+    color: #949394;
+  }
+
+  .md-gray-50 {
+    color: #777677;
+  }
+
+  .md-gray-60 {
+    color: #595859;
+  }
+
+  .md-gray-70 {
+    color: #464646;
+  }
+
+  .md-gray-80 {
+    color: #343334;
+  }
+
+  .md-gray-90 {
+    color: #272727;
+  }
+
+  .md-cool-gray-1 {
+    color: #e3ecec;
+  }
+
+  .md-cool-gray-10 {
+    color: #d0dada;
+  }
+
+  .md-cool-gray-20 {
+    color: #b8c1c1;
+  }
+
+  .md-cool-gray-30 {
+    color: #9fa7a7;
+  }
+
+  .md-cool-gray-40 {
+    color: #8c9696;
+  }
+
+  .md-cool-gray-50 {
+    color: #6f7878;
+  }
+
+  .md-cool-gray-60 {
+    color: #535a5a;
+  }
+
+  .md-cool-gray-70 {
+    color: #424747;
+  }
+
+  .md-cool-gray-80 {
+    color: #343334;
+  }
+
+  .md-cool-gray-90 {
+    color: #272727;
+  }
+
+  .md-warm-gray-1 {
+    color: #efe9e9;
+  }
+
+  .md-warm-gray-10 {
+    color: #e2d5d5;
+  }
+
+  .md-warm-gray-20 {
+    color: #ccbcbc;
+  }
+
+  .md-warm-gray-30 {
+    color: #b4a1a1;
+  }
+
+  .md-warm-gray-40 {
+    color: #9e9191;
+  }
+
+  .md-warm-gray-50 {
+    color: #7d7373;
+  }
+
+  .md-warm-gray-60 {
+    color: #5f5757;
+  }
+
+  .md-warm-gray-70 {
+    color: #4b4545;
+  }
+
+  .md-warm-gray-80 {
+    color: #373232;
+  }
+
+  .md-warm-gray-90 {
+    color: #2a2626;
+  }
+
+  .md-neutral-white-1 {
+    color: #fcfcfc;
+  }
+
+  .md-neutral-white-2 {
+    color: #f9f9f9;
+  }
+
+  .md-neutral-white-3 {
+    color: #f6f6f6;
+  }
+
+  .md-neutral-white-4 {
+    color: #f3f3f3;
+  }
+
+  .md-cool-white-1 {
+    color: #fbfcfc;
+  }
+
+  .md-cool-white-2 {
+    color: #f8fafa;
+  }
+
+  .md-cool-white-3 {
+    color: #f4f7f7;
+  }
+
+  .md-cool-white-4 {
+    color: #f0f4f4;
+  }
+
+  .md-warm-white-1 {
+    color: #fdfcfc;
+  }
+
+  .md-warm-white-2 {
+    color: #fbf8f8;
+  }
+
+  .md-warm-white-3 {
+    color: #f9f6f6;
+  }
+
+  .md-warm-white-4 {
+    color: #f6f3f3;
+  }
+
+  .md-black-100 {
+    color: #000;
+  }
+
+  .md-white-0 {
+    color: #fff;
   }
 
   .md-col {
@@ -39428,6 +41164,874 @@ template {
     clear: right;
   }
 
+  .lg-blue {
+    color: #056dd4;
+  }
+
+  .lg-brightmint {
+    color: #00df99;
+  }
+
+  .lg-cream {
+    color: #f5f5f3;
+  }
+
+  .lg-gold {
+    color: #f4b400;
+  }
+
+  .lg-green {
+    color: #0baf00;
+  }
+
+  .lg-red {
+    color: #be4900;
+  }
+
+  .lg-trueblack {
+    color: #000000;
+  }
+
+  .lg-textblack {
+    color: #333333;
+  }
+
+  .lg-darkgray {
+    color: #555555;
+  }
+
+  .lg-mediumgray {
+    color: #8e8e8e;
+  }
+
+  .lg-mediumgray-trans {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  .lg-lightgray {
+    color: #d3d3d3;
+  }
+
+  .lg-lightestgray {
+    color: #f5f5f3;
+  }
+
+  .lg-white {
+    color: #ffffff;
+  }
+
+  .lg-ultramarine-1 {
+    color: #e7e9f7;
+  }
+
+  .lg-ultramarine-10 {
+    color: #d1d7f4;
+  }
+
+  .lg-ultramarine-20 {
+    color: #b0bef3;
+  }
+
+  .lg-ultramarine-30 {
+    color: #89a2f6;
+  }
+
+  .lg-ultramarine-40 {
+    color: #648fff;
+  }
+
+  .lg-ultramarine-50 {
+    color: #3c6df0;
+  }
+
+  .lg-ultramarine-60 {
+    color: #3151b7;
+  }
+
+  .lg-ultramarine-70 {
+    color: #2e3f8f;
+  }
+
+  .lg-ultramarine-80 {
+    color: #252e6a;
+  }
+
+  .lg-ultramarine-90 {
+    color: #20214f;
+  }
+
+  .lg-blue-1 {
+    color: #e1ebf7;
+  }
+
+  .lg-blue-10 {
+    color: #c8daf4;
+  }
+
+  .lg-blue-20 {
+    color: #a8c0f3;
+  }
+
+  .lg-blue-30 {
+    color: #79a6f6;
+  }
+
+  .lg-blue-40 {
+    color: #5392ff;
+  }
+
+  .lg-blue-50 {
+    color: #2d74da;
+  }
+
+  .lg-blue-60 {
+    color: #1f57a4;
+  }
+
+  .lg-blue-70 {
+    color: #25467a;
+  }
+
+  .lg-blue-80 {
+    color: #1d3458;
+  }
+
+  .lg-blue-90 {
+    color: #19273c;
+  }
+
+  .lg-cerulean-10 {
+    color: #c2dbf4;
+  }
+
+  .lg-cerulean-20 {
+    color: #95c4f3;
+  }
+
+  .lg-cerulean-30 {
+    color: #56acf2;
+  }
+
+  .lg-cerulean-40 {
+    color: #009bef;
+  }
+
+  .lg-cerulean-50 {
+    color: #047cc0;
+  }
+
+  .lg-cerulean-60 {
+    color: #175d8d;
+  }
+
+  .lg-cerulean-70 {
+    color: #1c496d;
+  }
+
+  .lg-cerulean-80 {
+    color: #1d364d;
+  }
+
+  .lg-cerulean-90 {
+    color: #1b2834;
+  }
+
+  .lg-aqua-1 {
+    color: #d1f0f7;
+  }
+
+  .lg-aqua-10 {
+    color: #a0e3f0;
+  }
+
+  .lg-aqua-20 {
+    color: #71cddd;
+  }
+
+  .lg-aqua-30 {
+    color: #00b6cb;
+  }
+
+  .lg-aqua-40 {
+    color: #12a3b4;
+  }
+
+  .lg-aqua-50 {
+    color: #188291;
+  }
+
+  .lg-aqua-60 {
+    color: #17616b;
+  }
+
+  .lg-aqua-70 {
+    color: #164d56;
+  }
+
+  .lg-aqua-80 {
+    color: #13393e;
+  }
+
+  .lg-aqua-90 {
+    color: #122a2e;
+  }
+
+  .lg-teal-1 {
+    color: #c0f5e8;
+  }
+
+  .lg-teal-10 {
+    color: #8ee9d4;
+  }
+
+  .lg-teal-20 {
+    color: #40d5bb;
+  }
+
+  .lg-teal-30 {
+    color: #00baa1;
+  }
+
+  .lg-teal-40 {
+    color: #00a78f;
+  }
+
+  .lg-teal-50 {
+    color: #008673;
+  }
+
+  .lg-teal-60 {
+    color: #006456;
+  }
+
+  .lg-teal-70 {
+    color: #124f44;
+  }
+
+  .lg-teal-80 {
+    color: #133a32;
+  }
+
+  .lg-teal-90 {
+    color: #122b26;
+  }
+
+  .lg-green-1 {
+    color: #cef3d1;
+  }
+
+  .lg-green-10 {
+    color: #89eda0;
+  }
+
+  .lg-green-20 {
+    color: #57d785;
+  }
+
+  .lg-green-30 {
+    color: #34bc6e;
+  }
+
+  .lg-green-40 {
+    color: #00aa5e;
+  }
+
+  .lg-green-50 {
+    color: #00884b;
+  }
+
+  .lg-green-60 {
+    color: #116639;
+  }
+
+  .lg-green-70 {
+    color: #12512e;
+  }
+
+  .lg-green-80 {
+    color: #123b22;
+  }
+
+  .lg-green-90 {
+    color: #112c1b;
+  }
+
+  .lg-lime-1 {
+    color: #d7f4bd;
+  }
+
+  .lg-lime-10 {
+    color: #b4e876;
+  }
+
+  .lg-lime-20 {
+    color: #95d13c;
+  }
+
+  .lg-lime-30 {
+    color: #81b532;
+  }
+
+  .lg-lime-40 {
+    color: #73a22c;
+  }
+
+  .lg-lime-50 {
+    color: #5b8121;
+  }
+
+  .lg-lime-60 {
+    color: #426200;
+  }
+
+  .lg-lime-70 {
+    color: #374c1a;
+  }
+
+  .lg-lime-80 {
+    color: #283912;
+  }
+
+  .lg-lime-90 {
+    color: #1f2a10;
+  }
+
+  .lg-yellow-1 {
+    color: #fbeaae;
+  }
+
+  .lg-yellow-10 {
+    color: #fed500;
+  }
+
+  .lg-yellow-20 {
+    color: #e3bc13;
+  }
+
+  .lg-yellow-30 {
+    color: #c6a21a;
+  }
+
+  .lg-yellow-40 {
+    color: #b3901f;
+  }
+
+  .lg-yellow-50 {
+    color: #91721f;
+  }
+
+  .lg-yellow-60 {
+    color: #70541b;
+  }
+
+  .lg-yellow-70 {
+    color: #5b421a;
+  }
+
+  .lg-yellow-80 {
+    color: #452f18;
+  }
+
+  .lg-yellow-90 {
+    color: #372118;
+  }
+
+  .lg-gold-1 {
+    color: #f5e8db;
+  }
+
+  .lg-gold-10 {
+    color: #ffd191;
+  }
+
+  .lg-gold-20 {
+    color: #ffb000;
+  }
+
+  .lg-gold-30 {
+    color: #e39d14;
+  }
+
+  .lg-gold-40 {
+    color: #c4881c;
+  }
+
+  .lg-gold-50 {
+    color: #9c6d1e;
+  }
+
+  .lg-gold-60 {
+    color: #74521b;
+  }
+
+  .lg-gold-70 {
+    color: #5b421c;
+  }
+
+  .lg-gold-80 {
+    color: #42301b;
+  }
+
+  .lg-gold-90 {
+    color: #2f261c;
+  }
+
+  .lg-orange-1 {
+    color: #f5e8de;
+  }
+
+  .lg-orange-10 {
+    color: #fdcfad;
+  }
+
+  .lg-orange-20 {
+    color: #fcaf6d;
+  }
+
+  .lg-orange-30 {
+    color: #fe8500;
+  }
+
+  .lg-orange-40 {
+    color: #db7c00;
+  }
+
+  .lg-orange-50 {
+    color: #ad6418;
+  }
+
+  .lg-orange-60 {
+    color: #814b19;
+  }
+
+  .lg-orange-70 {
+    color: #653d1b;
+  }
+
+  .lg-orange-80 {
+    color: #482e1a;
+  }
+
+  .lg-orange-90 {
+    color: #33241c;
+  }
+
+  .lg-peach-1 {
+    color: #f7e7e2;
+  }
+
+  .lg-peach-10 {
+    color: #f8d0c3;
+  }
+
+  .lg-peach-20 {
+    color: #faad96;
+  }
+
+  .lg-peach-30 {
+    color: #fc835c;
+  }
+
+  .lg-peach-40 {
+    color: #fe6100;
+  }
+
+  .lg-peach-50 {
+    color: #c45433;
+  }
+
+  .lg-peach-60 {
+    color: #993a1d;
+  }
+
+  .lg-peach-70 {
+    color: #782f1c;
+  }
+
+  .lg-peach-80 {
+    color: #56251a;
+  }
+
+  .lg-peach-90 {
+    color: #3a201b;
+  }
+
+  .lg-red-1 {
+    color: #f7e6e6;
+  }
+
+  .lg-red-10 {
+    color: #fccec7;
+  }
+
+  .lg-red-20 {
+    color: #ffaa9d;
+  }
+
+  .lg-red-30 {
+    color: #ff806c;
+  }
+
+  .lg-red-40 {
+    color: #ff5c49;
+  }
+
+  .lg-red-50 {
+    color: #e62325;
+  }
+
+  .lg-red-60 {
+    color: #aa231f;
+  }
+
+  .lg-red-70 {
+    color: #83231e;
+  }
+
+  .lg-red-80 {
+    color: #5c1f1b;
+  }
+
+  .lg-red-90 {
+    color: #3e1d1b;
+  }
+
+  .lg-magenta-1 {
+    color: #f5e7eb;
+  }
+
+  .lg-magenta-10 {
+    color: #f5cedb;
+  }
+
+  .lg-magenta-20 {
+    color: #f7aac3;
+  }
+
+  .lg-magenta-30 {
+    color: #f87eac;
+  }
+
+  .lg-magenta-40 {
+    color: #ff509e;
+  }
+
+  .lg-magenta-50 {
+    color: #dc267f;
+  }
+
+  .lg-magenta-60 {
+    color: #a91560;
+  }
+
+  .lg-magenta-70 {
+    color: #831b4c;
+  }
+
+  .lg-magenta-80 {
+    color: #5d1a38;
+  }
+
+  .lg-magenta-90 {
+    color: #401a29;
+  }
+
+  .lg-purple-1 {
+    color: #f7e4fb;
+  }
+
+  .lg-purple-10 {
+    color: #efcef3;
+  }
+
+  .lg-purple-20 {
+    color: #e4adea;
+  }
+
+  .lg-purple-30 {
+    color: #d68adf;
+  }
+
+  .lg-purple-40 {
+    color: #cb71d7;
+  }
+
+  .lg-purple-50 {
+    color: #c22dd5;
+  }
+
+  .lg-purple-60 {
+    color: #9320a2;
+  }
+
+  .lg-purple-70 {
+    color: #71237c;
+  }
+
+  .lg-purple-80 {
+    color: #501e58;
+  }
+
+  .lg-purple-90 {
+    color: #3b1a40;
+  }
+
+  .lg-violet-1 {
+    color: #ece8f5;
+  }
+
+  .lg-violet-10 {
+    color: #e2d2f4;
+  }
+
+  .lg-violet-20 {
+    color: #d2b5f0;
+  }
+
+  .lg-violet-30 {
+    color: #bf93eb;
+  }
+
+  .lg-violet-40 {
+    color: #b07ce8;
+  }
+
+  .lg-violet-50 {
+    color: #9753e1;
+  }
+
+  .lg-violet-60 {
+    color: #7732bb;
+  }
+
+  .lg-violet-70 {
+    color: #602797;
+  }
+
+  .lg-violet-80 {
+    color: #44216a;
+  }
+
+  .lg-violet-90 {
+    color: #321c4c;
+  }
+
+  .lg-indigo-1 {
+    color: #e9e8ff;
+  }
+
+  .lg-indigo-10 {
+    color: #dcd4f7;
+  }
+
+  .lg-indigo-20 {
+    color: #c7b6f7;
+  }
+
+  .lg-indigo-30 {
+    color: #ae97f4;
+  }
+
+  .lg-indigo-40 {
+    color: #9b82f3;
+  }
+
+  .lg-indigo-50 {
+    color: #785ef0;
+  }
+
+  .lg-indigo-60 {
+    color: #5a3ec8;
+  }
+
+  .lg-indigo-70 {
+    color: #473793;
+  }
+
+  .lg-indigo-80 {
+    color: #352969;
+  }
+
+  .lg-indigo-90 {
+    color: #272149;
+  }
+
+  .lg-gray-1 {
+    color: #eaeaea;
+  }
+
+  .lg-gray-10 {
+    color: #d8d8d8;
+  }
+
+  .lg-gray-20 {
+    color: #c0bfc0;
+  }
+
+  .lg-gray-30 {
+    color: #a6a5a6;
+  }
+
+  .lg-gray-40 {
+    color: #949394;
+  }
+
+  .lg-gray-50 {
+    color: #777677;
+  }
+
+  .lg-gray-60 {
+    color: #595859;
+  }
+
+  .lg-gray-70 {
+    color: #464646;
+  }
+
+  .lg-gray-80 {
+    color: #343334;
+  }
+
+  .lg-gray-90 {
+    color: #272727;
+  }
+
+  .lg-cool-gray-1 {
+    color: #e3ecec;
+  }
+
+  .lg-cool-gray-10 {
+    color: #d0dada;
+  }
+
+  .lg-cool-gray-20 {
+    color: #b8c1c1;
+  }
+
+  .lg-cool-gray-30 {
+    color: #9fa7a7;
+  }
+
+  .lg-cool-gray-40 {
+    color: #8c9696;
+  }
+
+  .lg-cool-gray-50 {
+    color: #6f7878;
+  }
+
+  .lg-cool-gray-60 {
+    color: #535a5a;
+  }
+
+  .lg-cool-gray-70 {
+    color: #424747;
+  }
+
+  .lg-cool-gray-80 {
+    color: #343334;
+  }
+
+  .lg-cool-gray-90 {
+    color: #272727;
+  }
+
+  .lg-warm-gray-1 {
+    color: #efe9e9;
+  }
+
+  .lg-warm-gray-10 {
+    color: #e2d5d5;
+  }
+
+  .lg-warm-gray-20 {
+    color: #ccbcbc;
+  }
+
+  .lg-warm-gray-30 {
+    color: #b4a1a1;
+  }
+
+  .lg-warm-gray-40 {
+    color: #9e9191;
+  }
+
+  .lg-warm-gray-50 {
+    color: #7d7373;
+  }
+
+  .lg-warm-gray-60 {
+    color: #5f5757;
+  }
+
+  .lg-warm-gray-70 {
+    color: #4b4545;
+  }
+
+  .lg-warm-gray-80 {
+    color: #373232;
+  }
+
+  .lg-warm-gray-90 {
+    color: #2a2626;
+  }
+
+  .lg-neutral-white-1 {
+    color: #fcfcfc;
+  }
+
+  .lg-neutral-white-2 {
+    color: #f9f9f9;
+  }
+
+  .lg-neutral-white-3 {
+    color: #f6f6f6;
+  }
+
+  .lg-neutral-white-4 {
+    color: #f3f3f3;
+  }
+
+  .lg-cool-white-1 {
+    color: #fbfcfc;
+  }
+
+  .lg-cool-white-2 {
+    color: #f8fafa;
+  }
+
+  .lg-cool-white-3 {
+    color: #f4f7f7;
+  }
+
+  .lg-cool-white-4 {
+    color: #f0f4f4;
+  }
+
+  .lg-warm-white-1 {
+    color: #fdfcfc;
+  }
+
+  .lg-warm-white-2 {
+    color: #fbf8f8;
+  }
+
+  .lg-warm-white-3 {
+    color: #f9f6f6;
+  }
+
+  .lg-warm-white-4 {
+    color: #f6f3f3;
+  }
+
+  .lg-black-100 {
+    color: #000;
+  }
+
+  .lg-white-0 {
+    color: #fff;
+  }
+
   .lg-col {
     -webkit-box-flex: 0;
     -ms-flex: 0;
@@ -49575,6 +52179,874 @@ template {
 
   .xl-clear-right {
     clear: right;
+  }
+
+  .xl-blue {
+    color: #056dd4;
+  }
+
+  .xl-brightmint {
+    color: #00df99;
+  }
+
+  .xl-cream {
+    color: #f5f5f3;
+  }
+
+  .xl-gold {
+    color: #f4b400;
+  }
+
+  .xl-green {
+    color: #0baf00;
+  }
+
+  .xl-red {
+    color: #be4900;
+  }
+
+  .xl-trueblack {
+    color: #000000;
+  }
+
+  .xl-textblack {
+    color: #333333;
+  }
+
+  .xl-darkgray {
+    color: #555555;
+  }
+
+  .xl-mediumgray {
+    color: #8e8e8e;
+  }
+
+  .xl-mediumgray-trans {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  .xl-lightgray {
+    color: #d3d3d3;
+  }
+
+  .xl-lightestgray {
+    color: #f5f5f3;
+  }
+
+  .xl-white {
+    color: #ffffff;
+  }
+
+  .xl-ultramarine-1 {
+    color: #e7e9f7;
+  }
+
+  .xl-ultramarine-10 {
+    color: #d1d7f4;
+  }
+
+  .xl-ultramarine-20 {
+    color: #b0bef3;
+  }
+
+  .xl-ultramarine-30 {
+    color: #89a2f6;
+  }
+
+  .xl-ultramarine-40 {
+    color: #648fff;
+  }
+
+  .xl-ultramarine-50 {
+    color: #3c6df0;
+  }
+
+  .xl-ultramarine-60 {
+    color: #3151b7;
+  }
+
+  .xl-ultramarine-70 {
+    color: #2e3f8f;
+  }
+
+  .xl-ultramarine-80 {
+    color: #252e6a;
+  }
+
+  .xl-ultramarine-90 {
+    color: #20214f;
+  }
+
+  .xl-blue-1 {
+    color: #e1ebf7;
+  }
+
+  .xl-blue-10 {
+    color: #c8daf4;
+  }
+
+  .xl-blue-20 {
+    color: #a8c0f3;
+  }
+
+  .xl-blue-30 {
+    color: #79a6f6;
+  }
+
+  .xl-blue-40 {
+    color: #5392ff;
+  }
+
+  .xl-blue-50 {
+    color: #2d74da;
+  }
+
+  .xl-blue-60 {
+    color: #1f57a4;
+  }
+
+  .xl-blue-70 {
+    color: #25467a;
+  }
+
+  .xl-blue-80 {
+    color: #1d3458;
+  }
+
+  .xl-blue-90 {
+    color: #19273c;
+  }
+
+  .xl-cerulean-10 {
+    color: #c2dbf4;
+  }
+
+  .xl-cerulean-20 {
+    color: #95c4f3;
+  }
+
+  .xl-cerulean-30 {
+    color: #56acf2;
+  }
+
+  .xl-cerulean-40 {
+    color: #009bef;
+  }
+
+  .xl-cerulean-50 {
+    color: #047cc0;
+  }
+
+  .xl-cerulean-60 {
+    color: #175d8d;
+  }
+
+  .xl-cerulean-70 {
+    color: #1c496d;
+  }
+
+  .xl-cerulean-80 {
+    color: #1d364d;
+  }
+
+  .xl-cerulean-90 {
+    color: #1b2834;
+  }
+
+  .xl-aqua-1 {
+    color: #d1f0f7;
+  }
+
+  .xl-aqua-10 {
+    color: #a0e3f0;
+  }
+
+  .xl-aqua-20 {
+    color: #71cddd;
+  }
+
+  .xl-aqua-30 {
+    color: #00b6cb;
+  }
+
+  .xl-aqua-40 {
+    color: #12a3b4;
+  }
+
+  .xl-aqua-50 {
+    color: #188291;
+  }
+
+  .xl-aqua-60 {
+    color: #17616b;
+  }
+
+  .xl-aqua-70 {
+    color: #164d56;
+  }
+
+  .xl-aqua-80 {
+    color: #13393e;
+  }
+
+  .xl-aqua-90 {
+    color: #122a2e;
+  }
+
+  .xl-teal-1 {
+    color: #c0f5e8;
+  }
+
+  .xl-teal-10 {
+    color: #8ee9d4;
+  }
+
+  .xl-teal-20 {
+    color: #40d5bb;
+  }
+
+  .xl-teal-30 {
+    color: #00baa1;
+  }
+
+  .xl-teal-40 {
+    color: #00a78f;
+  }
+
+  .xl-teal-50 {
+    color: #008673;
+  }
+
+  .xl-teal-60 {
+    color: #006456;
+  }
+
+  .xl-teal-70 {
+    color: #124f44;
+  }
+
+  .xl-teal-80 {
+    color: #133a32;
+  }
+
+  .xl-teal-90 {
+    color: #122b26;
+  }
+
+  .xl-green-1 {
+    color: #cef3d1;
+  }
+
+  .xl-green-10 {
+    color: #89eda0;
+  }
+
+  .xl-green-20 {
+    color: #57d785;
+  }
+
+  .xl-green-30 {
+    color: #34bc6e;
+  }
+
+  .xl-green-40 {
+    color: #00aa5e;
+  }
+
+  .xl-green-50 {
+    color: #00884b;
+  }
+
+  .xl-green-60 {
+    color: #116639;
+  }
+
+  .xl-green-70 {
+    color: #12512e;
+  }
+
+  .xl-green-80 {
+    color: #123b22;
+  }
+
+  .xl-green-90 {
+    color: #112c1b;
+  }
+
+  .xl-lime-1 {
+    color: #d7f4bd;
+  }
+
+  .xl-lime-10 {
+    color: #b4e876;
+  }
+
+  .xl-lime-20 {
+    color: #95d13c;
+  }
+
+  .xl-lime-30 {
+    color: #81b532;
+  }
+
+  .xl-lime-40 {
+    color: #73a22c;
+  }
+
+  .xl-lime-50 {
+    color: #5b8121;
+  }
+
+  .xl-lime-60 {
+    color: #426200;
+  }
+
+  .xl-lime-70 {
+    color: #374c1a;
+  }
+
+  .xl-lime-80 {
+    color: #283912;
+  }
+
+  .xl-lime-90 {
+    color: #1f2a10;
+  }
+
+  .xl-yellow-1 {
+    color: #fbeaae;
+  }
+
+  .xl-yellow-10 {
+    color: #fed500;
+  }
+
+  .xl-yellow-20 {
+    color: #e3bc13;
+  }
+
+  .xl-yellow-30 {
+    color: #c6a21a;
+  }
+
+  .xl-yellow-40 {
+    color: #b3901f;
+  }
+
+  .xl-yellow-50 {
+    color: #91721f;
+  }
+
+  .xl-yellow-60 {
+    color: #70541b;
+  }
+
+  .xl-yellow-70 {
+    color: #5b421a;
+  }
+
+  .xl-yellow-80 {
+    color: #452f18;
+  }
+
+  .xl-yellow-90 {
+    color: #372118;
+  }
+
+  .xl-gold-1 {
+    color: #f5e8db;
+  }
+
+  .xl-gold-10 {
+    color: #ffd191;
+  }
+
+  .xl-gold-20 {
+    color: #ffb000;
+  }
+
+  .xl-gold-30 {
+    color: #e39d14;
+  }
+
+  .xl-gold-40 {
+    color: #c4881c;
+  }
+
+  .xl-gold-50 {
+    color: #9c6d1e;
+  }
+
+  .xl-gold-60 {
+    color: #74521b;
+  }
+
+  .xl-gold-70 {
+    color: #5b421c;
+  }
+
+  .xl-gold-80 {
+    color: #42301b;
+  }
+
+  .xl-gold-90 {
+    color: #2f261c;
+  }
+
+  .xl-orange-1 {
+    color: #f5e8de;
+  }
+
+  .xl-orange-10 {
+    color: #fdcfad;
+  }
+
+  .xl-orange-20 {
+    color: #fcaf6d;
+  }
+
+  .xl-orange-30 {
+    color: #fe8500;
+  }
+
+  .xl-orange-40 {
+    color: #db7c00;
+  }
+
+  .xl-orange-50 {
+    color: #ad6418;
+  }
+
+  .xl-orange-60 {
+    color: #814b19;
+  }
+
+  .xl-orange-70 {
+    color: #653d1b;
+  }
+
+  .xl-orange-80 {
+    color: #482e1a;
+  }
+
+  .xl-orange-90 {
+    color: #33241c;
+  }
+
+  .xl-peach-1 {
+    color: #f7e7e2;
+  }
+
+  .xl-peach-10 {
+    color: #f8d0c3;
+  }
+
+  .xl-peach-20 {
+    color: #faad96;
+  }
+
+  .xl-peach-30 {
+    color: #fc835c;
+  }
+
+  .xl-peach-40 {
+    color: #fe6100;
+  }
+
+  .xl-peach-50 {
+    color: #c45433;
+  }
+
+  .xl-peach-60 {
+    color: #993a1d;
+  }
+
+  .xl-peach-70 {
+    color: #782f1c;
+  }
+
+  .xl-peach-80 {
+    color: #56251a;
+  }
+
+  .xl-peach-90 {
+    color: #3a201b;
+  }
+
+  .xl-red-1 {
+    color: #f7e6e6;
+  }
+
+  .xl-red-10 {
+    color: #fccec7;
+  }
+
+  .xl-red-20 {
+    color: #ffaa9d;
+  }
+
+  .xl-red-30 {
+    color: #ff806c;
+  }
+
+  .xl-red-40 {
+    color: #ff5c49;
+  }
+
+  .xl-red-50 {
+    color: #e62325;
+  }
+
+  .xl-red-60 {
+    color: #aa231f;
+  }
+
+  .xl-red-70 {
+    color: #83231e;
+  }
+
+  .xl-red-80 {
+    color: #5c1f1b;
+  }
+
+  .xl-red-90 {
+    color: #3e1d1b;
+  }
+
+  .xl-magenta-1 {
+    color: #f5e7eb;
+  }
+
+  .xl-magenta-10 {
+    color: #f5cedb;
+  }
+
+  .xl-magenta-20 {
+    color: #f7aac3;
+  }
+
+  .xl-magenta-30 {
+    color: #f87eac;
+  }
+
+  .xl-magenta-40 {
+    color: #ff509e;
+  }
+
+  .xl-magenta-50 {
+    color: #dc267f;
+  }
+
+  .xl-magenta-60 {
+    color: #a91560;
+  }
+
+  .xl-magenta-70 {
+    color: #831b4c;
+  }
+
+  .xl-magenta-80 {
+    color: #5d1a38;
+  }
+
+  .xl-magenta-90 {
+    color: #401a29;
+  }
+
+  .xl-purple-1 {
+    color: #f7e4fb;
+  }
+
+  .xl-purple-10 {
+    color: #efcef3;
+  }
+
+  .xl-purple-20 {
+    color: #e4adea;
+  }
+
+  .xl-purple-30 {
+    color: #d68adf;
+  }
+
+  .xl-purple-40 {
+    color: #cb71d7;
+  }
+
+  .xl-purple-50 {
+    color: #c22dd5;
+  }
+
+  .xl-purple-60 {
+    color: #9320a2;
+  }
+
+  .xl-purple-70 {
+    color: #71237c;
+  }
+
+  .xl-purple-80 {
+    color: #501e58;
+  }
+
+  .xl-purple-90 {
+    color: #3b1a40;
+  }
+
+  .xl-violet-1 {
+    color: #ece8f5;
+  }
+
+  .xl-violet-10 {
+    color: #e2d2f4;
+  }
+
+  .xl-violet-20 {
+    color: #d2b5f0;
+  }
+
+  .xl-violet-30 {
+    color: #bf93eb;
+  }
+
+  .xl-violet-40 {
+    color: #b07ce8;
+  }
+
+  .xl-violet-50 {
+    color: #9753e1;
+  }
+
+  .xl-violet-60 {
+    color: #7732bb;
+  }
+
+  .xl-violet-70 {
+    color: #602797;
+  }
+
+  .xl-violet-80 {
+    color: #44216a;
+  }
+
+  .xl-violet-90 {
+    color: #321c4c;
+  }
+
+  .xl-indigo-1 {
+    color: #e9e8ff;
+  }
+
+  .xl-indigo-10 {
+    color: #dcd4f7;
+  }
+
+  .xl-indigo-20 {
+    color: #c7b6f7;
+  }
+
+  .xl-indigo-30 {
+    color: #ae97f4;
+  }
+
+  .xl-indigo-40 {
+    color: #9b82f3;
+  }
+
+  .xl-indigo-50 {
+    color: #785ef0;
+  }
+
+  .xl-indigo-60 {
+    color: #5a3ec8;
+  }
+
+  .xl-indigo-70 {
+    color: #473793;
+  }
+
+  .xl-indigo-80 {
+    color: #352969;
+  }
+
+  .xl-indigo-90 {
+    color: #272149;
+  }
+
+  .xl-gray-1 {
+    color: #eaeaea;
+  }
+
+  .xl-gray-10 {
+    color: #d8d8d8;
+  }
+
+  .xl-gray-20 {
+    color: #c0bfc0;
+  }
+
+  .xl-gray-30 {
+    color: #a6a5a6;
+  }
+
+  .xl-gray-40 {
+    color: #949394;
+  }
+
+  .xl-gray-50 {
+    color: #777677;
+  }
+
+  .xl-gray-60 {
+    color: #595859;
+  }
+
+  .xl-gray-70 {
+    color: #464646;
+  }
+
+  .xl-gray-80 {
+    color: #343334;
+  }
+
+  .xl-gray-90 {
+    color: #272727;
+  }
+
+  .xl-cool-gray-1 {
+    color: #e3ecec;
+  }
+
+  .xl-cool-gray-10 {
+    color: #d0dada;
+  }
+
+  .xl-cool-gray-20 {
+    color: #b8c1c1;
+  }
+
+  .xl-cool-gray-30 {
+    color: #9fa7a7;
+  }
+
+  .xl-cool-gray-40 {
+    color: #8c9696;
+  }
+
+  .xl-cool-gray-50 {
+    color: #6f7878;
+  }
+
+  .xl-cool-gray-60 {
+    color: #535a5a;
+  }
+
+  .xl-cool-gray-70 {
+    color: #424747;
+  }
+
+  .xl-cool-gray-80 {
+    color: #343334;
+  }
+
+  .xl-cool-gray-90 {
+    color: #272727;
+  }
+
+  .xl-warm-gray-1 {
+    color: #efe9e9;
+  }
+
+  .xl-warm-gray-10 {
+    color: #e2d5d5;
+  }
+
+  .xl-warm-gray-20 {
+    color: #ccbcbc;
+  }
+
+  .xl-warm-gray-30 {
+    color: #b4a1a1;
+  }
+
+  .xl-warm-gray-40 {
+    color: #9e9191;
+  }
+
+  .xl-warm-gray-50 {
+    color: #7d7373;
+  }
+
+  .xl-warm-gray-60 {
+    color: #5f5757;
+  }
+
+  .xl-warm-gray-70 {
+    color: #4b4545;
+  }
+
+  .xl-warm-gray-80 {
+    color: #373232;
+  }
+
+  .xl-warm-gray-90 {
+    color: #2a2626;
+  }
+
+  .xl-neutral-white-1 {
+    color: #fcfcfc;
+  }
+
+  .xl-neutral-white-2 {
+    color: #f9f9f9;
+  }
+
+  .xl-neutral-white-3 {
+    color: #f6f6f6;
+  }
+
+  .xl-neutral-white-4 {
+    color: #f3f3f3;
+  }
+
+  .xl-cool-white-1 {
+    color: #fbfcfc;
+  }
+
+  .xl-cool-white-2 {
+    color: #f8fafa;
+  }
+
+  .xl-cool-white-3 {
+    color: #f4f7f7;
+  }
+
+  .xl-cool-white-4 {
+    color: #f0f4f4;
+  }
+
+  .xl-warm-white-1 {
+    color: #fdfcfc;
+  }
+
+  .xl-warm-white-2 {
+    color: #fbf8f8;
+  }
+
+  .xl-warm-white-3 {
+    color: #f9f6f6;
+  }
+
+  .xl-warm-white-4 {
+    color: #f6f3f3;
+  }
+
+  .xl-black-100 {
+    color: #000;
+  }
+
+  .xl-white-0 {
+    color: #fff;
   }
 
   .xl-col {
