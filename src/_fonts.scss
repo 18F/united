@@ -177,17 +177,3 @@
     url('#{$static-font-path}/18Franklin-BlackItalic.woff') format('woff'),
     url('#{$static-font-path}/18Franklin-BlackItalic.ttf') format('truetype');
 }
-
-@font-face {
-  font-family: 'Roboto Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: url('#{$static-font-path}/RobotoMono-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'Roboto Mono';
-  font-style: normal;
-  font-weight: 700;
-  src: url('#{$static-font-path}/RobotoMono-Bold.ttf');
-}

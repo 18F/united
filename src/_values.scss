@@ -364,7 +364,7 @@ $global_values: (
     mono-s2: (
       slug: 'mono-s2',
       isReadable: true,
-      content: $mono-s1,
+      content: $mono-s2,
       extend: (
         property: 'font-family',
         value: $font-mono,
@@ -373,7 +373,7 @@ $global_values: (
     mono-s3: (
       slug: 'mono-s3',
       isReadable: true,
-      content: $mono-s1,
+      content: $mono-s3,
       extend: (
         property: 'font-family',
         value: $font-mono,
@@ -382,7 +382,7 @@ $global_values: (
     mono-s4: (
       slug: 'mono-s4',
       isReadable: true,
-      content: $mono-s1,
+      content: $mono-s4,
       extend: (
         property: 'font-family',
         value: $font-mono,
@@ -391,7 +391,7 @@ $global_values: (
     mono-s5: (
       slug: 'mono-s5',
       isReadable: true,
-      content: $mono-s1,
+      content: $mono-s5,
       extend: (
         property: 'font-family',
         value: $font-mono,
@@ -400,7 +400,7 @@ $global_values: (
     mono-s6: (
       slug: 'mono-s6',
       isReadable: true,
-      content: $mono-s1,
+      content: $mono-s6,
       extend: (
         property: 'font-family',
         value: $font-mono,
@@ -409,7 +409,7 @@ $global_values: (
     mono-s7: (
       slug: 'mono-s7',
       isReadable: true,
-      content: $mono-s1,
+      content: $mono-s7,
       extend: (
         property: 'font-family',
         value: $font-mono,
@@ -418,7 +418,7 @@ $global_values: (
     mono-s8: (
       slug: 'mono-s8',
       isReadable: true,
-      content: $mono-s1,
+      content: $mono-s8,
       extend: (
         property: 'font-family',
         value: $font-mono,
@@ -427,7 +427,7 @@ $global_values: (
     mono-s9: (
       slug: 'mono-s9',
       isReadable: true,
-      content: $mono-s1,
+      content: $mono-s9,
       extend: (
         property: 'font-family',
         value: $font-mono,
@@ -436,7 +436,25 @@ $global_values: (
     mono-s10: (
       slug: 'mono-s10',
       isReadable: true,
-      content: $mono-s1,
+      content: $mono-s10,
+      extend: (
+        property: 'font-family',
+        value: $font-mono,
+      ),
+    ),
+    mono-s11: (
+      slug: 'mono-s11',
+      isReadable: true,
+      content: $mono-s11,
+      extend: (
+        property: 'font-family',
+        value: $font-mono,
+      ),
+    ),
+    mono-s12: (
+      slug: 'mono-s12',
+      isReadable: true,
+      content: $mono-s12,
       extend: (
         property: 'font-family',
         value: $font-mono,
@@ -635,6 +653,24 @@ $global_values: (
       slug: 'serif-s10',
       isReadable: true,
       content: $serif-s10,
+      extend: (
+        property: 'font-family',
+        value: $font-serif,
+      ),
+    ),
+    serif-s11: (
+      slug: 'serif-s11',
+      isReadable: true,
+      content: $serif-s11,
+      extend: (
+        property: 'font-family',
+        value: $font-serif,
+      ),
+    ),
+    serif-s12: (
+      slug: 'serif-s12',
+      isReadable: true,
+      content: $serif-s12,
       extend: (
         property: 'font-family',
         value: $font-serif,
