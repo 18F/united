@@ -16,3 +16,7 @@
 // Now, let's build some utility class rules!
 
 @include renderUtilitiesIn($utilities);
+
+// Then, let's set some sensible defaults.
+
+@import "defaults";

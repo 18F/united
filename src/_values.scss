@@ -3,10 +3,10 @@ $global_values: (
     'auto': ('auto', isReadable),
   ),
   breakpoints: (
-    'sm': $breakpoint-sm,
-    'md': $breakpoint-md,
-    'lg': $breakpoint-lg,
-    'xl': $breakpoint-xl,
+    'sm': ($breakpoint-sm, isReadable),
+    'md': ($breakpoint-md, isReadable),
+    'lg': ($breakpoint-lg, isReadable),
+    'xl': ($breakpoint-xl, isReadable),
   ),
   colors: (
     'blue': ($color-blue, isReadable),
@@ -317,6 +317,10 @@ $global_values: (
     'n3': -#{$grid-3},
     'n4': -#{$grid-4},
     'n5': -#{$grid-5},
+    'n6': -#{$grid-6},
+    'n7': -#{$grid-7},
+    'n8': -#{$grid-8},
+    'n9': -#{$grid-9},
   ),
   negPixels: (
     'n1px': -1px,
@@ -523,6 +527,24 @@ $global_values: (
       slug: 'sans-s10',
       isReadable: true,
       content: $sans-s10,
+      extend: (
+        property: 'font-family',
+        value: $font-sans,
+      ),
+    ),
+    sans-s11: (
+      slug: 'sans-s11',
+      isReadable: true,
+      content: $sans-s11,
+      extend: (
+        property: 'font-family',
+        value: $font-sans,
+      ),
+    ),
+    sans-s12: (
+      slug: 'sans-s12',
+      isReadable: true,
+      content: $sans-s12,
       extend: (
         property: 'font-family',
         value: $font-sans,

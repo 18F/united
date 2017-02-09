@@ -11,7 +11,7 @@
 
 @mixin renderMediaQueries($selector, $property, $value, $valProps){
   @each $mediaKey, $mediaValue in map-get($global_values, breakpoints){
-    @media (min-width: #{$mediaValue}) {
+    @media (min-width: #{nth($mediaValue, 1)}) {
       .#{$mediaKey}-#{$selector} {
         @if map-has-key($valProps, extend) {
           #{map-deep-get($valProps, extend, property)}: strunquote(map-deep-get($valProps, extend, value));

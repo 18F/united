@@ -1,22 +1,22 @@
 /*
 ----------------------------------------
-Width
+Max Width
 ----------------------------------------
 usage:
-  .w[value]
+  .maxw[value]
 ----------------------------------------
 output:
-  width: value;
+  max-width: value;
 ----------------------------------------
 example:
-  .w75ct {
-    width: 75%:; }
+  .maxw-lg {
+    max-width: 1040px; }
 ----------------------------------------
 */
 
-$width: (
-  width: (
-    base: 'w',
+$max-width: (
+  max-width: (
+    base: 'maxw',
     modifiers: null,
     values: map-collect(
       map-get($global_values, percentage),
@@ -24,7 +24,7 @@ $width: (
       map-get($global_values, pixels),
       map-get($global_values, breakpoints)
     ),
-    property: 'width',
+    property: 'max-width',
     output: true,
     responsive: true,
   )

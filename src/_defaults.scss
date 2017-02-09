@@ -1,0 +1,39 @@
+html {
+  @extend .h100ct;
+}
+
+body {
+  @extend .minh100ct;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  @extend .m0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend .lh-hed;
+}
+
+h1,
+h2 {
+  @extend .sans-s9;
+}
+
+h1 {
+  @extend .fw700;
+}
+
+h2 {
+  @extend .fw300;
+}

@@ -91,7 +91,7 @@ gulp.task('bless', function() {
 
 // Process the files in series
 
-gulp.task('process', gulp.series('clean', 'build', 'package', 'bless'));
+gulp.task('process', gulp.series('clean', 'build'));
 
 // Watch for changes
 

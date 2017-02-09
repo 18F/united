@@ -46,8 +46,8 @@ $grid-n5:             grid(-5);     // 40px
 // Breakpoints
 
 $breakpoint-xs:       null;
-$breakpoint-sm:       grid(40);     // 320px
-$breakpoint-md:       grid(80);     // 640px
+$breakpoint-sm:       grid(50);     // 320px
+$breakpoint-md:       grid(85);     // 640px
 $breakpoint-lg:       grid(130);    // 1040px
 $breakpoint-xl:       grid(140);    // 1200px
 
@@ -127,6 +127,8 @@ $s7:                  16px;
 $s8:                  18px;
 $s9:                  30px;
 $s10:                 52px;
+$s11:                 90px;
+$s12:                 120px;
 
 $mono-s1:   typeScale($mono-capHeight, $s1);
 $mono-s2:   typeScale($mono-capHeight, $s2);
@@ -138,6 +140,8 @@ $mono-s7:   typeScale($mono-capHeight, $s7);
 $mono-s8:   typeScale($mono-capHeight, $s8);
 $mono-s9:   typeScale($mono-capHeight, $s9);
 $mono-s10:  typeScale($mono-capHeight, $s10);
+$mono-s11:  typeScale($mono-capHeight, $s11);
+$mono-s12:  typeScale($mono-capHeight, $s12);
 
 $sans-s1:   typeScale($sans-capHeight, $s1);
 $sans-s2:   typeScale($sans-capHeight, $s2);
@@ -149,6 +153,8 @@ $sans-s7:   typeScale($sans-capHeight, $s7);
 $sans-s8:   typeScale($sans-capHeight, $s8);
 $sans-s9:   typeScale($sans-capHeight, $s9);
 $sans-s10:  typeScale($sans-capHeight, $s10);
+$sans-s11:  typeScale($sans-capHeight, $s11);
+$sans-s12:  typeScale($sans-capHeight, $s12);
 
 $serif-s1:   typeScale($serif-capHeight, $s1);
 $serif-s2:   typeScale($serif-capHeight, $s2);
@@ -160,6 +166,8 @@ $serif-s7:   typeScale($serif-capHeight, $s7);
 $serif-s8:   typeScale($serif-capHeight, $s8);
 $serif-s9:   typeScale($serif-capHeight, $s9);
 $serif-s10:  typeScale($serif-capHeight, $s10);
+$serif-s11:  typeScale($serif-capHeight, $s11);
+$serif-s12:  typeScale($serif-capHeight, $s12);
 
 // --------------------------------------------------
 // Line height

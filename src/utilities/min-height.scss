@@ -1,22 +1,22 @@
 /*
 ----------------------------------------
-Width
+Min Height
 ----------------------------------------
 usage:
-  .w[value]
+  .minh[value]
 ----------------------------------------
 output:
-  width: value;
+  min-height: value;
 ----------------------------------------
 example:
-  .w75ct {
-    width: 75%:; }
+  .minh40 {
+    min-height: 320px; }
 ----------------------------------------
 */
 
-$width: (
-  width: (
-    base: 'w',
+$min-height: (
+  min-height: (
+    base: 'minh',
     modifiers: null,
     values: map-collect(
       map-get($global_values, percentage),
@@ -24,7 +24,7 @@ $width: (
       map-get($global_values, pixels),
       map-get($global_values, breakpoints)
     ),
-    property: 'width',
+    property: 'min-height',
     output: true,
     responsive: true,
   )
