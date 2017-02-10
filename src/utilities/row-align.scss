@@ -67,5 +67,6 @@ $row-align: (
     property: 'align-items',
     output: true,
     responsive: true,
+    pseudoclasses: false,
   )
 );

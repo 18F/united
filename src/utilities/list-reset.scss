@@ -33,6 +33,7 @@ $list-reset: (
     ),
     property: 'list-style',
     output: true,
-    responsive: true,
+    responsive: false,
+    pseudoclasses: true,
   )
 );

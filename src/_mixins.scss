@@ -9,6 +9,16 @@
   }
 }
 
+@mixin renderPseudoclasses($selector, $property, $value, $valProps){
+  @each $pseudoKey, $pseudoValue in map-get($global_values, pseudoclasses){
+    .#{$pseudoKey}-#{$selector}#{$pseudoValue} {
+      @each $thisProperty in $property {
+        #{$thisProperty}: $value;
+      }
+    }
+  }
+}
+
 @mixin renderMediaQueries($selector, $property, $value, $valProps){
   @each $mediaKey, $mediaValue in map-get($global_values, breakpoints){
     @media (min-width: #{nth($mediaValue, 1)}) {
@@ -264,6 +274,12 @@
           // https://www.youtube.com/watch?v=R3Igz5SfBCE
 
           @include renderUtility($selector, $property, $value, $valProps);
+
+          // Add the pseudoclass variants, if applicable
+
+          @if map-get($utility, pseudoclasses){
+            @include renderPseudoclasses($selector, $property, $value, $valProps);
+          }
 
           // And add the responsive prefixes, if applicable
 

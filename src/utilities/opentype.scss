@@ -26,5 +26,6 @@ $opentype: (
     property: 'font-feature-settings',
     output: true,
     responsive: false,
+    pseudoclasses: false,
   )
 )

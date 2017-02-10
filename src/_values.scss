@@ -347,6 +347,12 @@ $global_values: (
     '1px': 1px,
     '2px': 2px,
   ),
+  pseudoclasses: (
+    'ac': ':active',
+    'fo': ':focus',
+    'ho': ':hover',
+    'vi': ':visited',
+  ),
   typefaces: (
     'mono': ($font-mono, isReadable),
     'sans': ($font-sans, isReadable),
