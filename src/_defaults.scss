@@ -37,3 +37,7 @@ h1 {
 h2 {
   @extend .fw300;
 }
+
+p + p {
+  @extend .mt2;
+}

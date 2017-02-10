@@ -350,6 +350,10 @@ template {
   background-color: #19273c;
 }
 
+.bg-cerulean-1 {
+  background-color: #deedf7;
+}
+
 .bg-cerulean-10 {
   background-color: #c2dbf4;
 }
@@ -2100,6 +2104,36 @@ template {
 
 .b-blue-90 {
   border-color: #19273c;
+}
+
+.bt-cerulean-1 {
+  border-top-color: #deedf7;
+}
+
+.br-cerulean-1 {
+  border-left-color: #deedf7;
+}
+
+.bb-cerulean-1 {
+  border-bottom-color: #deedf7;
+}
+
+.bl-cerulean-1 {
+  border-left-color: #deedf7;
+}
+
+.by-cerulean-1 {
+  border-top-color: #deedf7;
+  border-bottom-color: #deedf7;
+}
+
+.bx-cerulean-1 {
+  border-left-color: #deedf7;
+  border-right-color: #deedf7;
+}
+
+.b-cerulean-1 {
+  border-color: #deedf7;
 }
 
 .bt-cerulean-10 {
@@ -8120,6 +8154,10 @@ template {
   color: #19273c;
 }
 
+.cerulean-1 {
+  color: #deedf7;
+}
+
 .cerulean-10 {
   color: #c2dbf4;
 }
@@ -10199,7 +10237,7 @@ template {
   margin: 0.75rem;
 }
 
-.mt2 {
+.mt2,p + p {
   margin-top: 1rem;
 }
 
@@ -13055,6 +13093,10 @@ template {
     background-color: #19273c;
   }
 
+  .sm-bg-cerulean-1 {
+    background-color: #deedf7;
+  }
+
   .sm-bg-cerulean-10 {
     background-color: #c2dbf4;
   }
@@ -14805,6 +14847,36 @@ template {
 
   .sm-b-blue-90 {
     border-color: #19273c;
+  }
+
+  .sm-bt-cerulean-1 {
+    border-top-color: #deedf7;
+  }
+
+  .sm-br-cerulean-1 {
+    border-left-color: #deedf7;
+  }
+
+  .sm-bb-cerulean-1 {
+    border-bottom-color: #deedf7;
+  }
+
+  .sm-bl-cerulean-1 {
+    border-left-color: #deedf7;
+  }
+
+  .sm-by-cerulean-1 {
+    border-top-color: #deedf7;
+    border-bottom-color: #deedf7;
+  }
+
+  .sm-bx-cerulean-1 {
+    border-left-color: #deedf7;
+    border-right-color: #deedf7;
+  }
+
+  .sm-b-cerulean-1 {
+    border-color: #deedf7;
   }
 
   .sm-bt-cerulean-10 {
@@ -20453,6 +20525,10 @@ template {
     color: #19273c;
   }
 
+  .sm-cerulean-1 {
+    color: #deedf7;
+  }
+
   .sm-cerulean-10 {
     color: #c2dbf4;
   }
@@ -25215,6 +25291,10 @@ template {
     background-color: #19273c;
   }
 
+  .md-bg-cerulean-1 {
+    background-color: #deedf7;
+  }
+
   .md-bg-cerulean-10 {
     background-color: #c2dbf4;
   }
@@ -26965,6 +27045,36 @@ template {
 
   .md-b-blue-90 {
     border-color: #19273c;
+  }
+
+  .md-bt-cerulean-1 {
+    border-top-color: #deedf7;
+  }
+
+  .md-br-cerulean-1 {
+    border-left-color: #deedf7;
+  }
+
+  .md-bb-cerulean-1 {
+    border-bottom-color: #deedf7;
+  }
+
+  .md-bl-cerulean-1 {
+    border-left-color: #deedf7;
+  }
+
+  .md-by-cerulean-1 {
+    border-top-color: #deedf7;
+    border-bottom-color: #deedf7;
+  }
+
+  .md-bx-cerulean-1 {
+    border-left-color: #deedf7;
+    border-right-color: #deedf7;
+  }
+
+  .md-b-cerulean-1 {
+    border-color: #deedf7;
   }
 
   .md-bt-cerulean-10 {
@@ -32613,6 +32723,10 @@ template {
     color: #19273c;
   }
 
+  .md-cerulean-1 {
+    color: #deedf7;
+  }
+
   .md-cerulean-10 {
     color: #c2dbf4;
   }
@@ -37375,6 +37489,10 @@ template {
     background-color: #19273c;
   }
 
+  .lg-bg-cerulean-1 {
+    background-color: #deedf7;
+  }
+
   .lg-bg-cerulean-10 {
     background-color: #c2dbf4;
   }
@@ -39125,6 +39243,36 @@ template {
 
   .lg-b-blue-90 {
     border-color: #19273c;
+  }
+
+  .lg-bt-cerulean-1 {
+    border-top-color: #deedf7;
+  }
+
+  .lg-br-cerulean-1 {
+    border-left-color: #deedf7;
+  }
+
+  .lg-bb-cerulean-1 {
+    border-bottom-color: #deedf7;
+  }
+
+  .lg-bl-cerulean-1 {
+    border-left-color: #deedf7;
+  }
+
+  .lg-by-cerulean-1 {
+    border-top-color: #deedf7;
+    border-bottom-color: #deedf7;
+  }
+
+  .lg-bx-cerulean-1 {
+    border-left-color: #deedf7;
+    border-right-color: #deedf7;
+  }
+
+  .lg-b-cerulean-1 {
+    border-color: #deedf7;
   }
 
   .lg-bt-cerulean-10 {
@@ -44773,6 +44921,10 @@ template {
     color: #19273c;
   }
 
+  .lg-cerulean-1 {
+    color: #deedf7;
+  }
+
   .lg-cerulean-10 {
     color: #c2dbf4;
   }
@@ -49535,6 +49687,10 @@ template {
     background-color: #19273c;
   }
 
+  .xl-bg-cerulean-1 {
+    background-color: #deedf7;
+  }
+
   .xl-bg-cerulean-10 {
     background-color: #c2dbf4;
   }
@@ -51285,6 +51441,36 @@ template {
 
   .xl-b-blue-90 {
     border-color: #19273c;
+  }
+
+  .xl-bt-cerulean-1 {
+    border-top-color: #deedf7;
+  }
+
+  .xl-br-cerulean-1 {
+    border-left-color: #deedf7;
+  }
+
+  .xl-bb-cerulean-1 {
+    border-bottom-color: #deedf7;
+  }
+
+  .xl-bl-cerulean-1 {
+    border-left-color: #deedf7;
+  }
+
+  .xl-by-cerulean-1 {
+    border-top-color: #deedf7;
+    border-bottom-color: #deedf7;
+  }
+
+  .xl-bx-cerulean-1 {
+    border-left-color: #deedf7;
+    border-right-color: #deedf7;
+  }
+
+  .xl-b-cerulean-1 {
+    border-color: #deedf7;
   }
 
   .xl-bt-cerulean-10 {
@@ -56931,6 +57117,10 @@ template {
 
   .xl-blue-90 {
     color: #19273c;
+  }
+
+  .xl-cerulean-1 {
+    color: #deedf7;
   }
 
   .xl-cerulean-10 {
