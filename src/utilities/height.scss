@@ -21,6 +21,8 @@ $height: (
     values: map-collect(
       map-get($global_values, percentage),
       map-get($global_values, grid),
+      map-get($global_values, em),
+      map-get($global_values, ch),
       map-get($global_values, pixels)
     ),
     property: 'height',

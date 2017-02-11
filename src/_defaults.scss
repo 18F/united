@@ -41,3 +41,56 @@ h2 {
 p + p {
   @extend .mt2;
 }
+
+.tk {
+  @extend .inline-block;
+  @extend .bg-gray-50;
+  @extend .rd-rounded;
+  @extend .my0;
+  @extend .mrn2px;
+  @extend .h1em;
+  @extend .w5ch;
+  @extend .b0;
+  &:nth-child(3n) {
+    @extend .w2em;
+  }
+  &:nth-child(5n) {
+    @extend .w3em;
+  }
+  &:nth-child(8n) {
+    @extend .w05em;
+  }
+  &:nth-child(23n) {
+    @extend .w4em;
+  }
+  &:last-child {
+    @extend .w6em;
+  }
+}
+
+p {
+  .tk {
+    @extend .w8em;
+    &:nth-child(3n) {
+      @extend .w2em;
+    }
+    &:nth-child(5n) {
+      @extend .w7em;
+    }
+    &:nth-child(8n) {
+      @extend .w05em;
+    }
+    &:nth-child(23n) {
+      @extend .w10em;
+    }
+    &:last-child {
+      @extend .w6em;
+    }
+  }
+}
+
+.justify {
+  .tk {
+    width: 2.5ch !important;
+  }
+}
