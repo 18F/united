@@ -1,30 +1,32 @@
 /*
 ----------------------------------------
-Font Weight
+Outline Width
 ----------------------------------------
 usage:
-  .fw[value]
+  .outline-[modifier]
 ----------------------------------------
 output:
-  font-weight: [value];
+  outline: [modifier] solid;
 ----------------------------------------
 example:
-  .fw300 {
-    font-weight: 300; }
+  .outline-05 {
+    outline: 4px solid }
 ----------------------------------------
 */
 
-$font-weight: (
-  font-weight: (
-    base: 'fw',
+$outline-1-width: (
+  outline-1-width: (
+    base: ('outline', isReadable),
     modifiers: null,
     values: map-collect(
-      map-get($global_values, fontWeights)
+      map-get($global_values, pixels),
+      map-get($global_values, grid)
     ),
-    property: 'font-weight',
+    valuePrepend: null,
+    valueAppend: ' solid',
+    property: 'outline',
     output: true,
     responsive: true,
     pseudoclasses: true,
-    placeholder: true,
   )
 )

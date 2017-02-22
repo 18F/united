@@ -19,6 +19,14 @@
   }
 }
 
+@mixin renderPlaceholder($selector, $property, $value, $valProps){
+  .pl-#{$selector}::placeholder {
+    @each $thisProperty in $property {
+      #{$thisProperty}: $value;
+    }
+  }
+}
+
 @mixin renderMediaQueries($selector, $property, $value, $valProps){
   @each $mediaKey, $mediaValue in map-get($global_values, breakpoints){
     @media (min-width: #{nth($mediaValue, 1)}) {
@@ -118,11 +126,26 @@
 
         $value: strunquote(nth(map-get($valProps, content), 1));
 
+        // Add any appended values...
+
+        @if map-get($utility, valueAppend) {
+          $value: $value + map-get($utility, valueAppend);
+        }
+
+        // ...or prepended values.
+
+        @if map-get($utility, valuePrepend) {
+          $value: map-get($utility, valuePrepend) + $value;
+        }
+
+        // Then unquote the string.
+
+        $value: strunquote($value);
+
         // And we'll set the $v as valProps.slug for use in
         // constructing the selector.
 
         $v: map-get($valProps, slug);
-
 
         // -------- Start of Modifiers ----------
 
@@ -279,6 +302,12 @@
 
           @if map-get($utility, pseudoclasses){
             @include renderPseudoclasses($selector, $property, $value, $valProps);
+          }
+
+          // Add the placeholder variant, if applicable
+
+          @if map-get($utility, placeholder){
+            @include renderPlaceholder($selector, $property, $value, $valProps);
           }
 
           // And add the responsive prefixes, if applicable

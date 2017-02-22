@@ -1,9 +1,25 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 html {
   @extend .h100ct;
+  font-size: 16px;
 }
 
 body {
   @extend .minh100ct;
+}
+
+// normalize all displayed text to system sans
+body,
+input,
+select,
+option,
+textarea {
+  @extend .sans-s5;
 }
 
 h1,
@@ -92,5 +108,97 @@ p {
 .justify {
   .tk {
     width: 2.5ch !important;
+  }
+}
+
+
+// inputs
+
+input[type="checkbox"],
+input[type="radio"]
+ {
+  @extend .relative;
+  @extend .va-baseline;
+  @extend .inline-block;
+  bottom: .125em;
+
+  & + label {
+    @extend .inline-block;
+    @extend .mt0;
+  }
+}
+
+input[type="radio"] + label {
+  @extend .ml05;
+}
+
+
+[type=text],
+[type=password],
+[type=url],
+[type=email],
+[type=number],
+textarea,
+select {
+  @extend .b1px;
+  @extend .b-solid;
+  @extend .b-gray-50;
+  @extend .rd0;
+  @extend .sans-s5;
+  @extend .textblack;
+  @extend .block;
+  @extend .h5;
+  @extend .lh-cap;
+  @extend .my05;
+  @extend .maxw50;
+  @extend .py05;
+  @extend .px1;
+  @extend .w100ct;
+  @extend .fo-outline-05;
+  @extend .fo-outline-gold-20;
+  @extend .pl-sans-s5;
+  @extend .pl-gray-30;
+  @extend .pl-fw300;
+  appearance: none;
+}
+
+label {
+  @extend .block;
+  @extend .mt2;
+  @extend .maxw50;
+}
+
+
+
+textarea {
+  @extend .h25;
+}
+
+select {
+  @extend .bg-white;
+  appearance: none;
+  background-image: url('#{$image-path}/arrow-down.png');
+  background-image: url('#{$image-path}/arrow-down.svg');
+  background-position: right 1.3rem center;
+  background-repeat: no-repeat;
+  background-size: 1.3rem;
+}
+
+fieldset {
+  @extend .b0;
+  @extend .mx0;
+  @extend .mt4;
+  @extend .p0;
+}
+
+legend {
+  @extend .sans-s4;
+  @extend .fw700;
+  @extend .float-left;
+  @extend .px0;
+  @extend .pb1;
+
+  & + * {
+    @extend .clear;
   }
 }

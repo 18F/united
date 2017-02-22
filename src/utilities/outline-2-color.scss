@@ -1,30 +1,31 @@
 /*
 ----------------------------------------
-Font Weight
+Outline Color
 ----------------------------------------
 usage:
-  .fw[value]
+  .outline-[modifier]
 ----------------------------------------
 output:
-  font-weight: [value];
+  outline-color: [modifier];
 ----------------------------------------
 example:
-  .fw300 {
-    font-weight: 300; }
+  .outline-yellow-50 {
+    outline-color: #91721f; }
 ----------------------------------------
 */
 
-$font-weight: (
-  font-weight: (
-    base: 'fw',
+$outline-2-color: (
+  outline-2-color: (
+    base: ('outline', isReadable),
     modifiers: null,
     values: map-collect(
-      map-get($global_values, fontWeights)
+      map-get($global_values, colors)
     ),
-    property: 'font-weight',
+    valuePrepend: null,
+    valueAppend: null,
+    property: 'outline-color',
     output: true,
-    responsive: true,
+    responsive: false,
     pseudoclasses: true,
-    placeholder: true,
   )
 )

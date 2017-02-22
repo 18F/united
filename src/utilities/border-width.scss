@@ -27,13 +27,13 @@ $border-width: (
       l: '-left-width',
       y: ('-top-width', '-bottom-width'),
       x: ('-left-width', '-right-width'),
-      noModifier: '',
+      noModifier: '-width',
     ),
     values:
       map-collect(
         map-get($global_values, pixels),
         map-get($global_values, gridShort),
-        map-get($global_values, zero-none)
+        map-get($global_values, zero-zero)
     ),
     property: 'border',
     output: true,
