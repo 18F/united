@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     bless = require('gulp-bless'),
     gzip = require('gulp-gzip'),
     size = require('gulp-size'),
+    cp = require('child_process'),
     browserSync = require('browser-sync').create();
 
 var supportedBrowsers = [
@@ -20,28 +21,24 @@ var supportedBrowsers = [
   	'IE 9',
 ];
 
+var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
+var messages = {
+    jekyllBuild: 'Rebuilding...'
+};
+
+
 // Clean the build directory
 
 gulp.task('clean', function () {
   return del([
-    './build/**/*'
+    './build/*.css'
   ]);
 });
 
-// browserSync
-
-gulp.task('serve', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
-    gulp.watch("demo/*.html").on('change', browserSync.reload);
-});
 
 // Compile Our Sass
 
-gulp.task('build', function() {
+gulp.task('compile', function() {
     return gulp.src('src/*.scss')
         .pipe(sass({
             outputStyle: 'compact',
@@ -60,6 +57,7 @@ gulp.task('build', function() {
         }))
         .pipe(rename('united.css'))
         .pipe(gulp.dest('./build/'))
+        .pipe(gulp.dest('./build/prototypes/css'))
         .pipe(size())
         .pipe(browserSync.stream());
 });
@@ -88,18 +86,41 @@ gulp.task('bless', function() {
         .pipe(size())
 });
 
-
 // Process the files in series
 
-gulp.task('process', gulp.series('clean', 'build'));
+gulp.task('process', gulp.series('clean', 'compile'));
+
+// build jekyll
+
+gulp.task('jekyll-build', function (done) {
+    browserSync.notify(messages.jekyllBuild);
+    return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
+        .on('close', done);
+});
+
+// rebuild jekyll and reload
+
+gulp.task('jekyll-rebuild', gulp.series('jekyll-build'), function () {
+    browserSync.reload();
+});
+
+gulp.task('serve', function() {
+    browserSync.init({
+        server: {
+          baseDir: 'build/prototypes'
+        }
+    });
+    gulp.watch("build/prototypes/**/*.html").on('change', browserSync.reload);
+});
 
 // Watch for changes
 
 gulp.task('watch', function() {
     gulp.watch('src/**/*.scss', gulp.series('process'));
+    gulp.watch(['src/prototypes/**/*'], gulp.parallel('jekyll-rebuild'));
  });
 
 
 // Default Task
 
-gulp.task('default', gulp.parallel('serve', gulp.series( 'process', 'watch')));
+gulp.task('default', gulp.parallel('serve', gulp.series('jekyll-build', 'process', 'watch')));

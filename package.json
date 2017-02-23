@@ -18,6 +18,7 @@
   "homepage": "https://github.com/18F/united#readme",
   "devDependencies": {
     "browser-sync": "^2.18.7",
+    "child_process": "^1.0.2",
     "clean-css": "^3.4.23",
     "del": "^2.2.2",
     "gulp": "github:gulpjs/gulp#4.0",
