@@ -123,4 +123,4 @@ gulp.task('watch', function() {
 
 // Default Task
 
-gulp.task('default', gulp.parallel('serve', gulp.series('jekyll-build', 'process', 'watch')));
+gulp.task('default', gulp.series('jekyll-build', 'process', gulp.parallel('serve', 'watch')));
