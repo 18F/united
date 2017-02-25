@@ -1,37 +1,33 @@
 /*
 ----------------------------------------
-Row
+Flex size
 ----------------------------------------
 usage:
-  .row
+  .[value]
 ----------------------------------------
 output:
-  display: flex;
-  flex-direction: row;
+  flex: [value];
 ----------------------------------------
 example:
-  .row {
-    display: flex;
-    flex-direction: row; }
+  .f1 {
+    flex: 0 0 1; }
+
+  .fill {
+    flex: 1 0 0; }
+
+  .fit {
+    flex: none; }
 ----------------------------------------
 */
 
-$row: (
-  row: (
+$flex-size: (
+  flex-size: (
     base: null,
     modifiers: null,
-    values: (
-      row: (
-        slug: 'row',
-        isReadable: true,
-        content: 'flex',
-        extend: (
-          property: 'flex-direction',
-          value: 'row',
-        ),
-      ),
+    values: map-collect(
+      map-get($global_values, flex)
     ),
-    property: 'display',
+    property: 'flex',
     output: true,
     responsive: true,
     pseudoclasses: false,

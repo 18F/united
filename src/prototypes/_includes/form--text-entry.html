@@ -1,0 +1,10 @@
+
+<div class="row {% if include.type == 'textarea' %}f-start{% else %}f-center{% endif %} pt05 mt05 bt1px bt-solid bt-gray-10 {{ include.div-props }}">
+  <label class="w50 f1 lh-single m0 {% if include.type == 'text' or include.type == 'password' %}mt0{% elsif include.type == 'textarea' %}pt105{% endif %} right pr2">{{ include.label }}</label>
+
+  {% if include.type == 'text' or include.type == 'password' %}
+  <input class="f2" type="{{ include.type }}" name="{{ include.input-name }}" />
+  {% elsif include.type == 'textarea' %}
+  <textarea class="f2" name="{{ include.input-name }}" placeholder="{{ include.placeholder }}"></textarea>
+  {% endif %}
+</div>

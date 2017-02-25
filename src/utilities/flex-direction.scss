@@ -1,39 +1,30 @@
 /*
 ----------------------------------------
-Row
+Flex direction
 ----------------------------------------
 usage:
-  .row
+  .f-[value]
 ----------------------------------------
 output:
-  display: flex;
-  flex-direction: row;
+  flex-direction: [value]
 ----------------------------------------
 example:
-  .row {
-    display: flex;
+  .f-row {
     flex-direction: row; }
 ----------------------------------------
 */
 
-$row: (
-  row: (
-    base: null,
+$flex-direction: (
+  flex-direction: (
+    base: 'f',
     modifiers: null,
     values: (
-      row: (
-        slug: 'row',
-        isReadable: true,
-        content: 'flex',
-        extend: (
-          property: 'flex-direction',
-          value: 'row',
-        ),
-      ),
+      row: ('row', isReadable),
+      column: ('column', isReadable),
     ),
-    property: 'display',
+    property: 'flex-direction',
     output: true,
     responsive: true,
     pseudoclasses: false,
   )
-);
+)

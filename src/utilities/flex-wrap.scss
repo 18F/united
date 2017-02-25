@@ -1,37 +1,28 @@
 /*
 ----------------------------------------
-Row
+Flex Wrap
 ----------------------------------------
 usage:
-  .row
+  .f-[value]
 ----------------------------------------
 output:
-  display: flex;
-  flex-direction: row;
+  flex-wrap: [value];
 ----------------------------------------
 example:
-  .row {
-    display: flex;
-    flex-direction: row; }
+  .f-wrap {
+    flex-wrap: wrap; }
 ----------------------------------------
 */
 
-$row: (
-  row: (
-    base: null,
+$flex-wrap: (
+  flex-wrap: (
+    base: 'f',
     modifiers: null,
     values: (
-      row: (
-        slug: 'row',
-        isReadable: true,
-        content: 'flex',
-        extend: (
-          property: 'flex-direction',
-          value: 'row',
-        ),
-      ),
+      'wrap': ('wrap', isReadable),
+      'nowrap': ('nowrap', isReadable),
     ),
-    property: 'display',
+    property: 'flex-wrap',
     output: true,
     responsive: true,
     pseudoclasses: false,

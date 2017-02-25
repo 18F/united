@@ -1,37 +1,30 @@
 /*
 ----------------------------------------
-Row
+Flex Align
 ----------------------------------------
 usage:
-  .row
+  .f-[value]
 ----------------------------------------
 output:
-  display: flex;
-  flex-direction: row;
+  align-items: [value];
 ----------------------------------------
 example:
-  .row {
-    display: flex;
-    flex-direction: row; }
+  .f-start {
+    align-items: flex-start; }
 ----------------------------------------
 */
 
-$row: (
-  row: (
-    base: null,
+$flex-align: (
+  flex-align: (
+    base: 'f',
     modifiers: null,
     values: (
-      row: (
-        slug: 'row',
-        isReadable: true,
-        content: 'flex',
-        extend: (
-          property: 'flex-direction',
-          value: 'row',
-        ),
-      ),
+      'start': ('flex-start', isReadable),
+      'end': ('flex-end', isReadable),
+      'center': ('center', isReadable),
+      'stretch': ('stretch', isReadable),
     ),
-    property: 'display',
+    property: 'align-items',
     output: true,
     responsive: true,
     pseudoclasses: false,

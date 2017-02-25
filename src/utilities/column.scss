@@ -6,28 +6,32 @@ usage:
   .col
 ----------------------------------------
 output:
-  flex: [value];
+  display: flex;
+  flex-direction: column;
 ----------------------------------------
 example:
-  .col {
-    flex: 0; }
-
-  .col-2 {
-    flex: 2 0 0; }
-
-  .col-fill {
-    flex: 1 0 0; }
+  .row {
+    display: flex;
+    flex-direction: column; }
 ----------------------------------------
 */
 
-$column: (
-  column: (
-    base: ('col', isReadable),
+$col: (
+  col: (
+    base: null,
     modifiers: null,
-    values: map-collect(
-      map-get($global_values, flex)
+    values: (
+      row: (
+        slug: 'col',
+        isReadable: true,
+        content: 'flex',
+        extend: (
+          property: 'flex-direction',
+          value: 'column',
+        ),
+      ),
     ),
-    property: 'flex',
+    property: 'display',
     output: true,
     responsive: true,
     pseudoclasses: false,
