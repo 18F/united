@@ -8,3 +8,11 @@ United is an _experimental_ atomic css utility class framework (similar to [Bass
 Among other things, a utility class framework can be helpful to prototype new patterns in a pattern library without modifying production code. It allows a designer or developer to get into design with minimal classing/naming overhead, and can provide tight integration with Sketch files built with similar base principles.
 
 Utility classes can form a universal language shared between different traditional taxonomic systems, as well as a bridge between visual design and front-end design — potentially making it simpler to move from design to production.
+
+## Developing locally
+1. Clone the repo
+2. Install Jekyll as shown [here](https://jekyllrb.com/docs/installation/)
+3. Install dependencies with `npm install`
+4. Run gulp with `gulp`
+5. ...
+6. Profit!
