@@ -58,6 +58,7 @@ gulp.task('compile', function() {
         .pipe(rename('united.css'))
         .pipe(gulp.dest('./build/'))
         .pipe(gulp.dest('./build/prototypes/css'))
+        .pipe(gulp.dest('./src/prototypes/css'))
         .pipe(size())
         .pipe(browserSync.stream());
 });
