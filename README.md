@@ -11,8 +11,8 @@ Utility classes can form a universal language shared between different tradition
 
 ## Developing locally
 1. Clone the repo
-2. Install Jekyll as shown [here](https://jekyllrb.com/docs/installation/)
+2. If you've never installed Jekyll, install it with `gem install jekyll` (more detail [here](https://jekyllrb.com/docs/installation/))
 3. Install dependencies with `npm install`
 4. Run gulp with `gulp`
-5. ...
+5. ???
 6. Profit!
