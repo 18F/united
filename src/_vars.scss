@@ -46,9 +46,9 @@ $grid-n5:             grid(-5);     // 40px
 // Breakpoints
 
 $breakpoint-xs:       null;
-$breakpoint-sm:       grid(50);     // 320px
-$breakpoint-md:       grid(85);     // 640px
-$breakpoint-lg:       grid(130);    // 1040px
+$breakpoint-sm:       grid(50);     // 400px
+$breakpoint-md:       grid(75);     // 600px
+$breakpoint-lg:       grid(100);    // 800px
 $breakpoint-xl:       grid(140);    // 1200px
 
 // --------------------------------------------------

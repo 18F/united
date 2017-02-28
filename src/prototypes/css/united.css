@@ -51494,11 +51494,11 @@ template {
 }
 
 .maxh-md {
-  max-height: 42.5rem;
+  max-height: 37.5rem;
 }
 
 .maxh-lg {
-  max-height: 65rem;
+  max-height: 50rem;
 }
 
 .maxh-xl {
@@ -51646,11 +51646,11 @@ template {
 }
 
 .maxw-md {
-  max-width: 42.5rem;
+  max-width: 37.5rem;
 }
 
 .maxw-lg {
-  max-width: 65rem;
+  max-width: 50rem;
 }
 
 .maxw-xl {
@@ -51798,11 +51798,11 @@ template {
 }
 
 .minh-md {
-  min-height: 42.5rem;
+  min-height: 37.5rem;
 }
 
 .minh-lg {
-  min-height: 65rem;
+  min-height: 50rem;
 }
 
 .minh-xl {
@@ -51950,11 +51950,11 @@ template {
 }
 
 .minw-md {
-  min-width: 42.5rem;
+  min-width: 37.5rem;
 }
 
 .minw-lg {
-  min-width: 65rem;
+  min-width: 50rem;
 }
 
 .minw-xl {
@@ -58059,11 +58059,11 @@ template {
 }
 
 .w-md {
-  width: 42.5rem;
+  width: 37.5rem;
 }
 
 .w-lg {
-  width: 65rem;
+  width: 50rem;
 }
 
 .w-xl {
@@ -69683,11 +69683,11 @@ select {
   }
 
   .sm-maxh-md {
-    max-height: 42.5rem;
+    max-height: 37.5rem;
   }
 
   .sm-maxh-lg {
-    max-height: 65rem;
+    max-height: 50rem;
   }
 
   .sm-maxh-xl {
@@ -69835,11 +69835,11 @@ select {
   }
 
   .sm-maxw-md {
-    max-width: 42.5rem;
+    max-width: 37.5rem;
   }
 
   .sm-maxw-lg {
-    max-width: 65rem;
+    max-width: 50rem;
   }
 
   .sm-maxw-xl {
@@ -69987,11 +69987,11 @@ select {
   }
 
   .sm-minh-md {
-    min-height: 42.5rem;
+    min-height: 37.5rem;
   }
 
   .sm-minh-lg {
-    min-height: 65rem;
+    min-height: 50rem;
   }
 
   .sm-minh-xl {
@@ -70139,11 +70139,11 @@ select {
   }
 
   .sm-minw-md {
-    min-width: 42.5rem;
+    min-width: 37.5rem;
   }
 
   .sm-minw-lg {
-    min-width: 65rem;
+    min-width: 50rem;
   }
 
   .sm-minw-xl {
@@ -71382,11 +71382,11 @@ select {
   }
 
   .sm-w-md {
-    width: 42.5rem;
+    width: 37.5rem;
   }
 
   .sm-w-lg {
-    width: 65rem;
+    width: 50rem;
   }
 
   .sm-w-xl {
@@ -71394,7 +71394,7 @@ select {
   }
 }
 
-@media (min-width: 42.5rem) {
+@media (min-width: 37.5rem) {
   .md-bg-blue {
     background-color: #056dd4;
   }
@@ -82902,11 +82902,11 @@ select {
   }
 
   .md-maxh-md {
-    max-height: 42.5rem;
+    max-height: 37.5rem;
   }
 
   .md-maxh-lg {
-    max-height: 65rem;
+    max-height: 50rem;
   }
 
   .md-maxh-xl {
@@ -83054,11 +83054,11 @@ select {
   }
 
   .md-maxw-md {
-    max-width: 42.5rem;
+    max-width: 37.5rem;
   }
 
   .md-maxw-lg {
-    max-width: 65rem;
+    max-width: 50rem;
   }
 
   .md-maxw-xl {
@@ -83206,11 +83206,11 @@ select {
   }
 
   .md-minh-md {
-    min-height: 42.5rem;
+    min-height: 37.5rem;
   }
 
   .md-minh-lg {
-    min-height: 65rem;
+    min-height: 50rem;
   }
 
   .md-minh-xl {
@@ -83358,11 +83358,11 @@ select {
   }
 
   .md-minw-md {
-    min-width: 42.5rem;
+    min-width: 37.5rem;
   }
 
   .md-minw-lg {
-    min-width: 65rem;
+    min-width: 50rem;
   }
 
   .md-minw-xl {
@@ -84601,11 +84601,11 @@ select {
   }
 
   .md-w-md {
-    width: 42.5rem;
+    width: 37.5rem;
   }
 
   .md-w-lg {
-    width: 65rem;
+    width: 50rem;
   }
 
   .md-w-xl {
@@ -84613,7 +84613,7 @@ select {
   }
 }
 
-@media (min-width: 65rem) {
+@media (min-width: 50rem) {
   .lg-bg-blue {
     background-color: #056dd4;
   }
@@ -96121,11 +96121,11 @@ select {
   }
 
   .lg-maxh-md {
-    max-height: 42.5rem;
+    max-height: 37.5rem;
   }
 
   .lg-maxh-lg {
-    max-height: 65rem;
+    max-height: 50rem;
   }
 
   .lg-maxh-xl {
@@ -96273,11 +96273,11 @@ select {
   }
 
   .lg-maxw-md {
-    max-width: 42.5rem;
+    max-width: 37.5rem;
   }
 
   .lg-maxw-lg {
-    max-width: 65rem;
+    max-width: 50rem;
   }
 
   .lg-maxw-xl {
@@ -96425,11 +96425,11 @@ select {
   }
 
   .lg-minh-md {
-    min-height: 42.5rem;
+    min-height: 37.5rem;
   }
 
   .lg-minh-lg {
-    min-height: 65rem;
+    min-height: 50rem;
   }
 
   .lg-minh-xl {
@@ -96577,11 +96577,11 @@ select {
   }
 
   .lg-minw-md {
-    min-width: 42.5rem;
+    min-width: 37.5rem;
   }
 
   .lg-minw-lg {
-    min-width: 65rem;
+    min-width: 50rem;
   }
 
   .lg-minw-xl {
@@ -97820,11 +97820,11 @@ select {
   }
 
   .lg-w-md {
-    width: 42.5rem;
+    width: 37.5rem;
   }
 
   .lg-w-lg {
-    width: 65rem;
+    width: 50rem;
   }
 
   .lg-w-xl {
@@ -109340,11 +109340,11 @@ select {
   }
 
   .xl-maxh-md {
-    max-height: 42.5rem;
+    max-height: 37.5rem;
   }
 
   .xl-maxh-lg {
-    max-height: 65rem;
+    max-height: 50rem;
   }
 
   .xl-maxh-xl {
@@ -109492,11 +109492,11 @@ select {
   }
 
   .xl-maxw-md {
-    max-width: 42.5rem;
+    max-width: 37.5rem;
   }
 
   .xl-maxw-lg {
-    max-width: 65rem;
+    max-width: 50rem;
   }
 
   .xl-maxw-xl {
@@ -109644,11 +109644,11 @@ select {
   }
 
   .xl-minh-md {
-    min-height: 42.5rem;
+    min-height: 37.5rem;
   }
 
   .xl-minh-lg {
-    min-height: 65rem;
+    min-height: 50rem;
   }
 
   .xl-minh-xl {
@@ -109796,11 +109796,11 @@ select {
   }
 
   .xl-minw-md {
-    min-width: 42.5rem;
+    min-width: 37.5rem;
   }
 
   .xl-minw-lg {
-    min-width: 65rem;
+    min-width: 50rem;
   }
 
   .xl-minw-xl {
@@ -111039,11 +111039,11 @@ select {
   }
 
   .xl-w-md {
-    width: 42.5rem;
+    width: 37.5rem;
   }
 
   .xl-w-lg {
-    width: 65rem;
+    width: 50rem;
   }
 
   .xl-w-xl {
