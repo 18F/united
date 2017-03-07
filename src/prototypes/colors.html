@@ -11,7 +11,7 @@ bodyclasses: sans-s5 lh-body m0 pt0 pb8 bg-white
   </div>
 </div>
 
-  <ul class="hide sm-block list-reset fixed pl4 pt4 sans-s3 gray-80 fw400 top-0">
+  <ul class="hide sm-block list-reset float-left sticky pl4 pt4 sans-s3 gray-80 fw400 top-0">
     <li class="pt05 bl05 bl-solid bl-black mb1px pl1"><a class="gray-90 ho-ultramarine-50" href="#classic">Classic</a></li>
     <li class="pt05 bl05 bl-solid bl-blue-50 mb1px pl1"><a class="gray-90 ho-ultramarine-50" href="#blue">Blue</a></li>
     <li class="pt05 bl05 bl-solid bl-ultramarine-50 mb1px pl1"><a class="gray-90 ho-ultramarine-50" href="#ultramarine">Ultramarine</a></li>
@@ -40,262 +40,166 @@ bodyclasses: sans-s5 lh-body m0 pt0 pb8 bg-white
 <!-- CLASSIC -->
 <div class="sm-ml20 lg-mx-auto maxw-md p2 cf">
   <h2 class="pb2 bb1px bb0 md-bb-solid bb-gray-20 mb2 md-mb4 mt4 fw200" id="classic">Classic</h2>
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-blue"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Blue</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">#056dd4</li>
-        <li class="sans-s3 fw600">.blue</li>
-      </ul>
-    </div>
+  <div class="row f-wrap">
+    {%  include
+        swatch.html
+        color="Blue"
+        hsl="hsl(210, 95%, 43%)"
+        hex="056dd4"
+        %}
+    {%  include
+        swatch.html
+        color="Bright mint"
+        class="brightmint"
+        hsl="hsl(161, 100%, 44%)"
+        hex='60DD9D'
+        %}
+    {%  include
+        swatch.html
+        color="Cream"
+        hsl="hsl(60, 9%, 96%)"
+        hex='F5F5F3'
+        %}
+    {%  include
+        swatch.html
+        color="Gold"
+        hsl="hsl(44, 100%, 48%)"
+        hex='f4b400'
+        %}
+    {%  include
+        swatch.html
+        color="Green"
+        hsl="hsl(116, 100%, 34%)"
+        hex='0baf00'
+        %}
+    {%  include
+        swatch.html
+        color="Red"
+        hsl="hsl(23, 100%, 37%)"
+        hex='0baf00'
+        %}
+    {%  include
+        swatch.html
+        color="True black"
+        class='trueblack'
+        hsl="hsl(0, 0%, 0%)"
+        hex='000000'
+        %}
+    {%  include
+        swatch.html
+        color="Text black"
+        class='textblack'
+        hsl="hsl(0, 0%, 20%)"
+        hex='000000'
+        %}
+    {%  include
+        swatch.html
+        color="Dark gray"
+        class='darkgray'
+        hsl="hsl(0, 0%, 33%)"
+        hex='555555'
+        %}
+    {%  include
+        swatch.html
+        color="Medium gray"
+        class='mediumgray'
+        hsl="hsl(0, 0%, 56%)"
+        hex='8e8e8e'
+        %}
+    {%  include
+        swatch.html
+        color="Mediumgray trans"
+        class='mediumgray-trans'
+        hsl="hsla(0, 0, 0, .4)"
+        hex='8e8e8e'
+        %}
+    {%  include
+        swatch.html
+        color="Light gray"
+        class='lightgray'
+        hsl="hsl(0, 0%, 83%)"
+        hex='d3d3d3'
+        %}
+    {%  include
+        swatch.html
+        color="Lightest gray"
+        class='lightestgray'
+        hsl="hsl(0, 0%, 96%)"
+        hex='f5f5f5'
+        %}
+    {%  include
+        swatch.html
+        color="White"
+        hsl="hsl(0, 0%, 100%)"
+        hex='ffffff'
+        %}
   </div>
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-brightmint"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Bright mint</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">#00df99</li>
-        <li class="sans-s3 fw600">.brightmint</li>
-      </ul>
-    </div>
-  </div>
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-cream"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Cream</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">#f5f5f3</li>
-        <li class="sans-s3 fw600">.cream</li>
-      </ul>
-    </div>
-  </div> <!-- /swatch -->
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-gold"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Gold</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">#f4b400</li>
-        <li class="sans-s3 fw600">.gold</li>
-      </ul>
-    </div>
-  </div> <!-- /swatch -->
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-green"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Green</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">#0baf00</li>
-        <li class="sans-s3 fw600">.green</li>
-      </ul>
-    </div>
-  </div> <!-- /swatch -->
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-red"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Red</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">#be4900</li>
-        <li class="sans-s3 fw600">.red</li>
-      </ul>
-    </div>
-  </div> <!-- /swatch -->
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-trueblack"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">True black</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">#000000</li>
-        <li class="sans-s3 fw600">.trueblack</li>
-      </ul>
-    </div>
-  </div> <!-- /swatch -->
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-textblack"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Text black</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">#333333</li>
-        <li class="sans-s3 fw600">.textblack</li>
-      </ul>
-    </div>
-  </div> <!-- /swatch -->
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-darkgray"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Dark gray</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">#555555</li>
-        <li class="sans-s3 fw600">.darkgray</li>
-      </ul>
-    </div>
-  </div> <!-- /swatch -->
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-mediumgray"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Medium gray</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">#8e8e8e</li>
-        <li class="sans-s3 fw600">.mediumgray</li>
-      </ul>
-    </div>
-  </div> <!-- /swatch -->
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-mediumgray-trans"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Mediumgray trans</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">rgba(0, 0, 0, .4)</li>
-        <li class="sans-s3 fw600">.mediumgray-trans</li>
-      </ul>
-    </div>
-  </div> <!-- /swatch -->
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-lightgray"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Light gray</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">#d3d3d3</li>
-        <li class="sans-s3 fw600">.lightgray</li>
-      </ul>
-    </div>
-  </div> <!-- /swatch -->
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-lightestgray"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Lightest gray</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">#f5f5f3</li>
-        <li class="sans-s3 fw600">.lightestgray</li>
-      </ul>
-    </div>
-  </div> <!-- /swatch -->
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-white"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">White</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">#ffffff</li>
-        <li class="sans-s3 fw600">.white</li>
-      </ul>
-    </div>
-  </div> <!-- /swatch -->
-  <!-- /CLASSIC -->
 
 
   <!-- BLUE -->
   <h2 class="pb2 bb1px bb0 md-bb-solid bb-gray-20 mb2 md-mb4 pt6 fw200 clear" id="blue">Blue</h2>
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-blue-1"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Blue 1</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">rgb(225, 235, 247)</li>
-        <li class="sans-s3 fw400 gray-50">#e1ebf7</li>
-        <li class="sans-s3 fw600">.blue-1</li>
-      </ul>
-    </div>
+  <div class="row f-wrap">
+    {% include
+        swatch.html
+        color="Blue 1"
+        hsl="hsl(213, 58%, 93%)"
+        hex='e1ebf7'
+        %}
+    {%  include
+        swatch.html
+        color="Blue 10"
+        hsl="hsl(215, 67%, 87%)"
+        hex='c8daf4'
+        %}
+    {%  include
+        swatch.html
+        color="Blue 20"
+        hsl="hsl(221, 76%, 81%)"
+        hex='a8c0f3'
+        %}
+    {%  include
+        swatch.html
+        color="Blue 30"
+        hsl="hsl(218, 87%, 72%)"
+        hex='79a6f6'
+        %}
+    {%  include
+        swatch.html
+        color="Blue 40"
+        hsl="hsl(218, 100%, 66%)"
+        hex='5392ff'
+    %}
+    {%  include
+        swatch.html
+        color="Blue 50"
+        hsl="hsl(215, 70%, 52%)"
+        hex='2d74da'
+        %}
+    {%  include
+        swatch.html
+        color="Blue 60"
+        hsl="hsl(215, 68%, 38%)"
+        hex='1f57a4'
+        %}
+    {%  include
+        swatch.html
+        color="Blue 70"
+        hsl="hsl(217, 53%, 31%)"
+        hex='25467a'
+        %}
+    {%  include
+        swatch.html
+        color="Blue 80"
+        hsl="hsl(217, 50%, 23%)"
+        hex='1d3458'
+        %}
+    {%  include
+        swatch.html
+        color="Blue 90"
+        hsl="hsl(216, 41%, 17%)"
+        hex='19273c'
+        %}
   </div>
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-blue-10"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Blue 10</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">rgb(200, 218, 244)</li>
-        <li class="sans-s3 fw400 gray-50">#c8daf4</li>
-        <li class="sans-s3 fw600">.blue-10</li>
-      </ul>
-    </div>
-  </div>
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-blue-20"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Blue 20</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">rgb(168, 192, 243)</li>
-        <li class="sans-s3 fw400 gray-50">#a8c0f3</li>
-        <li class="sans-s3 fw600">.blue-20</li>
-      </ul>
-    </div>
-  </div> <!-- /swatch -->
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-blue-30"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Blue 30</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">rgb(121, 166, 246)</li>
-        <li class="sans-s3 fw400 gray-50">#79a6f6</li>
-        <li class="sans-s3 fw600">.blue-30</li>
-      </ul>
-    </div>
-  </div> <!-- /swatch -->
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-blue-40"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Blue 40</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">rgb(83, 146, 255)</li>
-        <li class="sans-s3 fw400 gray-50">#5392ff</li>
-        <li class="sans-s3 fw600">.blue-40</li>
-      </ul>
-    </div>
-  </div> <!-- /swatch -->
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-blue-50"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Blue 50</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">rgb(45, 116, 218)</li>
-        <li class="sans-s3 fw400 gray-50">#2d74da</li>
-        <li class="sans-s3 fw600">.blue-50</li>
-      </ul>
-    </div>
-  </div> <!-- /swatch -->
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-blue-60"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Blue 60</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">rgb(31, 87, 164)</li>
-        <li class="sans-s3 fw400 gray-50">#1f57a4</li>
-        <li class="sans-s3 fw600">.blue-60</li>
-      </ul>
-    </div>
-  </div> <!-- /swatch -->
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-blue-70"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Blue 70</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">rgb(37, 70, 122)</li>
-        <li class="sans-s3 fw400 gray-50">#25467a</li>
-        <li class="sans-s3 fw600">.blue-70</li>
-      </ul>
-    </div>
-  </div> <!-- /swatch -->
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-blue-80"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Blue 80</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">rgb(29, 52, 88)</li>
-        <li class="sans-s3 fw400 gray-50">#1d3458</li>
-        <li class="sans-s3 fw600">.blue-80</li>
-      </ul>
-    </div>
-  </div> <!-- /swatch -->
-  <div class="swatch md-w25ct md-float-left mb4">
-    <div class="color h4 md-h15 bg-blue-90"></div>
-    <div class="mt2">
-      <h3 class="sans-s6 fw300">Blue 90</h3>
-      <ul class="list-reset mb0 mt05">
-        <li class="sans-s3 fw400 gray-50">rgb(25, 39, 60)</li>
-        <li class="sans-s3 fw400 gray-50">#19273c</li>
-        <li class="sans-s3 fw600">.blue-90</li>
-      </ul>
-    </div>
-  </div> <!-- /swatch -->
-  <!-- /BLUE -->
 
   <!-- ULTRAMARINE -->
   <h2 class="pb2 bb1px bb0 md-bb-solid bb-gray-20 mb2 md-mb4 pt6 fw200 clear" id="ultramarine">Ultramarine</h2>
