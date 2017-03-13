@@ -20,6 +20,7 @@ $display: (
     modifiers: null,
     values: (
       block: ('block', isReadable),
+      flex: ('flex', isReadable),
       hide: ('none', isReadable),
       inline: ('inline', isReadable),
       inline-block: ('inline-block', isReadable),
