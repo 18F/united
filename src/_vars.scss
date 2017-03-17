@@ -111,9 +111,17 @@ $font-mono:           'Roboto Mono',
 
 // 500px 'N' height (measured in Sketch)
 
-$sans-capHeight:      371px;  // 18Franklin
-$serif-capHeight:     346px;  // Georgia
-$mono-capHeight:      380px;  // Roboto Mono
+$18franklin-capheight:    371px;
+$georgia-capheight:       346px;
+$merriweather-capheight:  372px;
+$roboto-mono-capheight:   380px;
+$source-sans-capheight:   326px;
+
+$sans-capHeight:          $18franklin-capheight;
+$serif-capHeight:         $georgia-capheight;
+$mono-capHeight:          $roboto-mono-capheight;
+
+
 
 // --------------------------------------------------
 // Type scale
