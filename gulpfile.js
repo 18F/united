@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'),
     combineMq = require('gulp-combine-mq'),
     strip = require('gulp-strip-css-comments'),
+    uncss = require('gulp-uncss'),
     bless = require('gulp-bless'),
     gzip = require('gulp-gzip'),
     size = require('gulp-size'),
@@ -74,6 +75,20 @@ gulp.task('package', function() {
         .pipe(size())
 });
 
+gulp.task('subset', function() {
+    return gulp.src('build/united.css')
+      .pipe(uncss({
+        html: ['build/**/*.html']
+      }))
+      .pipe(cleanCSS({ compatibility: 'ie8' }))
+      .pipe(rename('united.app.css'))
+      .pipe(gulp.dest('./build/prototypes/css'))
+      .pipe(size())
+      .pipe(gzip({ extension: 'zip' }))
+      .pipe(gulp.dest('./build/prototypes/css'))
+      .pipe(size())
+});
+
 gulp.task('bless', function() {
     return gulp.src('build/united.css')
         .pipe(rename('united-bless.css'))
@@ -118,10 +133,10 @@ gulp.task('serve', function() {
 
 gulp.task('watch', function() {
     gulp.watch('src/**/*.scss', gulp.series('process'));
-    gulp.watch(['src/prototypes/**/*'], gulp.parallel('jekyll-rebuild'));
+    gulp.watch(['src/prototypes/**/*'], gulp.series('jekyll-rebuild', 'subset'));
  });
 
 
 // Default Task
 
-gulp.task('default', gulp.series('jekyll-build', 'process', gulp.parallel('serve', 'watch')));
+gulp.task('default', gulp.series('jekyll-build', 'process', 'subset', gulp.parallel('serve', 'watch')));
