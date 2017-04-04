@@ -67,7 +67,7 @@ p + p {
   @extend .h1em;
   @extend .w5ch;
   @extend .b0;
-  @extend .va-text-bottom
+  @extend .va-text-bottom;
   &:nth-child(3n) {
     @extend .w2em;
   }
@@ -226,4 +226,8 @@ legend {
 
 path {
   pointer-events: all;
+}
+
+.pointer {
+  cursor: pointer;
 }

@@ -58066,7 +58066,7 @@ template {
   vertical-align: super;
 }
 
-.va-text-bottom {
+.va-text-bottom,.tk {
   vertical-align: text-bottom;
 }
 
@@ -58373,6 +58373,10 @@ select {
 
 path {
   pointer-events: all;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 @font-face {
