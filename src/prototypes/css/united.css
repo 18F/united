@@ -58367,8 +58367,8 @@ select {
   background-size: 1.3rem;
 }
 
-.ho-fill-blue:hover path {
-  fill: #1f57a4;
+.ho-fill-ultramarine-60:hover path {
+  fill: #3151B7 !important;
 }
 
 path {
