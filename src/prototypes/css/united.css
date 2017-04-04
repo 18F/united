@@ -3754,7 +3754,7 @@ template {
   background-color: #d8d8d8;
 }
 
-.bg-gray-20 {
+.bg-gray-20,.tk {
   background-color: #c0bfc0;
 }
 
@@ -3814,7 +3814,7 @@ template {
   background-color: #949394;
 }
 
-.bg-gray-50,.tk {
+.bg-gray-50 {
   background-color: #777677;
 }
 

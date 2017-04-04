@@ -60,13 +60,14 @@ p + p {
 
 .tk {
   @extend .inline-block;
-  @extend .bg-gray-50;
+  @extend .bg-gray-20;
   @extend .rd-rounded;
   @extend .my0;
   @extend .mrn2px;
   @extend .h1em;
   @extend .w5ch;
   @extend .b0;
+  @extend .va-text-bottom
   &:nth-child(3n) {
     @extend .w2em;
   }
