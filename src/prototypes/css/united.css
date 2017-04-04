@@ -58367,6 +58367,14 @@ select {
   background-size: 1.3rem;
 }
 
+.ho-fill-blue:hover path {
+  fill: #1f57a4;
+}
+
+path {
+  pointer-events: all;
+}
+
 @font-face {
   font-family:'18Franklin-webfont';font-style:normal;font-weight:100;src:url("https://pages.18f.gov/18franklin/fonts/webfonts/18Franklin-Thin.woff2") format("woff2"), url("https://pages.18f.gov/18franklin/fonts/webfonts/18Franklin-Thin.woff") format("woff"), url("https://pages.18f.gov/18franklin/fonts/webfonts/18Franklin-Thin.ttf") format("truetype");
 }

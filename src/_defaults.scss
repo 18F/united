@@ -216,3 +216,13 @@ legend {
     @extend .clear;
   }
 }
+
+.ho-fill-blue:hover {
+  path {
+    fill: #1f57a4;
+  }
+}
+
+path {
+  pointer-events: all;
+}
