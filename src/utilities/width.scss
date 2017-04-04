@@ -24,7 +24,8 @@ $width: (
       map-get($global_values, pixels),
       map-get($global_values, em),
       map-get($global_values, ch),
-      map-get($global_values, breakpoints)
+      map-get($global_values, breakpoints),
+      map-get($global_values, auto)
     ),
     property: 'width',
     output: true,

@@ -18,6 +18,7 @@ $global_values: (
     '5ch': '5ch',
   ),
   colors: (
+    'transparent': ('transparent', isReadable),
     'blue': ($color-blue, isReadable),
     'brightmint': ($color-brightmint, isReadable),
     'cream': ($color-cream, isReadable),

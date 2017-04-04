@@ -169,7 +169,20 @@ label {
   @extend .maxw50;
 }
 
-
+button {
+  @extend .fo-outline-05;
+  @extend .fo-outline-gold-20;
+  @extend .rd-rounded;
+  @extend .h5;
+  @extend .px2;
+  @extend .bg-blue-50;
+  @extend .white;
+  @extend .ho-bg-blue-60;
+  @extend .b0;
+  @extend .sans-s4;
+  @extend .fw400;
+  cursor: pointer;
+}
 
 textarea {
   @extend .h25;
