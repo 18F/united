@@ -133,8 +133,8 @@ gulp.task('serve', function() {
 
 gulp.task('watch', function() {
     gulp.watch('src/**/*.scss', gulp.series('process'));
-    gulp.watch(['src/prototypes/**/*', '!src/prototypes/css/*'], gulp.series('jekyll-rebuild', 'subset'));
-//    gulp.watch(['src/prototypes/**/*', '!src/prototypes/css/*'], gulp.series('jekyll-rebuild'));
+//    gulp.watch(['src/prototypes/**/*', '!src/prototypes/css/*'], gulp.series('jekyll-rebuild', 'subset'));
+    gulp.watch(['src/prototypes/**/*', '!src/prototypes/css/*'], gulp.series('jekyll-rebuild'));
     gulp.watch(['src/prototypes/css/*'], gulp.series('jekyll-rebuild'));
  });
 
