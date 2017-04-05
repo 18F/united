@@ -37460,7 +37460,39 @@ template {
   border-top-style: dashed;
 }
 
+.ac-bt-dashed:active {
+  border-top-style: dashed;
+}
+
+.fo-bt-dashed:focus {
+  border-top-style: dashed;
+}
+
+.ho-bt-dashed:hover {
+  border-top-style: dashed;
+}
+
+.vi-bt-dashed:visited {
+  border-top-style: dashed;
+}
+
 .br-dashed {
+  border-left-style: dashed;
+}
+
+.ac-br-dashed:active {
+  border-left-style: dashed;
+}
+
+.fo-br-dashed:focus {
+  border-left-style: dashed;
+}
+
+.ho-br-dashed:hover {
+  border-left-style: dashed;
+}
+
+.vi-br-dashed:visited {
   border-left-style: dashed;
 }
 
@@ -37468,11 +37500,63 @@ template {
   border-bottom-style: dashed;
 }
 
+.ac-bb-dashed:active {
+  border-bottom-style: dashed;
+}
+
+.fo-bb-dashed:focus {
+  border-bottom-style: dashed;
+}
+
+.ho-bb-dashed:hover {
+  border-bottom-style: dashed;
+}
+
+.vi-bb-dashed:visited {
+  border-bottom-style: dashed;
+}
+
 .bl-dashed {
   border-left-style: dashed;
 }
 
+.ac-bl-dashed:active {
+  border-left-style: dashed;
+}
+
+.fo-bl-dashed:focus {
+  border-left-style: dashed;
+}
+
+.ho-bl-dashed:hover {
+  border-left-style: dashed;
+}
+
+.vi-bl-dashed:visited {
+  border-left-style: dashed;
+}
+
 .by-dashed {
+  border-top-style: dashed;
+  border-bottom-style: dashed;
+}
+
+.ac-by-dashed:active {
+  border-top-style: dashed;
+  border-bottom-style: dashed;
+}
+
+.fo-by-dashed:focus {
+  border-top-style: dashed;
+  border-bottom-style: dashed;
+}
+
+.ho-by-dashed:hover {
+  border-top-style: dashed;
+  border-bottom-style: dashed;
+}
+
+.vi-by-dashed:visited {
   border-top-style: dashed;
   border-bottom-style: dashed;
 }
@@ -37482,7 +37566,43 @@ template {
   border-right-style: dashed;
 }
 
+.ac-bx-dashed:active {
+  border-left-style: dashed;
+  border-right-style: dashed;
+}
+
+.fo-bx-dashed:focus {
+  border-left-style: dashed;
+  border-right-style: dashed;
+}
+
+.ho-bx-dashed:hover {
+  border-left-style: dashed;
+  border-right-style: dashed;
+}
+
+.vi-bx-dashed:visited {
+  border-left-style: dashed;
+  border-right-style: dashed;
+}
+
 .b-dashed {
+  border-style: dashed;
+}
+
+.ac-b-dashed:active {
+  border-style: dashed;
+}
+
+.fo-b-dashed:focus {
+  border-style: dashed;
+}
+
+.ho-b-dashed:hover {
+  border-style: dashed;
+}
+
+.vi-b-dashed:visited {
   border-style: dashed;
 }
 
@@ -37490,7 +37610,39 @@ template {
   border-top-style: dotted;
 }
 
+.ac-bt-dotted:active {
+  border-top-style: dotted;
+}
+
+.fo-bt-dotted:focus {
+  border-top-style: dotted;
+}
+
+.ho-bt-dotted:hover {
+  border-top-style: dotted;
+}
+
+.vi-bt-dotted:visited {
+  border-top-style: dotted;
+}
+
 .br-dotted {
+  border-left-style: dotted;
+}
+
+.ac-br-dotted:active {
+  border-left-style: dotted;
+}
+
+.fo-br-dotted:focus {
+  border-left-style: dotted;
+}
+
+.ho-br-dotted:hover {
+  border-left-style: dotted;
+}
+
+.vi-br-dotted:visited {
   border-left-style: dotted;
 }
 
@@ -37498,11 +37650,63 @@ template {
   border-bottom-style: dotted;
 }
 
+.ac-bb-dotted:active {
+  border-bottom-style: dotted;
+}
+
+.fo-bb-dotted:focus {
+  border-bottom-style: dotted;
+}
+
+.ho-bb-dotted:hover {
+  border-bottom-style: dotted;
+}
+
+.vi-bb-dotted:visited {
+  border-bottom-style: dotted;
+}
+
 .bl-dotted {
   border-left-style: dotted;
 }
 
+.ac-bl-dotted:active {
+  border-left-style: dotted;
+}
+
+.fo-bl-dotted:focus {
+  border-left-style: dotted;
+}
+
+.ho-bl-dotted:hover {
+  border-left-style: dotted;
+}
+
+.vi-bl-dotted:visited {
+  border-left-style: dotted;
+}
+
 .by-dotted {
+  border-top-style: dotted;
+  border-bottom-style: dotted;
+}
+
+.ac-by-dotted:active {
+  border-top-style: dotted;
+  border-bottom-style: dotted;
+}
+
+.fo-by-dotted:focus {
+  border-top-style: dotted;
+  border-bottom-style: dotted;
+}
+
+.ho-by-dotted:hover {
+  border-top-style: dotted;
+  border-bottom-style: dotted;
+}
+
+.vi-by-dotted:visited {
   border-top-style: dotted;
   border-bottom-style: dotted;
 }
@@ -37512,7 +37716,43 @@ template {
   border-right-style: dotted;
 }
 
+.ac-bx-dotted:active {
+  border-left-style: dotted;
+  border-right-style: dotted;
+}
+
+.fo-bx-dotted:focus {
+  border-left-style: dotted;
+  border-right-style: dotted;
+}
+
+.ho-bx-dotted:hover {
+  border-left-style: dotted;
+  border-right-style: dotted;
+}
+
+.vi-bx-dotted:visited {
+  border-left-style: dotted;
+  border-right-style: dotted;
+}
+
 .b-dotted {
+  border-style: dotted;
+}
+
+.ac-b-dotted:active {
+  border-style: dotted;
+}
+
+.fo-b-dotted:focus {
+  border-style: dotted;
+}
+
+.ho-b-dotted:hover {
+  border-style: dotted;
+}
+
+.vi-b-dotted:visited {
   border-style: dotted;
 }
 
@@ -37520,7 +37760,39 @@ template {
   border-top-style: solid;
 }
 
+.ac-bt-solid:active {
+  border-top-style: solid;
+}
+
+.fo-bt-solid:focus {
+  border-top-style: solid;
+}
+
+.ho-bt-solid:hover {
+  border-top-style: solid;
+}
+
+.vi-bt-solid:visited {
+  border-top-style: solid;
+}
+
 .br-solid {
+  border-left-style: solid;
+}
+
+.ac-br-solid:active {
+  border-left-style: solid;
+}
+
+.fo-br-solid:focus {
+  border-left-style: solid;
+}
+
+.ho-br-solid:hover {
+  border-left-style: solid;
+}
+
+.vi-br-solid:visited {
   border-left-style: solid;
 }
 
@@ -37528,11 +37800,63 @@ template {
   border-bottom-style: solid;
 }
 
+.ac-bb-solid:active {
+  border-bottom-style: solid;
+}
+
+.fo-bb-solid:focus {
+  border-bottom-style: solid;
+}
+
+.ho-bb-solid:hover {
+  border-bottom-style: solid;
+}
+
+.vi-bb-solid:visited {
+  border-bottom-style: solid;
+}
+
 .bl-solid {
   border-left-style: solid;
 }
 
+.ac-bl-solid:active {
+  border-left-style: solid;
+}
+
+.fo-bl-solid:focus {
+  border-left-style: solid;
+}
+
+.ho-bl-solid:hover {
+  border-left-style: solid;
+}
+
+.vi-bl-solid:visited {
+  border-left-style: solid;
+}
+
 .by-solid {
+  border-top-style: solid;
+  border-bottom-style: solid;
+}
+
+.ac-by-solid:active {
+  border-top-style: solid;
+  border-bottom-style: solid;
+}
+
+.fo-by-solid:focus {
+  border-top-style: solid;
+  border-bottom-style: solid;
+}
+
+.ho-by-solid:hover {
+  border-top-style: solid;
+  border-bottom-style: solid;
+}
+
+.vi-by-solid:visited {
   border-top-style: solid;
   border-bottom-style: solid;
 }
@@ -37542,7 +37866,43 @@ template {
   border-right-style: solid;
 }
 
+.ac-bx-solid:active {
+  border-left-style: solid;
+  border-right-style: solid;
+}
+
+.fo-bx-solid:focus {
+  border-left-style: solid;
+  border-right-style: solid;
+}
+
+.ho-bx-solid:hover {
+  border-left-style: solid;
+  border-right-style: solid;
+}
+
+.vi-bx-solid:visited {
+  border-left-style: solid;
+  border-right-style: solid;
+}
+
 .b-solid,[type=text],[type=password],[type=url],[type=email],[type=number],textarea,select {
+  border-style: solid;
+}
+
+.ac-b-solid:active {
+  border-style: solid;
+}
+
+.fo-b-solid:focus {
+  border-style: solid;
+}
+
+.ho-b-solid:hover {
+  border-style: solid;
+}
+
+.vi-b-solid:visited {
   border-style: solid;
 }
 
