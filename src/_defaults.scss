@@ -170,6 +170,11 @@ label {
   @extend .maxw50;
 }
 
+a {
+  @extend .fo-outline-05;
+  @extend .fo-outline-gold-20;
+}
+
 button {
   @extend .fo-outline-05;
   @extend .fo-outline-gold-20;

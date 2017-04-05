@@ -52707,7 +52707,7 @@ template {
   outline: 0.25rem solid;
 }
 
-.fo-outline-05:focus,[type=text]:focus,[type=password]:focus,[type=url]:focus,[type=email]:focus,[type=number]:focus,textarea:focus,select:focus,button:focus {
+.fo-outline-05:focus,[type=text]:focus,[type=password]:focus,[type=url]:focus,[type=email]:focus,[type=number]:focus,textarea:focus,select:focus,a:focus,button:focus {
   outline: 0.25rem solid;
 }
 
@@ -55007,7 +55007,7 @@ template {
   outline-color: #ffb000;
 }
 
-.fo-outline-gold-20:focus,[type=text]:focus,[type=password]:focus,[type=url]:focus,[type=email]:focus,[type=number]:focus,textarea:focus,select:focus,button:focus {
+.fo-outline-gold-20:focus,[type=text]:focus,[type=password]:focus,[type=url]:focus,[type=email]:focus,[type=number]:focus,textarea:focus,select:focus,a:focus,button:focus {
   outline-color: #ffb000;
 }
 
