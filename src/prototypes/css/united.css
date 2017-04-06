@@ -50213,7 +50213,7 @@ template {
   margin-top: -2px;
 }
 
-.mrn2px,.tk {
+.mrn2px {
   margin-right: -2px;
 }
 
@@ -50813,7 +50813,7 @@ template {
   margin-top: -0.5rem;
 }
 
-.mrn1 {
+.mrn1,.tk {
   margin-right: -0.5rem;
 }
 
