@@ -68,7 +68,7 @@ gulp.task('package', function() {
     return gulp.src('build/united.css')
         .pipe(cleanCSS({
           compatibility: 'ie8',
-          level: 0,
+          level: 2,
         }))
 				.pipe(rename('united.min.css'))
         .pipe(gulp.dest('./build/'))
@@ -136,8 +136,8 @@ gulp.task('serve', function() {
 
 gulp.task('watch', function() {
     gulp.watch('src/**/*.scss', gulp.series('process'));
-//    gulp.watch(['src/prototypes/**/*', '!src/prototypes/css/*'], gulp.series('jekyll-rebuild', 'subset'));
-    gulp.watch(['src/prototypes/**/*', '!src/prototypes/css/*'], gulp.series('jekyll-rebuild'));
+    gulp.watch(['src/prototypes/**/*', '!src/prototypes/css/*'], gulp.series('jekyll-rebuild', 'subset'));
+//    gulp.watch(['src/prototypes/**/*', '!src/prototypes/css/*'], gulp.series('jekyll-rebuild'));
     gulp.watch(['src/prototypes/css/*'], gulp.series('jekyll-rebuild'));
  });
 
