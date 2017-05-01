@@ -36,6 +36,13 @@ gulp.task('clean', function () {
   ]);
 });
 
+// Sync fonts
+
+gulp.task('fontsync', function() {
+   return gulp.src('./18Franklin/fonts/webfonts/**/*.{ttf,woff,woff2,eot}')
+   .pipe(gulp.dest('./src/prototypes/fonts'));
+});
+
 
 // Compile Our Sass
 
@@ -135,6 +142,7 @@ gulp.task('serve', function() {
 // Watch for changes
 
 gulp.task('watch', function() {
+    gulp.watch('./18Franklin/fonts/webfonts/**/*.{ttf,woff,eof,svg}', gulp.series('fontsync'))
     gulp.watch('src/**/*.scss', gulp.series('process'));
     gulp.watch(['src/prototypes/**/*', '!src/prototypes/css/*'], gulp.series('jekyll-rebuild', 'subset'));
 //    gulp.watch(['src/prototypes/**/*', '!src/prototypes/css/*'], gulp.series('jekyll-rebuild'));
@@ -144,4 +152,4 @@ gulp.task('watch', function() {
 
 // Default Task
 
-gulp.task('default', gulp.series('process', 'subset', 'jekyll-build', gulp.parallel('serve', 'watch')));
+gulp.task('default', gulp.series('fontsync', 'process', 'subset', 'jekyll-build', gulp.parallel('serve', 'watch')));
