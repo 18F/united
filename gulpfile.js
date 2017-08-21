@@ -27,6 +27,9 @@ var messages = {
     jekyllBuild: 'Rebuilding...'
 };
 
+const UNITED_OVERRIDE = 'src/overrides';
+const UNITED_OVERRIDE_DIR = path.join(__dirname, ...UNITED_OVERRIDE.split('/'));
+
 
 // Clean the build directory
 
@@ -52,6 +55,9 @@ gulp.task('compile', function() {
             outputStyle: 'compact',
             errLogToConsole: true,
             quiet: true,
+            includePaths: [
+              UNITED_OVERRIDE_DIR,
+            ]
         }).on('error', sass.logError))
         .pipe(strip())
 				.pipe(
