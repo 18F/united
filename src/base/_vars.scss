@@ -6,11 +6,11 @@
 // spacing is calculated on multiples of a
 // base grid (unitless, but assumed px)
 
-$grid-base:           8; // unitless, but px
+$grid-base:           8 !default; // unitless, but px
 
 // establishes the base type size (16px) for
 // rem calculations
-$grid-type:           16; // unitless, but px
+$grid-type:           16 !default; // unitless, but px
 
 // calculates multiples of the base grid in units of rem
 // grid($gridMultiple)
@@ -45,17 +45,25 @@ $grid-n5:             grid(-5);     // 40px
 // --------------------------------------------------
 // Breakpoints
 
+$breakpoint-sm-grid:  50;     // 400px
+$breakpoint-md-grid:  75;     // 600px
+$breakpoint-lg-grid:  100;    // 800px
+$breakpoint-xl-grid:  140;    // 1200px
+
 $breakpoint-xs:       null;
-$breakpoint-sm:       grid(50);     // 400px
-$breakpoint-md:       grid(75);     // 600px
-$breakpoint-lg:       grid(100);    // 800px
-$breakpoint-xl:       grid(140);    // 1200px
+$breakpoint-sm:       grid($breakpoint-sm-grid);
+$breakpoint-md:       grid($breakpoint-md-grid);
+$breakpoint-lg:       grid($breakpoint-lg-grid);
+$breakpoint-xl:       grid($breakpoint-xl-grid);
 
 // --------------------------------------------------
 // Widths
 
-$nav-width:           grid(75);     // 600px;
-$site-max-width:      grid(130);    // 1040px;
+$nav-width-grid:      75 !default;     // 600px;
+$site-max-width-grid:  75 !default;    // 1040px;
+
+$nav-width:           grid($nav-width-grid);
+$site-max-width:      grid($site-max-width-grid);
 $text-max-width:      36em;
 $text-narrow-width:   17em;
 
@@ -81,8 +89,8 @@ $color-white:                   #ffffff; // perhaps redundant
 // --------------------------------------------------
 // Paths
 
-$static-font-path: '../fonts';
-$image-path: '/';
+$static-font-path: '../fonts' !default;
+$image-path: '/' !default;
 
 // --------------------------------------------------
 // Typefaces
@@ -196,4 +204,4 @@ $ls-xloose:           .15em;
 // --------------------------------------------------
 // Border radius
 
-$border-radius:       2px;
+$border-radius:       2px !default;
