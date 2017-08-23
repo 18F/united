@@ -61,7 +61,7 @@ p + p {
 .tk {
   @extend .inline-block;
   @extend .bg-gray-20;
-  @extend .rd-rounded;
+  @extend .br-rounded;
   @extend .my0;
   @extend .mrn1;
   @extend .h1em;
@@ -144,7 +144,7 @@ select {
   @extend .b1px;
   @extend .b-solid;
   @extend .b-gray-50;
-  @extend .rd0;
+  @extend .br0;
   @extend .sans-s5;
   @extend .textblack;
   @extend .block;
@@ -160,7 +160,7 @@ select {
   @extend .pl-sans-s5;
   @extend .pl-gray-30;
   @extend .pl-fw300;
-  @extend .rd-rounded;
+  @extend .br-rounded;
   appearance: none;
 }
 
@@ -178,7 +178,7 @@ a {
 button {
   @extend .fo-outline-05;
   @extend .fo-outline-gold-20;
-  @extend .rd-rounded;
+  @extend .br-rounded;
   @extend .h5;
   @extend .px2;
   @extend .bg-blue-50;
@@ -235,4 +235,8 @@ path {
 
 .pointer {
   cursor: pointer;
+}
+
+svg {
+  fill: currentColor;
 }
