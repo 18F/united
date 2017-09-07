@@ -1,0 +1,47 @@
+//  UNITED OVERRIDE VARIABLES
+
+// --------------------------------------------------
+// Grid
+
+// spacing is calculated on multiples of a
+// base grid (unitless, but assumed px)
+
+$grid-base:           8; // unitless, but px
+
+// establishes the base type size (16px) for
+// rem calculations
+
+$grid-type:           16; // unitless, but px
+
+// --------------------------------------------------
+// Breakpoints
+
+// Breakpoint value is a grid multiplier
+// $breakpoint-sm-grid: 50 == 50 * $grid-base
+// if $grid-base == 8 :: $breakpoint-sm-grid: 50 == 400px
+
+//$breakpoint-sm-grid:  50;     // 400px
+//$breakpoint-md-grid:  75;     // 600px
+//$breakpoint-lg-grid:  100;    // 800px
+//$breakpoint-xl-grid:  140;    // 1200px
+
+// --------------------------------------------------
+// Widths
+
+// Width value is a grid multiplier
+// $nav-width-grid: 75 == 75 * $grid-base
+// if $grid-base == 8 :: $nav-width-grid: 75 == 600px
+
+//$nav-width-grid:       75;     // 600px;
+//$site-max-width-grid:  130;    // 1040px;
+
+// --------------------------------------------------
+// Paths
+
+//$static-font-path: '../fonts/foooo';
+//$image-path: '/';
+
+// --------------------------------------------------
+// Border radius
+
+//$border-radius:        2px !default;

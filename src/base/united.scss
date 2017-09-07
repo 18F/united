@@ -1,9 +1,10 @@
 @import "functions";
+@import "united-override-vars";
 @import "vars";
 @import "values";
 @import "mixins";
 @import "fonts";
-@import '../node_modules/normalize.css/normalize';
+@import 'node_modules/normalize.css/normalize';
 
 // Add utilities to import...
 
