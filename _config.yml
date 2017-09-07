@@ -1,3 +1,2 @@
 source: src/prototypes
-destination: _site
 keep_files: [css/united.css]
