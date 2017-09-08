@@ -44,6 +44,7 @@
     "node-notifier": "^4.6.0",
     "node-sass": "^3.4.2",
     "normalize.css": "^5.0.0",
+    "path": "^0.12.7",
     "watch": "^0.17.1"
   }
 }

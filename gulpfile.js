@@ -12,6 +12,7 @@ var gulp = require('gulp'),
     gzip = require('gulp-gzip'),
     size = require('gulp-size'),
     cp = require('child_process'),
+    path = require('path'),
     browserSync = require('browser-sync').create();
 
 var supportedBrowsers = [
@@ -50,7 +51,7 @@ gulp.task('fontsync', function() {
 // Compile Our Sass
 
 gulp.task('compile', function() {
-    return gulp.src('src/*.scss')
+    return gulp.src('src/base/united.scss')
         .pipe(sass({
             outputStyle: 'compact',
             errLogToConsole: true,
@@ -70,9 +71,9 @@ gulp.task('compile', function() {
             beautify: true
         }))
         .pipe(rename('united.css'))
-        .pipe(gulp.dest('./build/'))
-        .pipe(gulp.dest('./build/prototypes/css'))
-        .pipe(gulp.dest('./src/prototypes/css'))
+        .pipe(gulp.dest('build/'))
+        .pipe(gulp.dest('build/prototypes/css'))
+        .pipe(gulp.dest('src/base/prototypes/css'))
         .pipe(size())
         .pipe(browserSync.stream());
 });
