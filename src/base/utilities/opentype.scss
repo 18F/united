@@ -21,7 +21,9 @@ $opentype: (
     modifiers: null,
     values: (
       alt: ('ss01' 1, 'kern' 1, isReadable),
-      tnum: ('tnum' 1, 'kern' 1, isReadable),
+      tabular: ('tnum' 1, 'kern' 1, isReadable),
+      default: ('kern' 1, isReadable),
+      none: (none, isReadable),
     ),
     property: 'font-feature-settings',
     output: true,

@@ -23,7 +23,7 @@ $clear: (
     modifiers: null,
     values: (
       noValue: 'both',
-      both: ('none', isReadable),
+      both: ('both', isReadable),
       left: ('left', isReadable),
       none: ('none', isReadable),
       right: ('right', isReadable),

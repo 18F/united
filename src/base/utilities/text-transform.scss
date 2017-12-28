@@ -22,6 +22,7 @@ $text-transform: (
       capitalize: ('capitalize', isReadable),
       lower: ('lowercase', isReadable),
       allcaps: ('uppercase', isReadable),
+      orig-case: ('none', isReadable),
     ),
     property: 'text-transform',
     output: true,
