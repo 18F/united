@@ -19,6 +19,7 @@ $grid-05:             grid(.5);    // 4px
 $grid-1:              grid(1);     // 8px
 $grid-105:            grid(1.5);   // 12px
 $grid-2:              grid(2);     // 16px
+$grid-205:            grid(2.5);   // 20px
 $grid-3:              grid(3);     // 24px
 $grid-4:              grid(4);     // 32px
 $grid-5:              grid(5);     // 40px
@@ -119,13 +120,13 @@ $font-mono:           'Roboto Mono',
 
 // 500px 'N' height measured in Sketch
 
-$franklin-capheight:    371px;
+$united-capheight:        364px;
 $georgia-capheight:       346px;
 $merriweather-capheight:  372px;
 $roboto-mono-capheight:   380px;
 $source-sans-capheight:   326px;
 
-$sans-capHeight:          $franklin-capheight;
+$sans-capHeight:          $united-capheight;
 $serif-capHeight:         $georgia-capheight;
 $mono-capHeight:          $roboto-mono-capheight;
 
@@ -134,72 +135,109 @@ $mono-capHeight:          $roboto-mono-capheight;
 // --------------------------------------------------
 // Type scale
 
-$s1:                  8px;
-$s2:                  9px;
-$s3:                  10px;
-$s4:                  11px;
-$s5:                  12px;
-$s6:                  14px;
-$s7:                  16px;
-$s8:                  18px;
-$s9:                  30px;
-$s10:                 52px;
-$s11:                 90px;
-$s12:                 120px;
+$s1:                  12px;
+$s2:                  13px;
+$s3:                  14px;
+$s4:                  15px;
+$s5:                  16px;
+$s6:                  17px;
+$s7:                  18px;
+$s8:                  20px;
+$s9:                  22px;
+$s10:                 24px;
+$s11:                 28px;
+$s12:                 32px;
+$s13:                 36px;
+$s14:                 40px;
+$s15:                 48px;
+$s16:                 56px;
+$s17:                 64px;
+$s18:                 88px;
+$s19:                 120px;
+$s20:                 140px;
 
-$mono-s1:   typeScale($mono-capHeight, $s1);
-$mono-s2:   typeScale($mono-capHeight, $s2);
-$mono-s3:   typeScale($mono-capHeight, $s3);
-$mono-s4:   typeScale($mono-capHeight, $s4);
-$mono-s5:   typeScale($mono-capHeight, $s5);
-$mono-s6:   typeScale($mono-capHeight, $s6);
-$mono-s7:   typeScale($mono-capHeight, $s7);
-$mono-s8:   typeScale($mono-capHeight, $s8);
-$mono-s9:   typeScale($mono-capHeight, $s9);
-$mono-s10:  typeScale($mono-capHeight, $s10);
-$mono-s11:  typeScale($mono-capHeight, $s11);
-$mono-s12:  typeScale($mono-capHeight, $s12);
+$mono-1:   typeScale($mono-capHeight, $s1);
+$mono-2:   typeScale($mono-capHeight, $s2);
+$mono-3:   typeScale($mono-capHeight, $s3);
+$mono-4:   typeScale($mono-capHeight, $s4);
+$mono-5:   typeScale($mono-capHeight, $s5);
+$mono-6:   typeScale($mono-capHeight, $s6);
+$mono-7:   typeScale($mono-capHeight, $s7);
+$mono-8:   typeScale($mono-capHeight, $s8);
+$mono-9:   typeScale($mono-capHeight, $s9);
+$mono-10:  typeScale($mono-capHeight, $s10);
+$mono-11:  typeScale($mono-capHeight, $s11);
+$mono-12:  typeScale($mono-capHeight, $s12);
+$mono-13:  typeScale($mono-capHeight, $s13);
+$mono-14:  typeScale($mono-capHeight, $s14);
+$mono-15:  typeScale($mono-capHeight, $s15);
+$mono-16:  typeScale($mono-capHeight, $s16);
+$mono-17:  typeScale($mono-capHeight, $s17);
+$mono-18:  typeScale($mono-capHeight, $s18);
+$mono-19:  typeScale($mono-capHeight, $s19);
+$mono-20:  typeScale($mono-capHeight, $s20);
 
-$sans-s1:   typeScale($sans-capHeight, $s1);
-$sans-s2:   typeScale($sans-capHeight, $s2);
-$sans-s3:   typeScale($sans-capHeight, $s3);
-$sans-s4:   typeScale($sans-capHeight, $s4);
-$sans-s5:   typeScale($sans-capHeight, $s5);
-$sans-s6:   typeScale($sans-capHeight, $s6);
-$sans-s7:   typeScale($sans-capHeight, $s7);
-$sans-s8:   typeScale($sans-capHeight, $s8);
-$sans-s9:   typeScale($sans-capHeight, $s9);
-$sans-s10:  typeScale($sans-capHeight, $s10);
-$sans-s11:  typeScale($sans-capHeight, $s11);
-$sans-s12:  typeScale($sans-capHeight, $s12);
+$sans-1:   typeScale($sans-capHeight, $s1);
+$sans-2:   typeScale($sans-capHeight, $s2);
+$sans-3:   typeScale($sans-capHeight, $s3);
+$sans-4:   typeScale($sans-capHeight, $s4);
+$sans-5:   typeScale($sans-capHeight, $s5);
+$sans-6:   typeScale($sans-capHeight, $s6);
+$sans-7:   typeScale($sans-capHeight, $s7);
+$sans-8:   typeScale($sans-capHeight, $s8);
+$sans-9:   typeScale($sans-capHeight, $s9);
+$sans-10:  typeScale($sans-capHeight, $s10);
+$sans-11:  typeScale($sans-capHeight, $s11);
+$sans-12:  typeScale($sans-capHeight, $s12);
+$sans-13:  typeScale($sans-capHeight, $s13);
+$sans-14:  typeScale($sans-capHeight, $s14);
+$sans-15:  typeScale($sans-capHeight, $s15);
+$sans-16:  typeScale($sans-capHeight, $s16);
+$sans-17:  typeScale($sans-capHeight, $s17);
+$sans-18:  typeScale($sans-capHeight, $s18);
+$sans-19:  typeScale($sans-capHeight, $s19);
+$sans-20:  typeScale($sans-capHeight, $s20);
 
-$serif-s1:   typeScale($serif-capHeight, $s1);
-$serif-s2:   typeScale($serif-capHeight, $s2);
-$serif-s3:   typeScale($serif-capHeight, $s3);
-$serif-s4:   typeScale($serif-capHeight, $s4);
-$serif-s5:   typeScale($serif-capHeight, $s5);
-$serif-s6:   typeScale($serif-capHeight, $s6);
-$serif-s7:   typeScale($serif-capHeight, $s7);
-$serif-s8:   typeScale($serif-capHeight, $s8);
-$serif-s9:   typeScale($serif-capHeight, $s9);
-$serif-s10:  typeScale($serif-capHeight, $s10);
-$serif-s11:  typeScale($serif-capHeight, $s11);
-$serif-s12:  typeScale($serif-capHeight, $s12);
+$serif-1:   typeScale($serif-capHeight, $s1);
+$serif-2:   typeScale($serif-capHeight, $s2);
+$serif-3:   typeScale($serif-capHeight, $s3);
+$serif-4:   typeScale($serif-capHeight, $s4);
+$serif-5:   typeScale($serif-capHeight, $s5);
+$serif-6:   typeScale($serif-capHeight, $s6);
+$serif-7:   typeScale($serif-capHeight, $s7);
+$serif-8:   typeScale($serif-capHeight, $s8);
+$serif-9:   typeScale($serif-capHeight, $s9);
+$serif-10:  typeScale($serif-capHeight, $s10);
+$serif-11:  typeScale($serif-capHeight, $s11);
+$serif-12:  typeScale($serif-capHeight, $s12);
+$serif-13:  typeScale($serif-capHeight, $s13);
+$serif-14:  typeScale($serif-capHeight, $s14);
+$serif-15:  typeScale($serif-capHeight, $s15);
+$serif-16:  typeScale($serif-capHeight, $s16);
+$serif-17:  typeScale($serif-capHeight, $s17);
+$serif-18:  typeScale($serif-capHeight, $s18);
+$serif-19:  typeScale($serif-capHeight, $s19);
+$serif-20:  typeScale($serif-capHeight, $s20);
 
 // --------------------------------------------------
 // Line height
 
 $lh-single:           1;
-$lh-hed:              1.1;
+$lh-hed:              1.15;
 $lh-cap:              1.3;
+$lh-body-tight:       1.5;
 $lh-body:             1.618;
-$lh-display:          1.75;
+$lh-body-loose:       1.75;
 
 // --------------------------------------------------
 // Letter-spacing
 
-$ls-loose:            .1em;
-$ls-xloose:           .15em;
+$lsn3:                -.03em;
+$lsn2:                -.02em;
+$lsn1:                -.01em;
+$ls1:                 .05em;
+$ls2:                 .1em;
+$ls3:                 .15em;
 
 // --------------------------------------------------
 // Border radius

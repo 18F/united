@@ -140,6 +140,6 @@
 // typeScale()
 
 @function typeScale($capHeight, $scale){
-  $thisScale: (500 * strip-unit($scale)) / strip-unit($capHeight);
+  $thisScale: (364 * strip-unit($scale)) / strip-unit($capHeight);
   @return px($thisScale);
 }

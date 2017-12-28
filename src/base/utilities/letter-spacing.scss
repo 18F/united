@@ -3,13 +3,13 @@
 Letterspacing
 ----------------------------------------
 usage:
-  .ls-[modifier]
+  .ls[modifier]
 ----------------------------------------
 output:
   letter-spacing: [value];
 ----------------------------------------
 example:
-  .ls-loose {
+  .ls2 {
     letter-spacing: .1em; }
 ----------------------------------------
 */
@@ -20,8 +20,12 @@ $letter-spacing: (
     modifiers: null,
     values: (
       auto: ('auto', isReadable),
-      loose: $ls-loose,
-      xloose: $ls-xloose,
+      n1: $lsn1,
+      n2: $lsn2,
+      n3: $lsn3,
+      1: $ls1,
+      2: $ls2,
+      3: $ls3,
     ),
     property: 'letter-spacing',
     output: true,
