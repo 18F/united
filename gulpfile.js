@@ -134,9 +134,15 @@ gulp.task('sass-subset', function() {
 
 // 1. Build the jekyll demo site
 
-gulp.task('jekyll-build', function (done) {
+gulp.task('jekyll-build-dev', function (done) {
     browserSync.notify(messages.jekyllBuild);
     return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
+        .on('close', done);
+});
+
+gulp.task('jekyll-build-prod', function (done) {
+    browserSync.notify(messages.jekyllBuild);
+    return cp.spawn( jekyll , ['build', '--config', '_config.prod.yml'], {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -153,7 +159,11 @@ gulp.task('jekyll-serve', function() {
     gulp.watch("build/prototypes/**/*.html").on('change', browserSync.reload);
 });
 
-gulp.task('jekyll-rebuild', gulp.series('jekyll-build'), function () {
+gulp.task('jekyll-rebuild-dev', gulp.series('jekyll-build-dev'), function () {
+    browserSync.reload();
+});
+
+gulp.task('jekyll-rebuild-prod', gulp.series('jekyll-build-prod'), function () {
     browserSync.reload();
 });
 
@@ -172,13 +182,12 @@ gulp.task('sass-watch', function() {
 
  // `gulp jekyll-watch`
 
-gulp.task('jekyll-dev-watch', function() {
-   gulp.watch(['src/base/prototypes/**/*'], gulp.series('jekyll-rebuild'));
+gulp.task('jekyll-watch-dev', function() {
+   gulp.watch(['src/base/prototypes/**/*'], gulp.series('jekyll-rebuild-dev'));
 });
 
-gulp.task('jekyll-prod-watch', function() {
-   gulp.watch(['src/base/prototypes/**/*', '!src/prototypes/css/*'], gulp.series('jekyll-rebuild'));
-   gulp.watch(['src/base/prototypes/css/united.css'], gulp.series('sass-subset', 'jekyll-rebuild'));
+gulp.task('jekyll-watch-prod', function() {
+   gulp.watch(['src/base/prototypes/**/*'], gulp.series('sass-subset', 'jekyll-rebuild-prod'));
 });
 
 // - - - - - - - - - - - - - - - - - - - - - - -
@@ -189,11 +198,11 @@ gulp.task('sass', gulp.series('sass-fontsync', 'sass-clean', 'sass-compile', 'sa
 
 // `gulp jekyll-dev`
 
-gulp.task('jekyll-dev', gulp.series('jekyll-build', gulp.parallel('jekyll-serve', 'jekyll-dev-watch')));
+gulp.task('jekyll-dev', gulp.series('jekyll-build-dev', gulp.parallel('jekyll-serve', 'jekyll-watch-dev')));
 
 // `gulp jekyll-prod`
 
-gulp.task('jekyll-prod', gulp.series('jekyll-build', gulp.parallel('jekyll-serve', 'jekyll-prod-watch')));
+gulp.task('jekyll-prod', gulp.series('jekyll-build-prod', gulp.parallel('jekyll-serve', 'jekyll-watch-prod')));
 
 
 // Default Task
