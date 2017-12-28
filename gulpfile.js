@@ -1,4 +1,8 @@
-// Modules
+// ==============================================
+// VARIABLES
+
+// NPM modules
+
 var gulp = require('gulp'),
     del = require('del'),
     sass = require('gulp-sass'),
@@ -15,42 +19,50 @@ var gulp = require('gulp'),
     path = require('path'),
     browserSync = require('browser-sync').create();
 
+// Autoprefixer support
+
 var supportedBrowsers = [
-  	'> 1%',
-  	'Last 2 versions',
-  	'IE 11',
-  	'IE 10',
-  	'IE 9',
+  	'> 2%'
 ];
+
+// Jekyll support
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
     jekyllBuild: 'Rebuilding...'
 };
 
+// United directories
+
 const UNITED_OVERRIDE = 'src/overrides';
 const UNITED_OVERRIDE_DIR = path.join(__dirname, ...UNITED_OVERRIDE.split('/'));
 
 
-// Clean the build directory
+// ==============================================
+// COMPILE THE CSS
 
-gulp.task('clean', function () {
+// 1. Clean the build directory
+
+gulp.task('sass-clean', function () {
   return del([
     './build/*.css'
   ]);
 });
 
-// Sync fonts
+// - - - - - - - - - - - - - - - - - - - - - - -
 
-gulp.task('fontsync', function() {
+// 2. Sync fonts
+
+gulp.task('sass-fontsync', function() {
    return gulp.src('./18Franklin/fonts/webfonts/**/*.{ttf,woff,woff2,eot}')
-   .pipe(gulp.dest('./src/prototypes/fonts'));
+   .pipe(gulp.dest('./src/base/prototypes/fonts'));
 });
 
+// - - - - - - - - - - - - - - - - - - - - - - -
 
-// Compile Our Sass
+// 3. Compile the CSS
 
-gulp.task('compile', function() {
+gulp.task('sass-compile', function() {
     return gulp.src('src/base/united.scss')
         .pipe(sass({
             outputStyle: 'compact',
@@ -78,10 +90,14 @@ gulp.task('compile', function() {
         .pipe(browserSync.stream());
 });
 
-gulp.task('package', function() {
+// - - - - - - - - - - - - - - - - - - - - - - -
+
+// 5. Minify and package the CSS
+
+gulp.task('sass-package', function() {
     return gulp.src('build/united.css')
         .pipe(cleanCSS({
-          compatibility: 'ie8',
+          compatibility: 'ie10',
           level: 2,
         }))
 				.pipe(rename('united.min.css'))
@@ -92,38 +108,31 @@ gulp.task('package', function() {
         .pipe(size())
 });
 
-gulp.task('subset', function() {
+// ==============================================
+// SUBSET
+
+// Subset the complete CSS for a specific project
+
+gulp.task('sass-subset', function() {
     return gulp.src('build/united.css')
       .pipe(uncss({
         html: ['build/**/*.html']
       }))
       .pipe(cleanCSS({ compatibility: 'ie8' }))
       .pipe(rename('united.app.css'))
-      .pipe(gulp.dest('./src/prototypes/css'))
+      .pipe(gulp.dest('./src/base/prototypes/css'))
       .pipe(size())
       .pipe(gzip({ extension: 'zip' }))
-      .pipe(gulp.dest('./src/prototypes/css'))
+      .pipe(gulp.dest('./src/base/prototypes/css'))
       .pipe(size())
 });
 
-gulp.task('bless', function() {
-    return gulp.src('build/united.css')
-        .pipe(rename('united-bless.css'))
-        .pipe(bless({
-    	 		suffix: '-part-',
-          cacheBuster: false,
-          imports: false,
-  	    }))
-        .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(gulp.dest('./build/'))
-        .pipe(size())
-});
+// ==============================================
+// JEKYLL
 
-// Process the files in series
+// - - - - - - - - - - - - - - - - - - - - - - -
 
-gulp.task('process', gulp.series('clean', 'compile'));
-
-// build jekyll
+// 1. Build the jekyll demo site
 
 gulp.task('jekyll-build', function (done) {
     browserSync.notify(messages.jekyllBuild);
@@ -131,13 +140,11 @@ gulp.task('jekyll-build', function (done) {
         .on('close', done);
 });
 
-// rebuild jekyll and reload
+// - - - - - - - - - - - - - - - - - - - - - - -
 
-gulp.task('jekyll-rebuild', gulp.series('jekyll-build'), function () {
-    browserSync.reload();
-});
+// 2. Rebuild the demo site and reload on changes
 
-gulp.task('serve', function() {
+gulp.task('jekyll-serve', function() {
     browserSync.init({
         server: {
           baseDir: 'build/prototypes'
@@ -146,17 +153,49 @@ gulp.task('serve', function() {
     gulp.watch("build/prototypes/**/*.html").on('change', browserSync.reload);
 });
 
-// Watch for changes
+gulp.task('jekyll-rebuild', gulp.series('jekyll-build'), function () {
+    browserSync.reload();
+});
 
-gulp.task('watch', function() {
-    gulp.watch('./18Franklin/fonts/webfonts/**/*.{ttf,woff,eof,svg}', gulp.series('fontsync'))
-    gulp.watch('src/**/*.scss', gulp.series('process'));
-    gulp.watch(['src/prototypes/**/*', '!src/prototypes/css/*'], gulp.series('jekyll-rebuild', 'subset'));
-//    gulp.watch(['src/prototypes/**/*', '!src/prototypes/css/*'], gulp.series('jekyll-rebuild'));
-    gulp.watch(['src/prototypes/css/*'], gulp.series('jekyll-rebuild'));
+
+// ==============================================
+// GULP TASKS
+
+// - - - - - - - - - - - - - - - - - - - - - - -
+
+// `gulp sass-watch`
+
+gulp.task('sass-watch', function() {
+    gulp.watch('./18Franklin/fonts/webfonts/**/*.{ttf,woff,eof,svg}', gulp.series('sass-fontsync'))
+    gulp.watch('src/**/*.scss', gulp.series('sass-compile'));
  });
+
+ // `gulp jekyll-watch`
+
+gulp.task('jekyll-dev-watch', function() {
+   gulp.watch(['src/base/prototypes/**/*'], gulp.series('jekyll-rebuild'));
+});
+
+gulp.task('jekyll-prod-watch', function() {
+   gulp.watch(['src/base/prototypes/**/*', '!src/prototypes/css/*'], gulp.series('jekyll-rebuild'));
+   gulp.watch(['src/base/prototypes/css/united.css'], gulp.series('sass-subset', 'jekyll-rebuild'));
+});
+
+// - - - - - - - - - - - - - - - - - - - - - - -
+
+// `gulp sass`
+
+gulp.task('sass', gulp.series('sass-fontsync', 'sass-clean', 'sass-compile', 'sass-watch'));
+
+// `gulp jekyll-dev`
+
+gulp.task('jekyll-dev', gulp.series('jekyll-build', gulp.parallel('jekyll-serve', 'jekyll-dev-watch')));
+
+// `gulp jekyll-prod`
+
+gulp.task('jekyll-prod', gulp.series('jekyll-build', gulp.parallel('jekyll-serve', 'jekyll-prod-watch')));
 
 
 // Default Task
 
-gulp.task('default', gulp.series('fontsync', 'process', 'subset', 'jekyll-build', gulp.parallel('serve', 'watch')));
+// gulp.task('default', gulp.series('sass', 'jekyll', 'subset', 'jekyll-build', gulp.parallel('serve', 'watch')));
