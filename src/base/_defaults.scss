@@ -144,7 +144,6 @@ select {
   @extend .b1px;
   @extend .b-solid;
   @extend .b-gray-50;
-  @extend .br0;
   @extend .sans-5;
   @extend .gray-90;
   @extend .block;
@@ -156,7 +155,7 @@ select {
   @extend .px1;
   @extend .w100ct;
   @extend .fo-outline-05;
-  @extend .fo-outline-gold-20;
+  @extend .fo-outline-gold-20v;
   @extend .pl-sans-5;
   @extend .pl-gray-30;
   @extend .pl-fw300;
@@ -172,12 +171,12 @@ label {
 
 a {
   @extend .fo-outline-05;
-  @extend .fo-outline-gold-20;
+  @extend .fo-outline-gold-20v;
 }
 
 button {
   @extend .fo-outline-05;
-  @extend .fo-outline-gold-20;
+  @extend .fo-outline-gold-20v;
   @extend .br-rounded;
   @extend .h5;
   @extend .px2;

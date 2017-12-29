@@ -19,7 +19,7 @@ example:
 
 $border-radius: (
   border-radius: (
-    base: 'br',
+    base: ('radius', isReadable),
     modifiers: null,
     values: (
       0: '0',
