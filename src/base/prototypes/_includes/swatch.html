@@ -7,14 +7,11 @@
 
 {% assign thisColor = include.color | capitalize %}
 
-<div class="swatch md-w33ct minw33ct maxw33ct f1 md-float-left mb4">
-  <div class="color h4 md-h15 bg-{{ thisClass }}"></div>
-  <div class="mt2">
-    <h3 class="sans-6 fw300">{{ thisColor }}</h3>
-    <ul class="list-reset mb0 mt05">
-      <li class="sans-3 fw400 gray-50">{{ include.hsl }}</li>
-      <li class="sans-3 fw400 gray-50">#{{ include.hex }}</li>
-      <li class="sans-3 fw600">.{{ thisClass }}</li>
+<div class="swatch md-w33ct minw33ct maxw33ct f1 md-float-left mb5">
+  <div class="color h4 md-h10 bg-{{ thisClass }}"></div>
+  <div class="mt1">
+    <ul class="list-reset mb0 mt0">
+      <li class="mono-3 fw500">.{{ thisClass }}</li>
     </ul>
   </div>
 </div>

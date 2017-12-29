@@ -12,6 +12,7 @@ $utilities: map-collect(
   $color,
   $col,
   $display,
+  $elevation,
   $float,
   $flex-align,
   $flex-direction,
@@ -46,5 +47,6 @@ $utilities: map-collect(
   $text-transform,
   $vertical-align,
   $whitespace,
-  $width
+  $width,
+  $z-index
 );
