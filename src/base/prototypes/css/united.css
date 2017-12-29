@@ -57334,15 +57334,15 @@ template {
   border-color: #F5F5F0;
 }
 
-.br0 {
+.radius-0 {
   border-radius: 0;
 }
 
-.br-pill {
+.radius-pill {
   border-radius: 10em;
 }
 
-.br-rounded,.tk,[type=text],[type=password],[type=url],[type=email],[type=number],textarea,select,button {
+.radius-rounded,.tk,[type=text],[type=password],[type=url],[type=email],[type=number],textarea,select,button {
   border-radius: 2px;
 }
 
