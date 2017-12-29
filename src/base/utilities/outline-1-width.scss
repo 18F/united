@@ -20,7 +20,8 @@ $outline-1-width: (
     modifiers: null,
     values: map-collect(
       map-get($global_values, pixels),
-      map-get($global_values, grid)
+      map-get($global_values, gridShort),
+      map-get($global_values, zero-none)
     ),
     valuePrepend: null,
     valueAppend: ' solid',

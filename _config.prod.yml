@@ -1,0 +1,4 @@
+source: src/base/prototypes
+destination: build/prototypes
+keep_files: [css/united.css]
+app_css: "united.app.css"

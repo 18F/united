@@ -19,7 +19,7 @@ input,
 select,
 option,
 textarea {
-  @extend .sans-s5;
+  @extend .sans-5;
 }
 
 h1,
@@ -43,7 +43,7 @@ h6 {
 
 h1,
 h2 {
-  @extend .sans-s9;
+  @extend .sans-9;
 }
 
 h1 {
@@ -61,7 +61,7 @@ p + p {
 .tk {
   @extend .inline-block;
   @extend .bg-gray-20;
-  @extend .br-rounded;
+  @extend .radius-rounded;
   @extend .my0;
   @extend .mrn1;
   @extend .h1em;
@@ -144,9 +144,8 @@ select {
   @extend .b1px;
   @extend .b-solid;
   @extend .b-gray-50;
-  @extend .br0;
-  @extend .sans-s5;
-  @extend .textblack;
+  @extend .sans-5;
+  @extend .gray-90;
   @extend .block;
   @extend .h5;
   @extend .lh-cap;
@@ -156,11 +155,11 @@ select {
   @extend .px1;
   @extend .w100ct;
   @extend .fo-outline-05;
-  @extend .fo-outline-gold-20;
-  @extend .pl-sans-s5;
+  @extend .fo-outline-gold-20v;
+  @extend .pl-sans-5;
   @extend .pl-gray-30;
   @extend .pl-fw300;
-  @extend .br-rounded;
+  @extend .radius-rounded;
   appearance: none;
 }
 
@@ -172,20 +171,20 @@ label {
 
 a {
   @extend .fo-outline-05;
-  @extend .fo-outline-gold-20;
+  @extend .fo-outline-gold-20v;
 }
 
 button {
   @extend .fo-outline-05;
-  @extend .fo-outline-gold-20;
-  @extend .br-rounded;
+  @extend .fo-outline-gold-20v;
+  @extend .radius-rounded;
   @extend .h5;
   @extend .px2;
   @extend .bg-blue-50;
   @extend .white;
   @extend .ho-bg-blue-60;
   @extend .b0;
-  @extend .sans-s4;
+  @extend .sans-4;
   @extend .fw400;
   cursor: pointer;
 }
@@ -212,7 +211,7 @@ fieldset {
 }
 
 legend {
-  @extend .sans-s4;
+  @extend .sans-4;
   @extend .fw700;
   @extend .float-left;
   @extend .px0;
