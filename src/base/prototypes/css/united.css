@@ -1854,6 +1854,26 @@ template {
   background-color: #0078D4;
 }
 
+.bg-sky-60v {
+  background-color: #0059b3;
+}
+
+.ac-bg-sky-60v:active {
+  background-color: #0059b3;
+}
+
+.fo-bg-sky-60v:focus {
+  background-color: #0059b3;
+}
+
+.ho-bg-sky-60v:hover {
+  background-color: #0059b3;
+}
+
+.vi-bg-sky-60v:visited {
+  background-color: #0059b3;
+}
+
 .bg-cyan-1 {
   background-color: #D7EFF4;
 }
@@ -19232,6 +19252,156 @@ template {
 
 .vi-b-sky-50v:visited {
   border-color: #0078D4;
+}
+
+.bt-sky-60v {
+  border-top-color: #0059b3;
+}
+
+.ac-bt-sky-60v:active {
+  border-top-color: #0059b3;
+}
+
+.fo-bt-sky-60v:focus {
+  border-top-color: #0059b3;
+}
+
+.ho-bt-sky-60v:hover {
+  border-top-color: #0059b3;
+}
+
+.vi-bt-sky-60v:visited {
+  border-top-color: #0059b3;
+}
+
+.br-sky-60v {
+  border-left-color: #0059b3;
+}
+
+.ac-br-sky-60v:active {
+  border-left-color: #0059b3;
+}
+
+.fo-br-sky-60v:focus {
+  border-left-color: #0059b3;
+}
+
+.ho-br-sky-60v:hover {
+  border-left-color: #0059b3;
+}
+
+.vi-br-sky-60v:visited {
+  border-left-color: #0059b3;
+}
+
+.bb-sky-60v {
+  border-bottom-color: #0059b3;
+}
+
+.ac-bb-sky-60v:active {
+  border-bottom-color: #0059b3;
+}
+
+.fo-bb-sky-60v:focus {
+  border-bottom-color: #0059b3;
+}
+
+.ho-bb-sky-60v:hover {
+  border-bottom-color: #0059b3;
+}
+
+.vi-bb-sky-60v:visited {
+  border-bottom-color: #0059b3;
+}
+
+.bl-sky-60v {
+  border-left-color: #0059b3;
+}
+
+.ac-bl-sky-60v:active {
+  border-left-color: #0059b3;
+}
+
+.fo-bl-sky-60v:focus {
+  border-left-color: #0059b3;
+}
+
+.ho-bl-sky-60v:hover {
+  border-left-color: #0059b3;
+}
+
+.vi-bl-sky-60v:visited {
+  border-left-color: #0059b3;
+}
+
+.by-sky-60v {
+  border-top-color: #0059b3;
+  border-bottom-color: #0059b3;
+}
+
+.ac-by-sky-60v:active {
+  border-top-color: #0059b3;
+  border-bottom-color: #0059b3;
+}
+
+.fo-by-sky-60v:focus {
+  border-top-color: #0059b3;
+  border-bottom-color: #0059b3;
+}
+
+.ho-by-sky-60v:hover {
+  border-top-color: #0059b3;
+  border-bottom-color: #0059b3;
+}
+
+.vi-by-sky-60v:visited {
+  border-top-color: #0059b3;
+  border-bottom-color: #0059b3;
+}
+
+.bx-sky-60v {
+  border-left-color: #0059b3;
+  border-right-color: #0059b3;
+}
+
+.ac-bx-sky-60v:active {
+  border-left-color: #0059b3;
+  border-right-color: #0059b3;
+}
+
+.fo-bx-sky-60v:focus {
+  border-left-color: #0059b3;
+  border-right-color: #0059b3;
+}
+
+.ho-bx-sky-60v:hover {
+  border-left-color: #0059b3;
+  border-right-color: #0059b3;
+}
+
+.vi-bx-sky-60v:visited {
+  border-left-color: #0059b3;
+  border-right-color: #0059b3;
+}
+
+.b-sky-60v {
+  border-color: #0059b3;
+}
+
+.ac-b-sky-60v:active {
+  border-color: #0059b3;
+}
+
+.fo-b-sky-60v:focus {
+  border-color: #0059b3;
+}
+
+.ho-b-sky-60v:hover {
+  border-color: #0059b3;
+}
+
+.vi-b-sky-60v:visited {
+  border-color: #0059b3;
 }
 
 .bt-cyan-1 {
@@ -62118,6 +62288,42 @@ template {
   color: #0078D4;
 }
 
+.sky-60v {
+  color: #0059b3;
+}
+
+.ac-sky-60v:active {
+  color: #0059b3;
+}
+
+.fo-sky-60v:focus {
+  color: #0059b3;
+}
+
+.ho-sky-60v:hover {
+  color: #0059b3;
+}
+
+.vi-sky-60v:visited {
+  color: #0059b3;
+}
+
+.pl-sky-60v::-webkit-input-placeholder {
+  color: #0059b3;
+}
+
+.pl-sky-60v::-moz-placeholder {
+  color: #0059b3;
+}
+
+.pl-sky-60v:-ms-input-placeholder {
+  color: #0059b3;
+}
+
+.pl-sky-60v::placeholder {
+  color: #0059b3;
+}
+
 .cyan-1 {
   color: #D7EFF4;
 }
@@ -79855,6 +80061,26 @@ template {
   outline-color: #0078D4;
 }
 
+.outline-sky-60v {
+  outline-color: #0059b3;
+}
+
+.ac-outline-sky-60v:active {
+  outline-color: #0059b3;
+}
+
+.fo-outline-sky-60v:focus {
+  outline-color: #0059b3;
+}
+
+.ho-outline-sky-60v:hover {
+  outline-color: #0059b3;
+}
+
+.vi-outline-sky-60v:visited {
+  outline-color: #0059b3;
+}
+
 .outline-cyan-1 {
   outline-color: #D7EFF4;
 }
@@ -86857,6 +87083,10 @@ path {
     background-color: #0078D4;
   }
 
+  .sm-bg-sky-60v {
+    background-color: #0059b3;
+  }
+
   .sm-bg-cyan-1 {
     background-color: #D7EFF4;
   }
@@ -90331,6 +90561,36 @@ path {
 
   .sm-b-sky-50v {
     border-color: #0078D4;
+  }
+
+  .sm-bt-sky-60v {
+    border-top-color: #0059b3;
+  }
+
+  .sm-br-sky-60v {
+    border-left-color: #0059b3;
+  }
+
+  .sm-bb-sky-60v {
+    border-bottom-color: #0059b3;
+  }
+
+  .sm-bl-sky-60v {
+    border-left-color: #0059b3;
+  }
+
+  .sm-by-sky-60v {
+    border-top-color: #0059b3;
+    border-bottom-color: #0059b3;
+  }
+
+  .sm-bx-sky-60v {
+    border-left-color: #0059b3;
+    border-right-color: #0059b3;
+  }
+
+  .sm-b-sky-60v {
+    border-color: #0059b3;
   }
 
   .sm-bt-cyan-1 {
@@ -98661,6 +98921,10 @@ path {
     color: #0078D4;
   }
 
+  .sm-sky-60v {
+    color: #0059b3;
+  }
+
   .sm-cyan-1 {
     color: #D7EFF4;
   }
@@ -105219,6 +105483,10 @@ path {
     background-color: #0078D4;
   }
 
+  .md-bg-sky-60v {
+    background-color: #0059b3;
+  }
+
   .md-bg-cyan-1 {
     background-color: #D7EFF4;
   }
@@ -108693,6 +108961,36 @@ path {
 
   .md-b-sky-50v {
     border-color: #0078D4;
+  }
+
+  .md-bt-sky-60v {
+    border-top-color: #0059b3;
+  }
+
+  .md-br-sky-60v {
+    border-left-color: #0059b3;
+  }
+
+  .md-bb-sky-60v {
+    border-bottom-color: #0059b3;
+  }
+
+  .md-bl-sky-60v {
+    border-left-color: #0059b3;
+  }
+
+  .md-by-sky-60v {
+    border-top-color: #0059b3;
+    border-bottom-color: #0059b3;
+  }
+
+  .md-bx-sky-60v {
+    border-left-color: #0059b3;
+    border-right-color: #0059b3;
+  }
+
+  .md-b-sky-60v {
+    border-color: #0059b3;
   }
 
   .md-bt-cyan-1 {
@@ -117023,6 +117321,10 @@ path {
     color: #0078D4;
   }
 
+  .md-sky-60v {
+    color: #0059b3;
+  }
+
   .md-cyan-1 {
     color: #D7EFF4;
   }
@@ -123581,6 +123883,10 @@ path {
     background-color: #0078D4;
   }
 
+  .lg-bg-sky-60v {
+    background-color: #0059b3;
+  }
+
   .lg-bg-cyan-1 {
     background-color: #D7EFF4;
   }
@@ -127055,6 +127361,36 @@ path {
 
   .lg-b-sky-50v {
     border-color: #0078D4;
+  }
+
+  .lg-bt-sky-60v {
+    border-top-color: #0059b3;
+  }
+
+  .lg-br-sky-60v {
+    border-left-color: #0059b3;
+  }
+
+  .lg-bb-sky-60v {
+    border-bottom-color: #0059b3;
+  }
+
+  .lg-bl-sky-60v {
+    border-left-color: #0059b3;
+  }
+
+  .lg-by-sky-60v {
+    border-top-color: #0059b3;
+    border-bottom-color: #0059b3;
+  }
+
+  .lg-bx-sky-60v {
+    border-left-color: #0059b3;
+    border-right-color: #0059b3;
+  }
+
+  .lg-b-sky-60v {
+    border-color: #0059b3;
   }
 
   .lg-bt-cyan-1 {
@@ -135385,6 +135721,10 @@ path {
     color: #0078D4;
   }
 
+  .lg-sky-60v {
+    color: #0059b3;
+  }
+
   .lg-cyan-1 {
     color: #D7EFF4;
   }
@@ -141943,6 +142283,10 @@ path {
     background-color: #0078D4;
   }
 
+  .xl-bg-sky-60v {
+    background-color: #0059b3;
+  }
+
   .xl-bg-cyan-1 {
     background-color: #D7EFF4;
   }
@@ -145417,6 +145761,36 @@ path {
 
   .xl-b-sky-50v {
     border-color: #0078D4;
+  }
+
+  .xl-bt-sky-60v {
+    border-top-color: #0059b3;
+  }
+
+  .xl-br-sky-60v {
+    border-left-color: #0059b3;
+  }
+
+  .xl-bb-sky-60v {
+    border-bottom-color: #0059b3;
+  }
+
+  .xl-bl-sky-60v {
+    border-left-color: #0059b3;
+  }
+
+  .xl-by-sky-60v {
+    border-top-color: #0059b3;
+    border-bottom-color: #0059b3;
+  }
+
+  .xl-bx-sky-60v {
+    border-left-color: #0059b3;
+    border-right-color: #0059b3;
+  }
+
+  .xl-b-sky-60v {
+    border-color: #0059b3;
   }
 
   .xl-bt-cyan-1 {
@@ -153745,6 +154119,10 @@ path {
 
   .xl-sky-50v {
     color: #0078D4;
+  }
+
+  .xl-sky-60v {
+    color: #0059b3;
   }
 
   .xl-cyan-1 {
