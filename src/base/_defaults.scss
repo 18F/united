@@ -60,7 +60,7 @@ p + p {
 
 .tk {
   @extend .inline-block;
-  @extend .bg-gray-20;
+  @extend .bg-black-20;
   @extend .radius-rounded;
   @extend .my0;
   @extend .mrn1;
@@ -143,9 +143,9 @@ textarea,
 select {
   @extend .b1px;
   @extend .b-solid;
-  @extend .b-gray-50;
+  @extend .b-black-50;
   @extend .sans-5;
-  @extend .gray-90;
+  @extend .black-90;
   @extend .block;
   @extend .h5;
   @extend .lh-cap;
@@ -157,7 +157,7 @@ select {
   @extend .fo-outline-05;
   @extend .fo-outline-gold-20v;
   @extend .pl-sans-5;
-  @extend .pl-gray-30;
+  @extend .pl-black-30;
   @extend .pl-fw300;
   @extend .radius-rounded;
   appearance: none;
